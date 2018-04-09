@@ -1,0 +1,29 @@
+% 毕设封面
+\newcommand{\cover}
+{
+	\include{./Section/cover}
+}
+% 摘要
+\newenvironment{uscabstract}
+{
+	\centerline{\heiti \zihao{3} 基于SSD网络模型的房屋瓦片损害检测\newline}	
+	\setlength{\parindent}{0pt}
+	\textbf{\songti \zihao{-4}摘\quad 要：}
+	\songti
+	\zihao{-4}
+	\linespread{1.3}	
+}
+{
+	\newline
+	\newline
+}
+% 关键词
+\newenvironment{usckeywords}
+{
+	\textbf{\songti \zihao{-4}关键词：}
+	\kaishu
+	\zihao{-4}
+}
+{
+	\newpage
+}

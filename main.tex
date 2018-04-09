@@ -1,7 +1,7 @@
-\documentclass{usc}
+\documentclass{usc-cs}
 %%%%%%%%%%%%%%%%%%%%%%%%导言区%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{cite}
+\input{./Style/usc-cs-style}
+\input{./Style/usc-cs-glossary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
@@ -10,34 +10,13 @@
 	\cover
 	\tableofcontents
 	\newpage
-	\begin{uscabstract}
-		这也是一个摘要
-	\end{uscabstract}
-	\begin{usckeywords}
-		人工智能，机器视觉
-	\end{usckeywords}
-	\section{引言}
-	\subsection{第一节}
-	\begin{figure}
-		\centering
-		\includegraphics{./Pictures/usc.png}	
-		\caption{南华大学校徽}	
-	\end{figure}
-
 	
-	\subsubsection{第一点}
-	\subsection{第二节}
-	\section{开头}
-	\setcounter{figure}{0}
-	\begin{figure}
-		\centering
-		\includegraphics{./Pictures/usc.png}	
-		\caption{南华大学校徽}	
-	\end{figure}
-
-
+	\include{./Section/abstract}
+	\include{./Section/section1}
+	\include{./Section/section2}
 
 	我参考了这篇文章\cite{girshick2014rich}	
+	
 	\bibliographystyle{plain}
-	\bibliography{usc}	
+	\bibliography{reference}	
 \end{document}

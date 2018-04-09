@@ -1,0 +1,31 @@
+\RequirePackage{array}
+\RequirePackage{booktabs}
+\RequirePackage{graphicx}
+
+% 版面设置
+\RequirePackage{geometry}
+\geometry{left=3.17cm,right=2.4cm,top=2.54cm,bottom=2.54cm}
+
+% 页眉页脚
+\RequirePackage{lastpage}
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\label{}
+\chead{\songti \zihao{-5}南华大学计算机学院毕业设计}
+\rhead{}
+\lfoot{}
+\cfoot{第\thepage 页\quad 共\pageref{LastPage}页}
+\rfoot{}
+
+% 字体字号
+
+
+% 段落样式
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+% 脚注设置
+\renewcommand{\thefigure}{\thesection .\arabic{figure}}
+
+% 使用texbib管理参考文献
+\RequirePackage{cite}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  8 APR 2018 16:27
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  9 APR 2018 09:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,7 +6,7 @@ entering extended mode
 (./main.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
-(./usc.cls (/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexart.cls
+(./usc-cs.cls (/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexart.cls
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2016/01/19 v6377 L3 programming layer (loader) 
 
@@ -1104,6 +1104,26 @@ ai-Regular}].
 )) (/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2016/02/02 v2.3 Configuration file (CTEX)
 )
+*************************************************
+* ctex warning: "deprecated-command"
+* 
+* Command \CTEXsetup is deprecated.
+* \ctexset { section = { name={第,章},number={\chinese
+* {section}},format+={\heiti \zihao {3}} } } is set.
+*************************************************
+*************************************************
+* ctex warning: "deprecated-command"
+* 
+* Command \CTEXsetup is deprecated.
+* \ctexset { subsection = { format+={\heiti \zihao {-3}} } } is set.
+*************************************************
+*************************************************
+* ctex warning: "deprecated-command"
+* 
+* Command \CTEXsetup is deprecated.
+* \ctexset { subsubsection = { format+={\heiti \zihao {4}} } } is set.
+*************************************************
+) (./Style/usc-cs-style.tex
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen172
@@ -1172,32 +1192,14 @@ Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 \f@ncyO@erf=\skip67
 \f@ncyO@olf=\skip68
 \f@ncyO@orf=\skip69
-)
-*************************************************
-* ctex warning: "deprecated-command"
-* 
-* Command \CTEXsetup is deprecated.
-* \ctexset { section = { name={第,章},number={\chinese
-* {section}},format+={\heiti \zihao {3}} } } is set.
-*************************************************
-*************************************************
-* ctex warning: "deprecated-command"
-* 
-* Command \CTEXsetup is deprecated.
-* \ctexset { subsection = { format+={\heiti \zihao {-3}} } } is set.
-*************************************************
-*************************************************
-* ctex warning: "deprecated-command"
-* 
-* Command \CTEXsetup is deprecated.
-* \ctexset { subsubsection = { format+={\heiti \zihao {4}} } } is set.
-*************************************************
-) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) (./main.aux
-(./Style/cover.aux))
+)
+(./Style/usc-cs-glossary.tex) (./main.aux (./Section/cover.aux)
+(./Section/abstract.aux) (./Section/section1.aux) (./Section/section2.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -1218,7 +1220,8 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 6.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 6.
- (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
+
+(/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 6.
@@ -1321,9 +1324,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 6.
-\openout2 = `./Style/cover.aux'.
+\openout2 = `./Section/cover.aux'.
 
-(./Style/cover.tex
+(./Section/cover.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.53937> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -1406,25 +1409,46 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 13--18
+\openout2 = `./Section/abstract.aux'.
+
+ (./Section/abstract.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--6
 
  []
 
-[3]
+[3
+
+])
+\openout2 = `./Section/section1.aux'.
+
+ (./Section/section1.tex
 File: ./Pictures/usc.png Graphic file (type QTm)
- <use  "./Pictures/usc.png" >
+ <use  "./Pictures/usc.png" >) [4
+
+
+]
+\openout2 = `./Section/section2.aux'.
+
+
+(./Section/section2.tex
 File: ./Pictures/usc.png Graphic file (type QTm)
- <use  "./Pictures/usc.png" > (./main.bbl)
+ <use  "./Pictures/usc.png" >) [5
+
+
+] (./main.bbl)
 
 AED: lastpage setting LastPage
-[4] [5] (./main.aux (./Style/cover.aux)) ) 
+[6
+
+] (./main.aux (./Section/cover.aux) (./Section/abstract.aux)
+(./Section/section1.aux) (./Section/section2.aux)) ) 
 Here is how much of TeX's memory you used:
- 20731 strings out of 493638
- 427067 string characters out of 6146797
- 422487 words of memory out of 5000000
- 23925 multiletter control sequences out of 15000+600000
+ 20762 strings out of 493638
+ 427716 string characters out of 6146797
+ 422547 words of memory out of 5000000
+ 23928 multiletter control sequences out of 15000+600000
  5014 words of font info for 62 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 71i,11n,79p,10433b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,11n,79p,10439b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (5 pages).
+Output written on main.pdf (6 pages).
