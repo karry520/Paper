@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  9 APR 2018 12:04
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  10 APR 2018 21:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -157,10 +157,16 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 (/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
 File: ctexopts.cfg 2016/02/02 v2.3 Option configuration file (CTEX)
 )
+*************************************************
+* ctex warning: "deprecated-option"
+* 
+* Option `cs4size' is deprecated.
+* Option `zihao=-4' is set.
+*************************************************
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count107
 \c@section=\count108
@@ -1047,8 +1053,8 @@ File: ctex-name-utf8.cfg 2016/02/02 v2.3 Caption with encoding UTF8 (CTEX)
 . 
 . Defining command \zihao with sig. 'm' on line 1053.
 .................................................
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctex-c5size.clo
-File: ctex-c5size.clo 2016/02/02 v2.3 c5size option (CTEX)
+(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctex-cs4size.clo
+File: ctex-cs4size.clo 2016/02/02 v2.3 cs4size option (CTEX)
 )
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -1127,7 +1133,7 @@ File: ctex.cfg 2016/02/02 v2.3 Configuration file (CTEX)
 * ctex warning: "deprecated-command"
 * 
 * Command \CTEXsetup is deprecated.
-* \ctexset { section = { beforeskip={12bp},afterskip={12bp} } } is set.
+* \ctexset { section = { beforeskip={0em},afterskip={8pt} } } is set.
 *************************************************
 ) (./Style/usc-cs-style.tex
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
@@ -1158,6 +1164,13 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count138
 \@thisrulewidth=\dimen186
 )
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count139
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -1172,9 +1185,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count139
-\Gm@cntv=\count140
-\c@Gm@tempcnt=\count141
+\Gm@cnth=\count140
+\Gm@cntv=\count141
+\c@Gm@tempcnt=\count142
 \Gm@bindingoffset=\dimen187
 \Gm@wd@mp=\dimen188
 \Gm@odd@mp=\dimen189
@@ -1203,16 +1216,12 @@ Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-)
-(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
-Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count142
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
-Package: setspace 2011/12/19 v6.7a set line spacing
-)
 (./Style/usc-cs-glossary.tex) (./main.aux (./Section/cover.aux)
-(./Section/abstract.aux) (./Section/section1.aux) (./Section/section2.aux))
+(./Section/abstract.aux) (./Section/section1-preface.aux)
+(./Section/section2-why-use-ssd.aux) (./Section/section3-how-to-use-ssd.aux)
+(./Section/section4-experimental-process-and-results.aux)
+(./Section/section5-conclusion.aux) (./Section/section6-acknowledgements.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -1319,12 +1328,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \topmargin=-37.00018pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=57.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1341,11 +1350,11 @@ Package lastpage Info: Please have a look at the pageslts package at
 
 (./Section/cover.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.53937> on input line 6.
+(Font)              <12.045> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 6.
+(Font)              <8> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 6.
+(Font)              <6> on input line 6.
 File: ./Pictures/usc.png Graphic file (type QTm)
  <use  "./Pictures/usc.png" >
 *************************************************
@@ -1406,14 +1415,14 @@ File: ./Pictures/usc.png Graphic file (type QTm)
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
-LaTeX Font Info:    Font shape `EU1/FandolSong-Regular(0)/m/sl' in size <10.539
-37> not available
+LaTeX Font Info:    Font shape `EU1/FandolSong-Regular(0)/m/sl' in size <12.045
+> not available
 (Font)              Font shape `EU1/FandolSong-Regular(0)/m/it' tried instead o
 n input line 15.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64723pt.
+ Make it at least 14.45398pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
@@ -1424,42 +1433,70 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 \openout2 = `./Section/abstract.aux'.
 
- (./Section/abstract.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--6
+ (./Section/abstract.tex [3
 
- []
+]) [4
 
-[3
+]
+\openout2 = `./Section/section1-preface.aux'.
 
-])
-\openout2 = `./Section/section1.aux'.
-
- (./Section/section1.tex [4
-
-
-]) [5]
-\openout2 = `./Section/section2.aux'.
-
- (./Section/section2.tex
+ (./Section/section1-preface.tex
 File: ./Pictures/usc.png Graphic file (type QTm)
 
-<use  "./Pictures/usc.png" >) [6
+<use  "./Pictures/usc.png" >) [5
+
+]
+\openout2 = `./Section/section2-why-use-ssd.aux'.
+
+ (./Section/section2-why-use-ssd.tex) [6
+
+
+]
+\openout2 = `./Section/section3-how-to-use-ssd.aux'.
+
+
+(./Section/section3-how-to-use-ssd.tex) [7
+
+
+]
+\openout2 = `./Section/section4-experimental-process-and-results.aux'.
+
+
+(./Section/section4-experimental-process-and-results.tex) [8
+
+
+]
+\openout2 = `./Section/section5-conclusion.aux'.
+
+
+(./Section/section5-conclusion.tex) [9
+
+
+]
+\openout2 = `./Section/section6-acknowledgements.aux'.
+
+
+(./Section/section6-acknowledgements.tex) [10
 
 
 ] (./main.bbl)
 
 AED: lastpage setting LastPage
-[7
+[11
 
 ] (./main.aux (./Section/cover.aux) (./Section/abstract.aux)
-(./Section/section1.aux) (./Section/section2.aux)) ) 
+(./Section/section1-preface.aux) (./Section/section2-why-use-ssd.aux)
+(./Section/section3-how-to-use-ssd.aux)
+(./Section/section4-experimental-process-and-results.aux)
+(./Section/section5-conclusion.aux) (./Section/section6-acknowledgements.aux)) 
+) 
 Here is how much of TeX's memory you used:
- 20987 strings out of 493638
- 430619 string characters out of 6146797
- 502371 words of memory out of 5000000
- 24144 multiletter control sequences out of 15000+600000
- 5022 words of font info for 63 fonts, out of 8000000 for 9000
+ 21053 strings out of 493638
+ 433951 string characters out of 6146797
+ 501611 words of memory out of 5000000
+ 24185 multiletter control sequences out of 15000+600000
+ 7068 words of font info for 61 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 71i,11n,79p,10439b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,11n,79p,10439b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (7 pages).
+Output written on main.pdf (11 pages).

@@ -1,6 +1,11 @@
 \RequirePackage{array}
 \RequirePackage{booktabs}
 \RequirePackage{graphicx}
+% 使用随机文本
+\RequirePackage{lipsum}
+% 用于调整目录行距
+\RequirePackage{setspace}
+
 
 % 版面设置
 \RequirePackage{geometry}
@@ -25,10 +30,11 @@
 % 首行缩进
 \setlength{\parindent}{2em}
 % 段落间距
-\setlength{\parskip}{0.5\baselineskip}
+% \setlength{\parskip}{0.5\baselineskip}
+\setlength{\parskip}{0em}
 % 设置行间距1.5倍
 \setlength{\baselineskip}{1.5\baselineskip}
-
+% \linespread{1.3}\selectfont
 
 % 脚注设置
 \renewcommand{\thefigure}{\thesection .\arabic{figure}}
@@ -36,7 +42,5 @@
 % 使用texbib管理参考文献
 \RequirePackage{cite}
 
-% 使用随机文本
-\RequirePackage{lipsum}
-% 用于调整目录行距
-\RequirePackage{setspace}
+
+
