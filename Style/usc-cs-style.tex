@@ -18,14 +18,25 @@
 \rfoot{}
 
 % 字体字号
-
+%\renewcommand{\normalsize}{\fontsize{10pt}{\baselineskip}\selectfont}
+\fontsize{12pt}{18pt}\selectfont
 
 % 段落样式
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+% 首行缩进
+\setlength{\parindent}{2em}
+% 段落间距
+\setlength{\parskip}{0.5\baselineskip}
+% 设置行间距1.5倍
+\setlength{\baselineskip}{1.5\baselineskip}
+
 
 % 脚注设置
 \renewcommand{\thefigure}{\thesection .\arabic{figure}}
 
 % 使用texbib管理参考文献
 \RequirePackage{cite}
+
+% 使用随机文本
+\RequirePackage{lipsum}
+% 用于调整目录行距
+\RequirePackage{setspace}

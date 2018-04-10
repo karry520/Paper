@@ -5,8 +5,7 @@
 \CTEXsetup[format+={\heiti \zihao{-3}}]{subsection}
 \CTEXsetup[format+={\heiti \zihao{4}}]{subsubsection}
 
-
-
+\CTEXsetup[beforeskip={12bp},afterskip={12bp}]{section}
 
 
 

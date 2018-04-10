@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  9 APR 2018 09:53
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  9 APR 2018 12:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1123,6 +1123,12 @@ File: ctex.cfg 2016/02/02 v2.3 Configuration file (CTEX)
 * Command \CTEXsetup is deprecated.
 * \ctexset { subsubsection = { format+={\heiti \zihao {4}} } } is set.
 *************************************************
+*************************************************
+* ctex warning: "deprecated-command"
+* 
+* Command \CTEXsetup is deprecated.
+* \ctexset { section = { beforeskip={12bp},afterskip={12bp} } } is set.
+*************************************************
 ) (./Style/usc-cs-style.tex
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
@@ -1192,11 +1198,18 @@ Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 \f@ncyO@erf=\skip67
 \f@ncyO@olf=\skip68
 \f@ncyO@orf=\skip69
-))
+)
 (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count142
+))
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (./Style/usc-cs-glossary.tex) (./main.aux (./Section/cover.aux)
 (./Section/abstract.aux) (./Section/section1.aux) (./Section/section2.aux))
@@ -1357,7 +1370,7 @@ File: ./Pictures/usc.png Graphic file (type QTm)
 * 
 * Font 'FandolKai-Regular' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_FandolKai-Regular_int=\count142
+\g__fontspec_family_FandolKai-Regular_int=\count143
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1376,7 +1389,7 @@ File: ./Pictures/usc.png Graphic file (type QTm)
 * 
 * Font 'FandolHei-Regular' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_FandolHei-Regular_int=\count143
+\g__fontspec_family_FandolHei-Regular_int=\count144
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1396,7 +1409,7 @@ File: ./Pictures/usc.png Graphic file (type QTm)
 LaTeX Font Info:    Font shape `EU1/FandolSong-Regular(0)/m/sl' in size <10.539
 37> not available
 (Font)              Font shape `EU1/FandolSong-Regular(0)/m/it' tried instead o
-n input line 12.
+n input line 15.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1421,34 +1434,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--6
 ])
 \openout2 = `./Section/section1.aux'.
 
- (./Section/section1.tex
-File: ./Pictures/usc.png Graphic file (type QTm)
- <use  "./Pictures/usc.png" >) [4
+ (./Section/section1.tex [4
 
 
-]
+]) [5]
 \openout2 = `./Section/section2.aux'.
 
-
-(./Section/section2.tex
+ (./Section/section2.tex
 File: ./Pictures/usc.png Graphic file (type QTm)
- <use  "./Pictures/usc.png" >) [5
+
+<use  "./Pictures/usc.png" >) [6
 
 
 ] (./main.bbl)
 
 AED: lastpage setting LastPage
-[6
+[7
 
 ] (./main.aux (./Section/cover.aux) (./Section/abstract.aux)
 (./Section/section1.aux) (./Section/section2.aux)) ) 
 Here is how much of TeX's memory you used:
- 20762 strings out of 493638
- 427716 string characters out of 6146797
- 422547 words of memory out of 5000000
- 23928 multiletter control sequences out of 15000+600000
- 5014 words of font info for 62 fonts, out of 8000000 for 9000
+ 20987 strings out of 493638
+ 430619 string characters out of 6146797
+ 502371 words of memory out of 5000000
+ 24144 multiletter control sequences out of 15000+600000
+ 5022 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 71i,11n,79p,10439b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,11n,79p,10439b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (6 pages).
+Output written on main.pdf (7 pages).

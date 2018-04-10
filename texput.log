@@ -1,18 +1,18 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  8 APR 2018 10:47
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  9 APR 2018 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**usc.tex
+**usc-cs.tex
 
 ! Emergency stop.
-<*> usc.tex
-           
+<*> usc-cs.tex
+              
 *** (job aborted, file error in nonstop mode)
 
  
 Here is how much of TeX's memory you used:
  2 strings out of 493638
- 13 string characters out of 6146797
+ 16 string characters out of 6146797
  53573 words of memory out of 5000000
  3505 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
