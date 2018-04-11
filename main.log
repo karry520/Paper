@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  10 APR 2018 21:12
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  10 APR 2018 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1415,18 +1415,7 @@ File: ./Pictures/usc.png Graphic file (type QTm)
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
-LaTeX Font Info:    Font shape `EU1/FandolSong-Regular(0)/m/sl' in size <12.045
-> not available
-(Font)              Font shape `EU1/FandolSong-Regular(0)/m/it' tried instead o
-n input line 15.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.45398pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2
+ [2
 
 
 
@@ -1435,54 +1424,53 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  (./Section/abstract.tex [3
 
-]) [4
-
-]
+])
 \openout2 = `./Section/section1-preface.aux'.
 
  (./Section/section1-preface.tex
 File: ./Pictures/usc.png Graphic file (type QTm)
 
-<use  "./Pictures/usc.png" >) [5
+<use  "./Pictures/usc.png" >) [4
+
 
 ]
 \openout2 = `./Section/section2-why-use-ssd.aux'.
 
- (./Section/section2-why-use-ssd.tex) [6
+ (./Section/section2-why-use-ssd.tex) [5
 
 
 ]
 \openout2 = `./Section/section3-how-to-use-ssd.aux'.
 
 
-(./Section/section3-how-to-use-ssd.tex) [7
+(./Section/section3-how-to-use-ssd.tex) [6
 
 
 ]
 \openout2 = `./Section/section4-experimental-process-and-results.aux'.
 
 
-(./Section/section4-experimental-process-and-results.tex) [8
+(./Section/section4-experimental-process-and-results.tex) [7
 
 
 ]
 \openout2 = `./Section/section5-conclusion.aux'.
 
 
-(./Section/section5-conclusion.tex) [9
+(./Section/section5-conclusion.tex) [8
 
 
 ]
 \openout2 = `./Section/section6-acknowledgements.aux'.
 
 
-(./Section/section6-acknowledgements.tex) [10
+(./Section/section6-acknowledgements.tex) [9
 
 
 ] (./main.bbl)
 
 AED: lastpage setting LastPage
-[11
+[10
 
 ] (./main.aux (./Section/cover.aux) (./Section/abstract.aux)
 (./Section/section1-preface.aux) (./Section/section2-why-use-ssd.aux)
@@ -1491,12 +1479,12 @@ AED: lastpage setting LastPage
 (./Section/section5-conclusion.aux) (./Section/section6-acknowledgements.aux)) 
 ) 
 Here is how much of TeX's memory you used:
- 21053 strings out of 493638
- 433951 string characters out of 6146797
+ 21047 strings out of 493638
+ 433776 string characters out of 6146797
  501611 words of memory out of 5000000
- 24185 multiletter control sequences out of 15000+600000
- 7068 words of font info for 61 fonts, out of 8000000 for 9000
+ 24180 multiletter control sequences out of 15000+600000
+ 7060 words of font info for 60 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  71i,11n,79p,10439b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (11 pages).
+Output written on main.pdf (10 pages).
