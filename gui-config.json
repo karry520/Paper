@@ -1,0 +1,48 @@
+{
+    "configs": [
+        {
+            "method": "rc4-md5",
+            "password": "654123",
+            "remarks": "me-hk",
+            "server": "hk1.i7.lc",
+            "server_port": 11060
+        },
+        {
+            "method": "rc4-md5",
+            "password": "189756",
+            "remarks": "bees-jp01",
+            "server": "jp01.ipip.pm",
+            "server_port": 53207
+        },
+        {
+            "method": "rc4-md5",
+            "password": "654123",
+            "remarks": "me-sg",
+            "server": "sg.i7.lc",
+            "server_port": 11060
+        },
+        {
+            "method": "rc4-md5",
+            "password": "654123",
+            "remarks": "me-jp",
+            "server": "jp5.i7.lc",
+            "server_port": 11060
+        },
+        {
+            "method": "rc4-md5",
+            "password": "189756",
+            "remarks": "bees-jp02",
+            "server": "jp02.ipip.pm",
+            "server_port": 53207
+        },
+        {
+            "method": "rc4-md5",
+            "password": "189756",
+            "remarks": "bees-us01",
+            "server": "us01.ipip.pm",
+            "server_port": 53207
+        }
+    ],
+    "localPort": 1080,
+    "shareOverLan": false
+}
