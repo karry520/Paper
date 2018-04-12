@@ -2,46 +2,55 @@ This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: ./Section/cover.aux
+A level-1 auxiliary file: ./Section/abstract.aux
+A level-1 auxiliary file: ./Section/section1-preface.aux
+A level-1 auxiliary file: ./Section/section2-why-use-ssd.aux
+A level-1 auxiliary file: ./Section/section3-how-to-use-ssd.aux
+A level-1 auxiliary file: ./Section/section4-experimental-process-and-results.aux
+A level-1 auxiliary file: ./Section/section5-conclusion.aux
+A level-1 auxiliary file: ./Section/section6-acknowledgements.aux
 The style file: plain.bst
+I found no \citation commands---while reading file main.aux
 Database file #1: reference.bib
-You've used 1 entry,
+You've used 0 entries,
             2118 wiz_defined-function locations,
-            504 strings with 4266 characters,
-and the built_in function-call counts, 533 in all, are:
-= -- 51
-> -- 23
-< -- 1
-+ -- 9
-- -- 8
-* -- 35
-:= -- 82
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 7
+            505 strings with 4259 characters,
+and the built_in function-call counts, 18 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 23
-empty$ -- 42
-format.name$ -- 8
-if$ -- 117
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 10
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 0
 quote$ -- 0
-skip$ -- 20
+skip$ -- 1
 stack$ -- 0
-substring$ -- 37
-swap$ -- 11
-text.length$ -- 1
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 0
 warning$ -- 0
-while$ -- 5
-width$ -- 2
-write$ -- 13
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There was 1 error message)

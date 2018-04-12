@@ -1,22 +1,109 @@
 \section{前言}
-% 正文
-在深度学习正式介入之前，传统的目标检测方法都是区域选择提取特征分类回归三部曲，这样就有两个难以解决的问题；其一是区域选择的策略效果差、时间复杂度高；其二是手工提取的特征鲁棒性较差。云计算时代来临后，目标检测算法大家族主要划分为两大派系，一个是R-CNN系两刀流，另一个则是以YOLO为代表的一刀流派下面分别解释一下两刀流和一刀流。 
-\begin{uscequation}
-	a^2 + b^2 = c^2 
-\end{uscequation}
-等等。
+% 一些关于序号的设置
+\setcounter{figure}{0}
 
-在深度学习正式介入之前，传统的目标检测方法都是区域选择提取特征分类回归三部曲，这样就有两个难以解决的问题；其一是区域选择的策略效果差、时间复杂度高；其二是手工提取的特征鲁棒性较差。云计算时代来临后，目标检测算法大家族主要划分为两大派系，一个是R-CNN系两刀流，另一个则是以YOLO为代表的一刀流派下面分别解释一下两刀流和一刀流。$a + b = c$，哈哈。
+% 正文
+目标检测一直是计算机视觉的基础问题，在 2010 年左右就开始停滞不前了。自 2013 年一篇论文的发表，目标检测从原始的传统手工提取特征方法变成了基于卷积神经网络的特征提取，从此一发不可收拾。根着历史的潮流，简要地探讨“目标检测”算法的两种思想和这些思想引申出的算法，主要涉及那些主流算法。
+\subsection{概述}
+在深度学习正式介入之前，传统的“目标检测”方法都是 区域选择、提取特征、分类回归 三部曲，这样就有两个难以解决的问题；其一是区域选择的策略效果差、时间复杂度高；其二是手工提取的特征鲁棒性较差。云计算时代来临后，“目标检测”算法大家族主要划分为两大派系，一个是R-CNN系两刀流，另一个则是以YOLO为代表的一刀流派。下面分别解释一下“两刀流”和“一刀流”。
+
+\textbf{两刀流:}顾名思义，两刀解决问题：
+
+1、生成可能区域（Region Proposal） \& CNN 提取特征 
+
+2、放入分类器分类并修正位置 \\
+这一流派的算法都离不开 Region Proposal ，即是优点也是缺点，主要代表人物就是 R-CNN 系。
+
+\textbf{一刀流:}顾名思义，一刀解决问题，直接对预测的目标物体进行回归。
+回归解决问题简单快速，但是太粗暴了，主要代表人物是 YOLO 和 SSD 。
+
+无论“两刀流”还是“一刀流”，他们都是在同一个天平下选取一个平衡点、或者选取一个极端——要么准，要么快。两刀流的天平主要倾向准，一刀流的天平主要倾向快。但最后万剑归宗，大家也找到了自己的平衡，平衡点的有略微的不同。接下来我们花开两朵各表一支，一朵 两刀流 的前世今生，另一朵 一刀流 的发展历史。
+\subsection{R-CNN系列}
+R-CNN 其实是一个很大的家族，自从 rbg 大神发表那篇论文，子孙无数、桃李满天下。在此，我们只探讨 R-CNN 直系亲属，他们的发展顺序如下：
+
+\vspace{10pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%将要提到glossary文档中%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 流程图定义基本形状
+\tikzstyle{Node} = [rectangle, rounded corners, minimum width = 2cm, minimum height=1cm,text centered, draw = black, fill = blue!40]
+% 箭头形式
+\tikzstyle{arrow} = [->,>=stealth]
+\begin{tikzpicture}[node distance=3cm]
+\node (rcnn) [Node]
+{R-CNN};
+\node (sppnet) [Node,right of=rcnn]
+{SPP-Net};
+\node (fastrcnn) [Node,right of=sppnet]
+{Fast R-CNN};
+\node (fasterrcnn) [Node,right of=fastrcnn]
+{Faster R-CNN};
+\node (maskrcnn) [Node,right of=fasterrcnn]
+{Mask R-CNN};
+%连接具体形状
+\draw [arrow] (rcnn) -- (sppnet);
+\draw [arrow] (sppnet) -- (fastrcnn);
+\draw [arrow] (fastrcnn) -- (fasterrcnn);
+\draw [arrow] (fasterrcnn) -- (maskrcnn);
+\end{tikzpicture}
+
+他们在整个家族进化的过程中，一致暗埋了一条主线：充分榨干 feature maps 的价值。
+\subsubsection{RCNN}
+这个模型，是利用卷积神经网络来做「目标检测」的开山之作，其意义深远不言而喻。
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./Pictures/rcnn-regions_with_cnn_features.png}	
+	\caption{RCNN}
+\end{figure}
+
+\textbf{解决问题一、速度}
+传统的区域选择使用滑窗，每滑一个窗口检测一次，相邻窗口信息重叠高，检测速度慢。R-CNN 使用一个启发式方法（Selective search），先生成候选区域再检测，降低信息冗余程度，从而提高检测速度。
+
+\textbf{解决问题二、特征提取}
+传统的手工提取特征鲁棒性差，限于如颜色、纹理等 低层次（Low level）的特征。使用 CNN （卷积神经网络）提取特征，可以提取更高层面的抽象特征，从而提高特征的鲁棒性。
+
+该方法将 PASCAL VOC 上的检测率从 35.1\% 提升到 53.7 \% ，提高了好几个量级。虽然比传统方法好很多，但是从现在的眼光看，只能是初窥门径。
+\subsubsection{SPP Net}
+R-CNN 提出后的一年，以何恺明、任少卿为首的团队提出了 SPP Net ，这才是真正摸到了卷积神经网络的脉络。也不奇怪，毕竟这些人鼓捣出了 ResNet 残差网络，对神经网络的理解是其他人没法比的。尽管 R-CNN 效果不错，但是他还有两个硬伤：
+
+\textbf{硬伤一、算力冗余}
+先生成候选区域，再对区域进行卷积，这里有两个问题：其一是候选区域会有一定程度的重叠，对相同区域进行重复卷积；其二是每个区域进行新的卷积需要新的存储空间。何恺明等人意识到这个可以优化，于是把先生成候选区域再卷积，变成了先卷积后生成区域。“简单地”改变顺序，不仅减少存储量而且加快了训练速度。
+
+\textbf{硬伤二、图片缩放}
+无论是剪裁（Crop）还是缩放（Warp），在很大程度上会丢失图片原有的信息导致训练效果不好，如上图所示。直观的理解，把车剪裁成一个门，人看到这个门也不好判断整体是一辆车；把一座高塔缩放成一个胖胖的塔，人看到也没很大把握直接下结论。人都做不到，机器的难度就可想而知了。
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./Pictures/sppnet_crop_warp.png}	
+	\caption{RCNN}
+\end{figure}
+何恺明等人发现了这个问题，于是思索有什么办法能不对图片进行变形，将图片原汁原味地输入进去学习。最后，他们发现问题的根源是 FC Layer（全连接层）需要确定输入维度，于是他们在输入全连接层前定义一个特殊的池化层，将输入的任意尺度 feature maps 组合成特定维度的输出，这个组合可以是不同大小的拼凑，如同拼凑七巧板般。举个例子，我们要输入的维度 64∗256 ，那么我们可以这样组合 32∗256+16∗256+8∗256+8∗256 。
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./Pictures/sppnet_pool_layer.png}	
+	\caption{RCNN}
+\end{figure}
+SPP Net 的出现是如同一道惊雷，不仅减少了计算冗余，更重要的是打破了固定尺寸输入这一束缚，让后来者享受到这一缕阳光。
+
+\subsubsection{Fast R-CNN}
+\subsubsection{Faster R-CNN}
+\subsubsection{Mask R-CNN}
+\subsection{YOLO系列}
+\subsubsection{YOLO}
+\subsubsection{SSD}
+\subsubsection{YOLO9000}
+\subsection{小结}
+%\begin{uscequation}
+%	a^2 + b^2 = c^2 
+%\end{uscequation}
 
 
 % 图片
-\setcounter{figure}{0}
-\begin{figure}[h]
-	\centering
-	\includegraphics{./Pictures/usc.png}	
-	\caption{南华大学校徽}	
-\end{figure}
-在深度学习正式介入之前，传统的目标检测方法都是区域选择提取特征分类回归三部曲，这样就有两个难以解决的问题；其一是区域选择的策略效果差、时间复杂度高；其二是手工提取的特征鲁棒性较差。云计算时代来临后，目标检测算法大家族主要划分为两大派系，一个是R-CNN系两刀流，我参考了这篇文章\cite{girshick2014rich}	
+%\setcounter{figure}{0}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics{./Pictures/usc.png}	
+%	\caption{南华大学校徽}	
+%\end{figure}
+
 % 表格
 
 % 公式
