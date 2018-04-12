@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  12 APR 2018 10:59
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.3)  12 APR 2018 21:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1744,57 +1744,56 @@ LaTeX Font Warning: Font shape `EU1/ppl/bx/n' undefined
  (./Section/section1-preface.tex
 File: ./Pictures/rcnn-regions_with_cnn_features.png Graphic file (type QTm)
 
-<use  "./Pictures/rcnn-regions_with_cnn_features.png" >
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4
+<use  "./Pictures/rcnn-regions_with_cnn_features.png" > [4
 
 
 ]
 File: ./Pictures/sppnet_crop_warp.png Graphic file (type QTm)
- <use  "./Pictures/sppnet_crop_warp.png" >
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5]
+<use  "./Pictures/sppnet_crop_warp.png" > [5]
 File: ./Pictures/sppnet_pool_layer.png Graphic file (type QTm)
- <use  "./Pictures/sppnet_pool_layer.png" >
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+<use  "./Pictures/sppnet_pool_layer.png" >
+File: ./Pictures/fast_rcnn.png Graphic file (type QTm)
+ <use  "./Pictures/fast_rcnn.png" >
+[6] [7]
+File: ./Pictures/faster_rcnn.png Graphic file (type QTm)
+ <use  "./Pictures/faster_rcnn.png" >
+File: ./Pictures/faster_rcnn_anchor.png Graphic file (type QTm)
 
-) [6] [7]
+<use  "./Pictures/faster_rcnn_anchor.png" > [8]) [9] [10]
 \openout2 = `./Section/section2-why-use-ssd.aux'.
 
- (./Section/section2-why-use-ssd.tex) [8
+
+(./Section/section2-why-use-ssd.tex) [11
 
 
 ]
 \openout2 = `./Section/section3-how-to-use-ssd.aux'.
 
 
-(./Section/section3-how-to-use-ssd.tex) [9
+(./Section/section3-how-to-use-ssd.tex) [12
 
 
 ]
 \openout2 = `./Section/section4-experimental-process-and-results.aux'.
 
 
-(./Section/section4-experimental-process-and-results.tex) [10
+(./Section/section4-experimental-process-and-results.tex) [13
 
 
 ]
 \openout2 = `./Section/section5-conclusion.aux'.
 
 
-(./Section/section5-conclusion.tex) [11
+(./Section/section5-conclusion.tex) [14
 
 
 ]
 \openout2 = `./Section/section6-acknowledgements.aux'.
 
 
-(./Section/section6-acknowledgements.tex) [12
+(./Section/section6-acknowledgements.tex) [15
 
 
 ] (./main.bbl
@@ -1803,7 +1802,7 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 ) 
 AED: lastpage setting LastPage
-[13
+[16
 
 ] (./main.aux (./Section/cover.aux) (./Section/abstract.aux)
 (./Section/section1-preface.aux) (./Section/section2-why-use-ssd.aux)
@@ -1815,12 +1814,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32119 strings out of 493638
- 679563 string characters out of 6146797
- 722641 words of memory out of 5000000
- 35021 multiletter control sequences out of 15000+600000
+ 32137 strings out of 493638
+ 680367 string characters out of 6146797
+ 722938 words of memory out of 5000000
+ 35036 multiletter control sequences out of 15000+600000
  7052 words of font info for 59 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  71i,12n,79p,10439b,567s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (13 pages).
+Output written on main.pdf (16 pages).
