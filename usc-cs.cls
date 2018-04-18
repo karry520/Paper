@@ -8,6 +8,6 @@
 % 标题前后间距设置
 \CTEXsetup[beforeskip={0em},afterskip={8pt}]{section}
 \CTEXsetup[beforeskip={0em},afterskip={0em}]{subsection}
-
+\CTEXsetup[beforeskip={0em},afterskip={0em}]{subsubsection}
 
 
