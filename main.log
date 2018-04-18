@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  18 APR 2018 21:02
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  18 APR 2018 21:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1135,6 +1135,12 @@ File: ctex.cfg 2016/02/02 v2.3 Configuration file (CTEX)
 * Command \CTEXsetup is deprecated.
 * \ctexset { section = { beforeskip={0em},afterskip={8pt} } } is set.
 *************************************************
+*************************************************
+* ctex warning: "deprecated-command"
+* 
+* Command \CTEXsetup is deprecated.
+* \ctexset { subsection = { beforeskip={0em},afterskip={0em} } } is set.
+*************************************************
 ) (./Style/usc-cs-style.tex
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
@@ -1521,7 +1527,7 @@ File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
 \arrowsize=\dimen297
 ))) (./Style/usc-cs-glossary.tex) (./main.aux (./Section/cover.aux)
 (./Section/zh-abstract.aux) (./Section/en-abstract.aux)
-(./Section/section1-preface.aux)
+(./Section/section1-introduction.aux)
 (./Section/section2-object-detection-correlation-algorithm.aux)
 (./Section/section3-algorithm-design.aux)
 (./Section/section4-algorithm-implementation.aux)
@@ -1750,16 +1756,17 @@ LaTeX Font Warning: Font shape `EU1/ppl/bx/n' undefined
 
 
 ])
-\openout2 = `./Section/section1-preface.aux'.
+\openout2 = `./Section/section1-introduction.aux'.
 
- (./Section/section1-preface.tex) [5
+ (./Section/section1-introduction.tex (./Section/section1/subsection1.tex)
+(./Section/section1/subsection2.tex) (./Section/section1/subsection3.tex))
+[5
 
 
 ]
 \openout2 = `./Section/section2-object-detection-correlation-algorithm.aux'.
 
-
-(./Section/section2-object-detection-correlation-algorithm.tex) [6
+ (./Section/section2-object-detection-correlation-algorithm.tex) [6
 
 
 ]
@@ -1806,7 +1813,7 @@ AED: lastpage setting LastPage
 [12
 
 ] (./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
-(./Section/en-abstract.aux) (./Section/section1-preface.aux)
+(./Section/en-abstract.aux) (./Section/section1-introduction.aux)
 (./Section/section2-object-detection-correlation-algorithm.aux)
 (./Section/section3-algorithm-design.aux)
 (./Section/section4-algorithm-implementation.aux)
@@ -1818,9 +1825,9 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 31923 strings out of 493638
- 670235 string characters out of 6146796
- 716435 words of memory out of 5000000
+ 31933 strings out of 493638
+ 670531 string characters out of 6146796
+ 716419 words of memory out of 5000000
  34814 multiletter control sequences out of 15000+600000
  7044 words of font info for 58 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191

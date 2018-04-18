@@ -4,9 +4,10 @@
 \CTEXsetup[name={第,章},number={\chinese{section}},format+={\heiti \zihao{3}}]{section}
 \CTEXsetup[format+={\heiti \zihao{-3}}]{subsection}
 \CTEXsetup[format+={\heiti \zihao{4}}]{subsubsection}
+
 % 标题前后间距设置
 \CTEXsetup[beforeskip={0em},afterskip={8pt}]{section}
-
+\CTEXsetup[beforeskip={0em},afterskip={0em}]{subsection}
 
 
 
