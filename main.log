@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  19 APR 2018 20:27
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  19 APR 2018 21:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1531,9 +1531,65 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
 \arrowsize=\dimen297
-))) (./Style/usc-cs-glossary.tex) (./main.aux (./Section/cover.aux)
-(./Section/zh-abstract.aux) (./Section/en-abstract.aux)
-(./Section/section1-introduction.aux)
+)) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count163
+\lst@gtempboxa=\box64
+\lst@token=\toks33
+\lst@length=\count164
+\lst@currlwidth=\dimen298
+\lst@column=\count165
+\lst@pos=\count166
+\lst@lostspace=\dimen299
+\lst@width=\dimen300
+\lst@newlines=\count167
+\lst@lineno=\count168
+\lst@maxwidth=\dimen301
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count169
+\lst@skipnumbers=\count170
+\lst@framebox=\box65
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen302
+\captionmargin@=\dimen303
+\captionwidth=\dimen304
+\caption@tempdima=\dimen305
+\caption@indent=\dimen306
+\caption@parindent=\dimen307
+\caption@hangindent=\dimen308
+)
+\c@ContinuedFloat=\count171
+Package caption Info: listings package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+))
+(./Style/usc-cs-glossary.tex)
+(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+Package: xeCJK-listings 2016/02/10 v3.3.4 xeCJK patch file for listings
+\l__xeCJK_listings_max_char_int=\count172
+\l__xeCJK_listings_flag_int=\count173
+)
+(./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
+(./Section/en-abstract.aux) (./Section/section1-introduction.aux)
 (./Section/section2-object-detection-correlation-algorithm.aux)
 (./Section/section3-algorithm-design.aux)
 (./Section/section4-algorithm-implementation.aux)
@@ -1671,6 +1727,9 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 6.
 ABD: EveryShipout initializing macros
+\c@lstlisting=\count174
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 \openout2 = `./Section/cover.aux'.
 
  (./Section/cover.tex
@@ -1705,7 +1764,7 @@ File: ./Pictures/usc.png Graphic file (type QTm)
 * 
 * Font 'FandolKai-Regular' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_FandolKai-Regular_int=\count163
+\g__fontspec_family_FandolKai-Regular_int=\count175
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1728,7 +1787,7 @@ LaTeX Font Warning: Font shape `EU1/ppl/bx/n' undefined
 * 
 * Font 'FandolHei-Regular' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_FandolHei-Regular_int=\count164
+\g__fontspec_family_FandolHei-Regular_int=\count176
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1749,27 +1808,26 @@ LaTeX Font Warning: Font shape `EU1/ppl/bx/n' undefined
 
 
 
-]
+] [3]
 \openout2 = `./Section/zh-abstract.aux'.
 
- (./Section/zh-abstract.tex [3
+ (./Section/zh-abstract.tex [4
 
 ])
 \openout2 = `./Section/en-abstract.aux'.
 
- (./Section/en-abstract.tex
-[4
+ (./Section/en-abstract.tex [5
 
 
 ])
 \openout2 = `./Section/section1-introduction.aux'.
 
- (./Section/section1-introduction.tex (./Section/section1/subsection1-1.tex) (.
-/Section/section1/subsection1-2.tex [5
+ (./Section/section1-introduction.tex
+(./Section/section1/subsection1-1.tex) (./Section/section1/subsection1-2.tex
+[6
 
 
-])
-(./Section/section1/subsection1-3.tex)) [6]
+]) (./Section/section1/subsection1-3.tex)) [7]
 \openout2 = `./Section/section2-object-detection-correlation-algorithm.aux'.
 
 
@@ -1777,7 +1835,7 @@ LaTeX Font Warning: Font shape `EU1/ppl/bx/n' undefined
 (./Section/section2/section2-1.tex) (./Section/section2/section2-2.tex
 File: ./Pictures/rcnn-regions_with_cnn_features.png Graphic file (type QTm)
 
-<use  "./Pictures/rcnn-regions_with_cnn_features.png" > [7
+<use  "./Pictures/rcnn-regions_with_cnn_features.png" > [8
 
 
 ]
@@ -1789,61 +1847,97 @@ File: ./Pictures/sppnet_pool_layer.png Graphic file (type QTm)
 <use  "./Pictures/sppnet_pool_layer.png" >
 File: ./Pictures/fast_rcnn.png Graphic file (type QTm)
  <use  "./Pictures/fast_rcnn.png" >
-[8] [9]
+[9] [10]
 File: ./Pictures/faster_rcnn.png Graphic file (type QTm)
  <use  "./Pictures/faster_rcnn.png" >
 File: ./Pictures/faster_rcnn_anchor.png Graphic file (type QTm)
 
-<use  "./Pictures/faster_rcnn_anchor.png" > [10] [11])
+<use  "./Pictures/faster_rcnn_anchor.png" > [11] [12])
 (./Section/section2/section2-3.tex
 File: ./Pictures/od_regressor.png Graphic file (type QTm)
  <use  "./Pictures/od_regressor.png" >
-[12] [13]) (./Section/section2/section2-4.tex)) [14]
+[13] [14]) (./Section/section2/section2-4.tex)) [15]
 \openout2 = `./Section/section3-algorithm-design.aux'.
 
 
 (./Section/section3-algorithm-design.tex (./Section/section3/section3-1.tex)
 (./Section/section3/section3-2.tex
 File: ./Pictures/ssd_(1).jpg Graphic file (type QTm)
- <use  "./Pictures/ssd_(1).jpg" > [15
-
-
-]
+ <use  "./Pictures/ssd_(1).jpg" >
 File: ./Pictures/ssd_(2).jpg Graphic file (type QTm)
 
-<use  "./Pictures/ssd_(2).jpg" >
+<use  "./Pictures/ssd_(2).jpg" > [16
+
+
+] [17]
 File: ./Pictures/ssd_(3).jpg Graphic file (type QTm)
  <use  "./Pictures/ssd_(3).jpg" >)
-(./Section/section3/section3-3.tex [16]
+(./Section/section3/section3-3.tex
 File: ./Pictures/ssd_modual.jpg Graphic file (type QTm)
  <use  "./Pictures/ssd_modual.jpg" >)
-(./Section/section3/section3-4.tex [17]) (./Section/section3/section3-5.tex
-[18]) (./Section/section3/section3-6.tex)) [19]
+(./Section/section3/section3-4.tex [18]) (./Section/section3/section3-5.tex
+[19] [20]) (./Section/section3/section3-6.tex)) [21]
 \openout2 = `./Section/section4-algorithm-implementation.aux'.
 
 
-(./Section/section4-algorithm-implementation.tex) [20
+(./Section/section4-algorithm-implementation.tex
+(./Section/section4/section4-1.tex) (./Section/section4/section4-2.tex
+*************************************************
+* fontspec warning: "script-not-exist"
+* 
+* Font 'FandolFang-Regular' does not contain script 'CJK'.
+*************************************************
+\g__fontspec_family_FandolFang-Regular_int=\count177
+LaTeX Font Info:    Try loading font information for EU1+pcr on input line 1.
+LaTeX Font Info:    No file EU1pcr.fd. on input line 1.
+
+LaTeX Font Warning: Font shape `EU1/pcr/m/n' undefined
+(Font)              using `EU1/lmr/m/n' instead on input line 1.
+
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FandolFang-Regular(0)' created for font 'FandolFang-Regular'
+. with options [Script={CJK},Extension={.otf},AutoFakeBold={4}].
+. 
+. This font family consists of the following NFSS series/shapes:
+. - 'normal' (m/n) with NFSS spec.: <->"[FandolFang-Regular.otf]/OT:"
+. - 'small caps'  (m/sc) with NFSS spec.: - 'bold' (bx/n) with NFSS spec.:
+. <->"[FandolFang-Regular.otf]/OT:embolden=4;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+.................................................
+
+LaTeX Font Warning: Font shape `EU1/pcr/bx/n' undefined
+(Font)              using `EU1/pcr/m/n' instead on input line 2.
+
+
+Overfull \hbox (4.66061pt too wide) in paragraph at lines 7--8
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) (./Section/section4/section4-3.tex) (./Section/section4/section4-4.tex)
+(./Section/section4/section4-5.tex)) [22
 
 
 ]
 \openout2 = `./Section/section5-experimental-results-and-analysis.aux'.
 
 
-(./Section/section5-experimental-results-and-analysis.tex) [21
+(./Section/section5-experimental-results-and-analysis.tex) [23
 
 
 ]
 \openout2 = `./Section/section6-summary-and-outlook.aux'.
 
 
-(./Section/section6-summary-and-outlook.tex) [22
+(./Section/section6-summary-and-outlook.tex) [24
 
 
 ]
 \openout2 = `./Section/section7-acknowledgements.aux'.
 
 
-(./Section/section7-acknowledgements.tex) [23
+(./Section/section7-acknowledgements.tex) [25
 
 
 ] (./main.bbl
@@ -1852,7 +1946,7 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 ) 
 AED: lastpage setting LastPage
-[24
+[26
 
 ] (./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
 (./Section/en-abstract.aux) (./Section/section1-introduction.aux)
@@ -1867,12 +1961,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32232 strings out of 493638
- 684095 string characters out of 6146796
- 724406 words of memory out of 5000000
- 35067 multiletter control sequences out of 15000+600000
- 7060 words of font info for 60 fonts, out of 8000000 for 9000
+ 34715 strings out of 493638
+ 725133 string characters out of 6146796
+ 791667 words of memory out of 5000000
+ 37499 multiletter control sequences out of 15000+600000
+ 7076 words of font info for 62 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 71i,12n,79p,10439b,567s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,12n,79p,10439b,1146s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (24 pages).
+Output written on main.pdf (26 pages).
