@@ -1,0 +1,26 @@
+训练SSD和基于region proposal方法的最大区别就是：SSD需要精确的将ground truth映射到输出结果上。这样才能提高检测的准确率。文中主要采取了以下几个技巧来提高检测的准确度。
+
+\textbf{匹配策略}
+Default boxes生成器
+Hard Negative Mining
+Data Augmentation
+
+\textbf{1. 匹配策略}
+
+这里的匹配是指的ground truth和Default box的匹配。这里采取的方法与 Faster R-CNN中的方法类似。主要是分为两步：第一步是根据最大的overlap将ground truth和default box进行匹配(根据ground truth找到default box中IOU最大的作为正样本)，第二步是将default boxes与overlap大于某个阈值(目标检测中通常选取0.5，Faster R-CNN中选取的是0.7)的ground truth进行匹配。
+
+\textbf{2. Default Boxes生成器}
+
+\textbf{3. Hard Negative Mining}
+经过匹配策略会得到大量的负样本，只有少量的正样本。这样导致了正负样本不平衡，经过试验表明，正负样本的不均衡是导致检测正确率低下的一个重要原因。所以在训练过程中采用了Hard Negative Mining的策略，根据Confidence Loss对所有的box进行排序，使得正负样本的比例控制在1:3之内，经过作者实验，这样做能提高4\%左右的准确度。
+
+\textbf{4. Data Augmentation}
+
+为了模型更加鲁棒，需要使用不同尺度目标的输入，作者对数据进行了增强处理。
+
+1、使用整张图像作为输入
+
+2、使用IOU和目标物体为0.1、0.3、0.5、0.7和0.9的patch，这些patch在原图的大小的[0.1, 1]之间，相应的宽高比在[1/2, 2]之间。
+
+3、随机采取一个patch
+
