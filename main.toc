@@ -30,13 +30,13 @@
 \contentsline {subsubsection}{\numberline {3.5.3}数据增强}{21}
 \contentsline {subsection}{\numberline {3.6}本章小结}{21}
 \contentsline {section}{\numberline {第四章}瓦片损害检测算法实现}{22}
-\contentsline {subsection}{\numberline {4.1}数据标注}{22}
+\contentsline {subsection}{\numberline {4.1}图像预处理}{22}
 \contentsline {subsubsection}{\numberline {4.1.1}标注工具}{22}
 \contentsline {subsubsection}{\numberline {4.1.2}数据集}{22}
 \contentsline {subsection}{\numberline {4.2}网络模型实现代码}{22}
 \contentsline {subsection}{\numberline {4.3}损失函数}{22}
-\contentsline {subsection}{\numberline {4.4}模型训练代码}{22}
-\contentsline {subsection}{\numberline {4.5}测试代码}{22}
+\contentsline {subsection}{\numberline {4.4}模型训练/测试代码}{22}
+\contentsline {subsection}{\numberline {4.5}瓦片检测}{22}
 \contentsline {section}{\numberline {第五章}实验结果与分析}{23}
 \contentsline {section}{\numberline {第六章}总结及展望}{24}
 \contentsline {section}{\numberline {第七章}致谢}{25}
