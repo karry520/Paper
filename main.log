@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  20 APR 2018 20:05
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  20 APR 2018 21:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1794,15 +1794,15 @@ LaTeX Font Warning: Font shape `EU1/ppl/bx/n' undefined
 . <->"[FandolHei-Bold.otf]/OT:"
 . - 'bold small caps'  (bx/sc) with NFSS spec.: 
 .................................................
-(./main.toc)
+(./main.toc [2
+
+
+
+])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [2
-
-
-
-] [3]
+ [3]
 \openout2 = `./Section/zh-abstract.aux'.
 
  (./Section/zh-abstract.tex [4
@@ -1817,40 +1817,46 @@ LaTeX Font Warning: Font shape `EU1/ppl/bx/n' undefined
 \openout2 = `./Section/section1-introduction.aux'.
 
  (./Section/section1-introduction.tex
-(./Section/section1/subsection1-1.tex) (./Section/section1/subsection1-2.tex
-[6
+(./Section/section1/subsection1-1.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9.03374> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 4.
+ [6
 
 
-]) (./Section/section1/subsection1-3.tex)) [7]
+])
+(./Section/section1/subsection1-2.tex) (./Section/section1/subsection1-3.tex
+[7])) [8]
 \openout2 = `./Section/section2-object-detection-correlation-algorithm.aux'.
 
+ (./Section/section2-object-detection-correlation-algorithm.tex
+(./Section/section2/section2-1.tex) (./Section/section2/section2-2.tex [9
 
-(./Section/section2-object-detection-correlation-algorithm.tex
-(./Section/section2/section2-1.tex) (./Section/section2/section2-2.tex
+
+])
+(./Section/section2/section2-3.tex) (./Section/section2/section2-4.tex
 File: ./Pictures/rcnn-regions_with_cnn_features.png Graphic file (type QTm)
 
-<use  "./Pictures/rcnn-regions_with_cnn_features.png" > [8
+<use  "./Pictures/rcnn-regions_with_cnn_features.png" > [10]
+File: ./Pictures/sppnet_crop_warp.jpg Graphic file (type QTm)
 
+<use  "./Pictures/sppnet_crop_warp.jpg" > [11]
+File: ./Pictures/sppnet_pool_layer.jpg Graphic file (type QTm)
 
-]
-File: ./Pictures/sppnet_crop_warp.png Graphic file (type QTm)
-
-<use  "./Pictures/sppnet_crop_warp.png" >
-File: ./Pictures/sppnet_pool_layer.png Graphic file (type QTm)
-
-<use  "./Pictures/sppnet_pool_layer.png" >
+<use  "./Pictures/sppnet_pool_layer.jpg" >
 File: ./Pictures/fast_rcnn.png Graphic file (type QTm)
  <use  "./Pictures/fast_rcnn.png" >
-[9] [10]
-File: ./Pictures/faster_rcnn.png Graphic file (type QTm)
- <use  "./Pictures/faster_rcnn.png" >
+[12]
+File: ./Pictures/faster_rcnn.jpg Graphic file (type QTm)
+ <use  "./Pictures/faster_rcnn.jpg" >
 File: ./Pictures/faster_rcnn_anchor.png Graphic file (type QTm)
 
-<use  "./Pictures/faster_rcnn_anchor.png" > [11] [12])
-(./Section/section2/section2-3.tex
+<use  "./Pictures/faster_rcnn_anchor.png" > [13])
+(./Section/section2/section2-5.tex
 File: ./Pictures/od_regressor.png Graphic file (type QTm)
  <use  "./Pictures/od_regressor.png" >
-[13] [14]) (./Section/section2/section2-4.tex)) [15]
+[14]) (./Section/section2/section2-6.tex) [15]) [16]
 \openout2 = `./Section/section3-algorithm-design.aux'.
 
 
@@ -1860,17 +1866,17 @@ File: ./Pictures/ssd_(1).jpg Graphic file (type QTm)
  <use  "./Pictures/ssd_(1).jpg" >
 File: ./Pictures/ssd_(2).jpg Graphic file (type QTm)
 
-<use  "./Pictures/ssd_(2).jpg" > [16
+<use  "./Pictures/ssd_(2).jpg" > [17
 
 
-] [17]
+] [18]
 File: ./Pictures/ssd_(3).jpg Graphic file (type QTm)
  <use  "./Pictures/ssd_(3).jpg" >)
 (./Section/section3/section3-3.tex
 File: ./Pictures/ssd_modual.jpg Graphic file (type QTm)
  <use  "./Pictures/ssd_modual.jpg" >)
-(./Section/section3/section3-4.tex [18]) (./Section/section3/section3-5.tex
-[19] [20]) (./Section/section3/section3-6.tex)) [21]
+(./Section/section3/section3-4.tex [19]) (./Section/section3/section3-5.tex
+[20] [21]) (./Section/section3/section3-6.tex)) [22]
 \openout2 = `./Section/section4-algorithm-implementation.aux'.
 
 
@@ -1901,41 +1907,146 @@ LaTeX Font Warning: Font shape `EU1/pcr/m/n' undefined
 . - 'bold small caps'  (bx/sc) with NFSS spec.: 
 .................................................
 
-LaTeX Font Warning: Font shape `EU1/pcr/m/it' undefined
+LaTeX Font Warning: Font shape `EU1/pcr/bx/n' undefined
 (Font)              using `EU1/pcr/m/n' instead on input line 2.
 
 
-LaTeX Font Warning: Font shape `EU1/pcr/bx/n' undefined
-(Font)              using `EU1/pcr/m/n' instead on input line 5.
+LaTeX Font Warning: Font shape `EU1/pcr/m/it' undefined
+(Font)              using `EU1/pcr/m/n' instead on input line 16.
 
-
-Overfull \hbox (4.66061pt too wide) in paragraph at lines 7--8
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-) (./Section/section4/section4-3.tex) (./Section/section4/section4-4.tex)
-(./Section/section4/section4-5.tex)) [22
+[23
 
 
 ]
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 37--38
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 38--39
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 39--41
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (29.95535pt too wide) in paragraph at lines 41--43
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.63167pt too wide) in paragraph at lines 46--48
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.63167pt too wide) in paragraph at lines 49--51
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (29.95535pt too wide) in paragraph at lines 70--72
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[24]
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 97--98
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+) (./Section/section4/section4-3.tex [25]
+Overfull \hbox (10.9843pt too wide) in paragraph at lines 42--44
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (156.42905pt too wide) in paragraph at lines 45--46
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[26]
+Overfull \hbox (4.66061pt too wide) in paragraph at lines 53--54
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.66061pt too wide) in paragraph at lines 56--57
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.9843pt too wide) in paragraph at lines 65--66
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.86852pt too wide) in paragraph at lines 66--68
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 69--70
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (61.57378pt too wide) in paragraph at lines 70--71
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (137.458pt too wide) in paragraph at lines 71--72
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 72--74
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (200.69484pt too wide) in paragraph at lines 75--76
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.54483pt too wide) in paragraph at lines 90--92
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[27]
+Overfull \hbox (55.25009pt too wide) in paragraph at lines 96--97
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.9843pt too wide) in paragraph at lines 105--106
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) (./Section/section4/section4-4.tex) (./Section/section4/section4-5.tex))
+[28]
 \openout2 = `./Section/section5-experimental-results-and-analysis.aux'.
 
-
-(./Section/section5-experimental-results-and-analysis.tex) [23
+ (./Section/section5-experimental-results-and-analysis.tex) [29
 
 
 ]
 \openout2 = `./Section/section6-summary-and-outlook.aux'.
 
 
-(./Section/section6-summary-and-outlook.tex) [24
+(./Section/section6-summary-and-outlook.tex) [30
 
 
 ]
 \openout2 = `./Section/section7-acknowledgements.aux'.
 
 
-(./Section/section7-acknowledgements.tex) [25
+(./Section/section7-acknowledgements.tex) [31
 
 
 ] (./main.bbl
@@ -1944,7 +2055,7 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 ) 
 AED: lastpage setting LastPage
-[26
+[32
 
 ] (./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
 (./Section/en-abstract.aux) (./Section/section1-introduction.aux)
@@ -1959,12 +2070,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 34725 strings out of 493638
- 724861 string characters out of 6146796
- 790958 words of memory out of 5000000
- 37513 multiletter control sequences out of 15000+600000
- 7076 words of font info for 62 fonts, out of 8000000 for 9000
+ 34885 strings out of 493638
+ 728621 string characters out of 6146796
+ 824958 words of memory out of 5000000
+ 37662 multiletter control sequences out of 15000+600000
+ 7996 words of font info for 66 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 71i,12n,79p,10439b,1187s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,12n,79p,10439b,1929s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (26 pages).
+Output written on main.pdf (32 pages).
