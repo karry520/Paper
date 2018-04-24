@@ -1,56 +1,56 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: ./Section/cover.aux
-A level-1 auxiliary file: ./Section/abstract.aux
-A level-1 auxiliary file: ./Section/section1-preface.aux
-A level-1 auxiliary file: ./Section/section2-why-use-ssd.aux
-A level-1 auxiliary file: ./Section/section3-how-to-use-ssd.aux
-A level-1 auxiliary file: ./Section/section4-experimental-process-and-results.aux
-A level-1 auxiliary file: ./Section/section5-conclusion.aux
-A level-1 auxiliary file: ./Section/section6-acknowledgements.aux
+A level-1 auxiliary file: ./Section/zh-abstract.aux
+A level-1 auxiliary file: ./Section/en-abstract.aux
+A level-1 auxiliary file: ./Section/section1-introduction.aux
+A level-1 auxiliary file: ./Section/section2-object-detection-correlation-algorithm.aux
+A level-1 auxiliary file: ./Section/section3-algorithm-design.aux
+A level-1 auxiliary file: ./Section/section4-algorithm-implementation.aux
+A level-1 auxiliary file: ./Section/section5-experimental-results-and-analysis.aux
+A level-1 auxiliary file: ./Section/section6-summary-and-outlook.aux
+A level-1 auxiliary file: ./Section/section7-acknowledgements.aux
 The style file: plain.bst
-I found no \citation commands---while reading file main.aux
 Database file #1: reference.bib
-You've used 0 entries,
+You've used 9 entries,
             2118 wiz_defined-function locations,
-            505 strings with 4259 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+            559 strings with 6006 characters,
+and the built_in function-call counts, 3989 in all, are:
+= -- 403
+> -- 181
+< -- 8
++ -- 72
+- -- 62
+* -- 261
+:= -- 609
+add.period$ -- 31
+call.type$ -- 9
+change.case$ -- 58
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 9
+duplicate$ -- 170
+empty$ -- 314
+format.name$ -- 62
+if$ -- 884
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 9
+missing$ -- 9
+newline$ -- 48
+num.names$ -- 18
+pop$ -- 76
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 49
 quote$ -- 0
-skip$ -- 1
+skip$ -- 131
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 247
+swap$ -- 68
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 36
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 error message)
+while$ -- 41
+width$ -- 10
+write$ -- 105
