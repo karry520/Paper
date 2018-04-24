@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {3.1}瓦片损害检测流程}{18}
 \contentsline {subsection}{\numberline {3.2}SSD算法核心思想}{18}
 \contentsline {subsection}{\numberline {3.3}SSD模型结构}{20}
-\contentsline {subsection}{\numberline {3.4}SSD模型训练}{20}
+\contentsline {subsection}{\numberline {3.4}SSD模型训练}{21}
 \contentsline {subsection}{\numberline {3.5}算法改进方案}{22}
 \contentsline {subsubsection}{\numberline {3.5.1}损失函数-Focus Loss}{22}
 \contentsline {subsubsection}{\numberline {3.5.2}非极大抑制-Soft-NMS}{22}

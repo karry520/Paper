@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  24 APR 2018 11:58
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  24 APR 2018 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1810,10 +1810,10 @@ LaTeX Font Warning: Font shape `EU1/ppl/bx/n' undefined
 ])
 \openout2 = `./Section/en-abstract.aux'.
 
- (./Section/en-abstract.tex [5
+ (./Section/en-abstract.tex) [5
 
 
-])
+]
 \openout2 = `./Section/section1-introduction.aux'.
 
  (./Section/section1-introduction.tex
@@ -1864,21 +1864,24 @@ File: ./Pictures/od_regressor.png Graphic file (type QTm)
 
 (./Section/section3-algorithm-design.tex (./Section/section3/section3-1.tex)
 (./Section/section3/section3-2.tex
+File: ./Pictures/ssd_modual.jpg Graphic file (type QTm)
+ <use  "./Pictures/ssd_modual.jpg" >
 File: ./Pictures/ssd_(1).jpg Graphic file (type QTm)
- <use  "./Pictures/ssd_(1).jpg" >
-File: ./Pictures/ssd_(2).jpg Graphic file (type QTm)
 
-<use  "./Pictures/ssd_(2).jpg" > [18
+<use  "./Pictures/ssd_(1).jpg" >
+File: ./Pictures/ssd_(2).jpg Graphic file (type QTm)
+ <use  "./Pictures/ssd_(2).jpg" > [18
 
 
 ] [19]
 File: ./Pictures/ssd_(3).jpg Graphic file (type QTm)
- <use  "./Pictures/ssd_(3).jpg" >)
-(./Section/section3/section3-3.tex
+
+<use  "./Pictures/ssd_(3).jpg" >) (./Section/section3/section3-3.tex
 File: ./Pictures/ssd_modual.jpg Graphic file (type QTm)
- <use  "./Pictures/ssd_modual.jpg" >)
-(./Section/section3/section3-4.tex [20]) (./Section/section3/section3-5.tex
-[21] [22]) (./Section/section3/section3-6.tex)) [23]
+
+<use  "./Pictures/ssd_modual.jpg" >) (./Section/section3/section3-4.tex
+[20]) [21] (./Section/section3/section3-5.tex [22])
+(./Section/section3/section3-6.tex)) [23]
 \openout2 = `./Section/section4-algorithm-implementation.aux'.
 
 
@@ -2069,10 +2072,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 34876 strings out of 493638
- 727385 string characters out of 6146796
+ 34907 strings out of 493638
+ 729190 string characters out of 6146796
  824958 words of memory out of 5000000
- 37654 multiletter control sequences out of 15000+600000
+ 37685 multiletter control sequences out of 15000+600000
  7996 words of font info for 66 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  71i,12n,79p,10439b,1929s stack positions out of 5000i,500n,10000p,200000b,80000s
