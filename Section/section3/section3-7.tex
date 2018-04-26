@@ -14,8 +14,7 @@
  回归loss,smoothL1:
 \begin{align*}
  L_loc(x,l,g) &= \sum _{i \in Pos} ^{N} \sum_{m \in \{cx,cy,w,h\}} x_{ij}^k smooth _{L1} (l_i ^m - g_j ^m) \\
- g_j^{cx} &= \left( g_j ^{cx} - d_i ^{cx} \right) / d_i ^w \\
- 
+ g_j^{cx} &= \left( g_j ^{cx} - d_i ^{cx} \right) / d_i ^w 
 \end{align*}
 
 \subsubsection{改进损失函数-Focus Loss}

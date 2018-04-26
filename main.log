@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  26 APR 2018 12:16
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  26 APR 2018 21:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1887,24 +1887,35 @@ LaTeX Font Warning: Font shape `EU1/ppl/m/it' undefined
 
 
 ]) (./Section/section2/section2-3.tex) (./Section/section2/section2-4.tex
+[11]
 File: ./Pictures/rcnn-regions_with_cnn_features.png Graphic file (type QTm)
+ <use  "./Pictures/rcnn-regions_with_cnn_features.png" >
+Overfull \hbox (32.91685pt too wide) in paragraph at lines 38--40
+[]\EU1/FandolSong-Regular(1)/bx/n/12.045 解 决 问 题 二、|  训 练 集。|  \EU1/FandolSong-
+Regular(1)/m/n/12.045 经 典 的 目 标 检 测 算 法 在 区 域 中 提 取 人 工 设 定 的 特 征 \EU1/ppl/m/it
+/12.045 (Haar,HOG)\EU1/FandolSong-Regular(1)/m/n/12.045 。|
+ []
 
-<use  "./Pictures/rcnn-regions_with_cnn_features.png" > [11]
+[12]
 File: ./Pictures/sppnet_crop_warp.jpg Graphic file (type QTm)
-
-<use  "./Pictures/sppnet_crop_warp.jpg" > [12]
+ <use  "./Pictures/sppnet_crop_warp.jpg" > [13]
 File: ./Pictures/sppnet_pool_layer.jpg Graphic file (type QTm)
 
-<use  "./Pictures/sppnet_pool_layer.jpg" > [13]
+<use  "./Pictures/sppnet_pool_layer.jpg" >
 File: ./Pictures/fast_rcnn.png Graphic file (type QTm)
-
-<use  "./Pictures/fast_rcnn.png" >
+ <use  "./Pictures/fast_rcnn.png" >
+[14]
+File: ./Pictures/fast-rcnn-model.png Graphic file (type QTm)
+ <use  "./Pictures/fast-rcnn-model.png" > [15]
 File: ./Pictures/faster_rcnn.jpg Graphic file (type QTm)
- <use  "./Pictures/faster_rcnn.jpg" >
-[14]) (./Section/section2/section2-5.tex
+
+<use  "./Pictures/faster_rcnn.jpg" > [16]
+File: ./Pictures/rpn.png Graphic file (type QTm)
+ <use  "./Pictures/rpn.png" > [17])
+(./Section/section2/section2-5.tex
 File: ./Pictures/od_regressor.png Graphic file (type QTm)
  <use  "./Pictures/od_regressor.png" >
-[15] [16]) (./Section/section2/section2-6.tex)) [17]
+[18]) (./Section/section2/section2-6.tex) [19]) [20]
 \openout2 = `./Section/section3-algorithm-design.aux'.
 
 
@@ -1916,27 +1927,27 @@ File: ./Pictures/ssd_(1).jpg Graphic file (type QTm)
 
 <use  "./Pictures/ssd_(1).jpg" >
 File: ./Pictures/ssd_(2).jpg Graphic file (type QTm)
- <use  "./Pictures/ssd_(2).jpg" > [18
+ <use  "./Pictures/ssd_(2).jpg" > [21
 
 
-] [19]
+] [22]
 File: ./Pictures/ssd_(3).jpg Graphic file (type QTm)
 
 <use  "./Pictures/ssd_(3).jpg" >) (./Section/section3/section3-3.tex
 File: ./Pictures/ssd_modual.jpg Graphic file (type QTm)
 
 <use  "./Pictures/ssd_modual.jpg" >) (./Section/section3/section3-7.tex
-[20] [21] [22]
+[23] [24] [25]
 Missing character: There is no γ in font [lmroman12-regular]:mapping=tex-text!
-) (./Section/section3/section3-4.tex [23])
-(./Section/section3/section3-5.tex [24]) (./Section/section3/section3-6.tex))
-[25]
+) (./Section/section3/section3-4.tex [26])
+(./Section/section3/section3-5.tex [27]) (./Section/section3/section3-6.tex))
+[28]
 \openout2 = `./Section/section4-algorithm-implementation.aux'.
 
  (./Section/section4-algorithm-implementation.tex
 (./Section/section4/section4-1.tex
 File: ./Pictures/labelimg.jpg Graphic file (type QTm)
- <use  "./Pictures/labelimg.jpg" >) [26
+ <use  "./Pictures/labelimg.jpg" >) [29
 
 
 ]
@@ -1973,32 +1984,32 @@ LaTeX Font Warning: Font shape `EU1/pcr/bx/n' undefined
 LaTeX Font Warning: Font shape `EU1/pcr/m/it' undefined
 (Font)              using `EU1/pcr/m/n' instead on input line 8.
 
-[27] [28] [29]) (./Section/section4/section4-3.tex [30])
+[30] [31] [32]) (./Section/section4/section4-3.tex [33])
 (./Section/section4/section4-4.tex) (./Section/section4/section4-5.tex))
-[31]
+[34]
 \openout2 = `./Section/section5-experimental-results-and-analysis.aux'.
 
- (./Section/section5-experimental-results-and-analysis.tex) [32
+ (./Section/section5-experimental-results-and-analysis.tex) [35
 
 
 ]
 \openout2 = `./Section/section6-summary-and-outlook.aux'.
 
 
-(./Section/section6-summary-and-outlook.tex) [33
+(./Section/section6-summary-and-outlook.tex) [36
 
 
 ]
 \openout2 = `./Section/section7-acknowledgements.aux'.
 
 
-(./Section/section7-acknowledgements.tex) [34
+(./Section/section7-acknowledgements.tex) [37
 
 
 ] (./main.bbl)
 
 AED: lastpage setting LastPage
-[35
+[38
 
 ] (./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
 (./Section/en-abstract.aux) (./Section/section1-introduction.aux)
@@ -2013,12 +2024,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 35475 strings out of 493638
- 736179 string characters out of 6146796
+ 35483 strings out of 493638
+ 736298 string characters out of 6146796
  805958 words of memory out of 5000000
- 38228 multiletter control sequences out of 15000+600000
+ 38234 multiletter control sequences out of 15000+600000
  9138 words of font info for 73 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  71i,12n,79p,10439b,1933s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (35 pages).
+Output written on main.pdf (38 pages).
