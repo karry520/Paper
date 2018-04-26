@@ -10,6 +10,14 @@
  2、$L_{loc}$代表的是回归误差，采用的是Smooth L1 loss
  
  3、$\alpha$取1
+ 
+ 回归loss,smoothL1:
+\begin{align*}
+ L_loc(x,l,g) &= \sum _{i \in Pos} ^{N} \sum_{m \in \{cx,cy,w,h\}} x_{ij}^k smooth _{L1} (l_i ^m - g_j ^m) \\
+ g_j^{cx} &= \left( g_j ^{cx} - d_i ^{cx} \right) / d_i ^w \\
+ 
+\end{align*}
+
 \subsubsection{改进损失函数-Focus Loss}
 我们知道object detection的算法主要可以分为两大类：two-stage detector和one-stage detector。前者是指类似Faster RCNN，RFCN这样需要region proposal的检测算法，这类算法可以达到很高的准确率，但是速度较慢。虽然可以通过减少proposal的数量或降低输入图像的分辨率等方式达到提速，但是速度并没有质的提升。后者是指类似YOLO，SSD这样不需要region proposal，直接回归的检测算法，这类算法速度很快，但是准确率不如前者。作者提出focal loss的出发点也是希望one-stage detector可以达到two-stage detector的准确率，同时不影响原有的速度。
 
