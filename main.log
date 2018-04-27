@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  26 APR 2018 21:25
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  27 APR 2018 12:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1643,8 +1643,11 @@ Package: xeCJK-listings 2016/02/10 v3.3.4 xeCJK patch file for listings
 (./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
 (./Section/en-abstract.aux) (./Section/section1-introduction.aux)
 (./Section/section2-object-detection-correlation-algorithm.aux)
-(./Section/section3-algorithm-design.aux)
-(./Section/section4-algorithm-implementation.aux)
+(./Section/section3-algorithm-design.aux
+
+LaTeX Warning: Label `rcnn' multiply defined.
+
+) (./Section/section4-algorithm-implementation.aux)
 (./Section/section5-experimental-results-and-analysis.aux)
 (./Section/section6-summary-and-outlook.aux)
 (./Section/section7-acknowledgements.aux))
@@ -1911,40 +1914,46 @@ File: ./Pictures/faster_rcnn.jpg Graphic file (type QTm)
 
 <use  "./Pictures/faster_rcnn.jpg" > [16]
 File: ./Pictures/rpn.png Graphic file (type QTm)
- <use  "./Pictures/rpn.png" > [17])
+ <use  "./Pictures/rpn.png" >
+File: ./Pictures/faster_rcnn_anchor.png Graphic file (type QTm)
+
+<use  "./Pictures/faster_rcnn_anchor.png" > [17] [18])
 (./Section/section2/section2-5.tex
 File: ./Pictures/od_regressor.png Graphic file (type QTm)
  <use  "./Pictures/od_regressor.png" >
-[18]) (./Section/section2/section2-6.tex) [19]) [20]
+[19]) (./Section/section2/section2-6.tex)) [20]
 \openout2 = `./Section/section3-algorithm-design.aux'.
 
 
-(./Section/section3-algorithm-design.tex (./Section/section3/section3-1.tex)
-(./Section/section3/section3-2.tex
+(./Section/section3-algorithm-design.tex (./Section/section3/section3-1.tex
+File: ./Pictures/liucheng.png Graphic file (type QTm)
+
+<use  "./Pictures/liucheng.png" >) (./Section/section3/section3-2.tex
 File: ./Pictures/ssd_modual.jpg Graphic file (type QTm)
- <use  "./Pictures/ssd_modual.jpg" >
+
+<use  "./Pictures/ssd_modual.jpg" >
 File: ./Pictures/ssd_(1).jpg Graphic file (type QTm)
+ <use  "./Pictures/ssd_(1).jpg" > [21
 
-<use  "./Pictures/ssd_(1).jpg" >
+
+]
 File: ./Pictures/ssd_(2).jpg Graphic file (type QTm)
- <use  "./Pictures/ssd_(2).jpg" > [21
 
-
-] [22]
+<use  "./Pictures/ssd_(2).jpg" > [22]
 File: ./Pictures/ssd_(3).jpg Graphic file (type QTm)
-
-<use  "./Pictures/ssd_(3).jpg" >) (./Section/section3/section3-3.tex
+ <use  "./Pictures/ssd_(3).jpg" >)
+(./Section/section3/section3-3.tex
 File: ./Pictures/ssd_modual.jpg Graphic file (type QTm)
-
-<use  "./Pictures/ssd_modual.jpg" >) (./Section/section3/section3-7.tex
-[23] [24] [25]
+ <use  "./Pictures/ssd_modual.jpg" >)
+[23] (./Section/section3/section3-7.tex [24] [25]
 Missing character: There is no γ in font [lmroman12-regular]:mapping=tex-text!
-) (./Section/section3/section3-4.tex [26])
-(./Section/section3/section3-5.tex [27]) (./Section/section3/section3-6.tex))
-[28]
+)
+(./Section/section3/section3-4.tex [26]) (./Section/section3/section3-5.tex
+[27]) (./Section/section3/section3-6.tex)) [28]
 \openout2 = `./Section/section4-algorithm-implementation.aux'.
 
- (./Section/section4-algorithm-implementation.tex
+
+(./Section/section4-algorithm-implementation.tex
 (./Section/section4/section4-1.tex
 File: ./Pictures/labelimg.jpg Graphic file (type QTm)
  <use  "./Pictures/labelimg.jpg" >) [29
@@ -2022,12 +2031,15 @@ AED: lastpage setting LastPage
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 35483 strings out of 493638
- 736298 string characters out of 6146796
+ 35488 strings out of 493638
+ 736396 string characters out of 6146796
  805958 words of memory out of 5000000
- 38234 multiletter control sequences out of 15000+600000
+ 38237 multiletter control sequences out of 15000+600000
  9138 words of font info for 73 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  71i,12n,79p,10439b,1933s stack positions out of 5000i,500n,10000p,200000b,80000s

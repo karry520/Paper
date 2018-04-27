@@ -149,7 +149,7 @@ g为Smooth L1误差，对outlier不敏感:
 那么怎么解决这两个问题呢？于是乎，任少卿等人提出了一个Region Proposal Networks的概念，利用神经网络自己学习去生成候选区域。其结构如图\ref{rpn}。
 \begin{uscfigure}
 	\includegraphics[width=\textwidth,height=8cm]{./Pictures/faster_rcnn.jpg}	
-	\caption{RPN结构}	
+	\caption{Faster RCNN算法架构}	
 	\label{rpn}
 \end{uscfigure}
 这种生成方法同时解决了上述的两个问题，神经网络可以学到更加高层、语义、抽象的特征，生成的候选区域的可靠程度大大提高；可以从上图看出RPNs和RoI Pooling共用前面的卷积神经网络——将RPNs嵌入原有网络，原有网络和RPNs一起预测，大大地减少了参数量和预测时间。在 RPNs 中引入了anchor的概念feature map中每个滑窗位置都会生成k个anchors，然后判断anchor覆盖的图像是前景还是背景，同时回归Bbox的精细位置，预测的Bbox更加精确。
@@ -162,12 +162,28 @@ Faster RCNN着重解决了三个问题:
 	\item[>] 如何训练区域生成网络
 	\item[>] 如何让区域生成网络和Faster RCNN网络共享特征提取网络
 \end{itemize}
-\textbf{区域生成网络(RPN)}
+
+\textbf{区域生成网络(RPN):结构}
+
+其结构如图\ref{rpn-model}
 \begin{uscfigure}
 	\includegraphics[width=\textwidth,height=8cm]{./Pictures/rpn.png}	
 	\caption{RPN结构}	
 	\label{rpn-model}
 \end{uscfigure}
+
+\textbf{1、特征提取:}原始特征提取(上图灰色方框)包含若干层conv+relu，直接套用ImageNet上常见的分类网络即可。本文试验了两种网络：5层的ZF\footnote{介绍一下这个网络}，16层的VGG-16，具体结构不再赘述。 额外添加一个conv+relu层，输出51*39*256维特征(feature)。
+
+\textbf{2、候选区域:}特征可以看做一个尺度51*39的256通道图像，对于该图像的每一个位置，考虑9个可能的候选窗口：三种面积{1282,2562,5122}×三种比例{1:1,1:2,2:1}。这些候选窗口称为anchors。下图示出51*39个anchor中心，以及9种anchor示例\ref{anchor}。
+ 
+\begin{uscfigure}
+	\includegraphics[width=\textwidth,height=8cm]{./Pictures/faster_rcnn_anchor.png}	
+	\caption{Faster RCNN anchor示意图}	
+	\label{anchor}
+\end{uscfigure}
+
+\textbf{3、窗口分类和位置精修:}分类层(cls\_score)输出每一个位置上，9个anchor属于前景和背景的概率；窗口回归层(bbox\_pred)输出每一个位置上，9个anchor对应窗口应该平移缩放的参数。 对于每一个位置来说，分类层从256维特征中输出属于前景和背景的概率；窗口回归层从256维特征中输出4个平移缩放参数。
+
 \subsubsection{Mask R-CNN}
 时隔一年，何恺明团队再次更新了 R-CNN 家族，改进 Faster R-CNN 并使用新的 backbone 和 FPN 创造出了 Mask R-CNN 。
 
