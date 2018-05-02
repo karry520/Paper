@@ -41,7 +41,6 @@
 \contentsline {subsection}{\numberline {4.2}网络模型实现}{30}
 \contentsline {subsection}{\numberline {4.3}损失函数}{33}
 \contentsline {subsection}{\numberline {4.4}模型训练/测试}{34}
-\contentsline {subsection}{\numberline {4.5}瓦片检测}{34}
 \contentsline {section}{\numberline {第五章}实验结果与分析}{35}
 \contentsline {subsection}{\numberline {5.1}改进ssd算法的实验结果}{35}
 \contentsline {subsection}{\numberline {5.2}改进ssd对瓦片损害检测的准确率和召回率的实验}{35}

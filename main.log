@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  27 APR 2018 12:23
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.4.17)  2 MAY 2018 10:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1942,24 +1942,22 @@ File: ./Pictures/ssd_(2).jpg Graphic file (type QTm)
 <use  "./Pictures/ssd_(2).jpg" > [22]
 File: ./Pictures/ssd_(3).jpg Graphic file (type QTm)
  <use  "./Pictures/ssd_(3).jpg" >)
-(./Section/section3/section3-3.tex
-File: ./Pictures/ssd_modual.jpg Graphic file (type QTm)
- <use  "./Pictures/ssd_modual.jpg" >)
-[23] (./Section/section3/section3-7.tex [24] [25]
+(./Section/section3/section3-3.tex) [23] (./Section/section3/section3-7.tex
+[24] [25]
 Missing character: There is no γ in font [lmroman12-regular]:mapping=tex-text!
-)
-(./Section/section3/section3-4.tex [26]) (./Section/section3/section3-5.tex
-[27]) (./Section/section3/section3-6.tex)) [28]
+) (./Section/section3/section3-4.tex)
+(./Section/section3/section3-5.tex [26] [27])
+(./Section/section3/section3-6.tex)) [28]
 \openout2 = `./Section/section4-algorithm-implementation.aux'.
 
 
 (./Section/section4-algorithm-implementation.tex
 (./Section/section4/section4-1.tex
 File: ./Pictures/labelimg.jpg Graphic file (type QTm)
- <use  "./Pictures/labelimg.jpg" >) [29
+ <use  "./Pictures/labelimg.jpg" > [29
 
 
-]
+])
 (./Section/section4/section4-2.tex
 *************************************************
 * fontspec warning: "script-not-exist"
@@ -1994,11 +1992,11 @@ LaTeX Font Warning: Font shape `EU1/pcr/m/it' undefined
 (Font)              using `EU1/pcr/m/n' instead on input line 8.
 
 [30] [31] [32]) (./Section/section4/section4-3.tex [33])
-(./Section/section4/section4-4.tex) (./Section/section4/section4-5.tex))
-[34]
+(./Section/section4/section4-4.tex)) [34]
 \openout2 = `./Section/section5-experimental-results-and-analysis.aux'.
 
- (./Section/section5-experimental-results-and-analysis.tex) [35
+
+(./Section/section5-experimental-results-and-analysis.tex) [35
 
 
 ]
@@ -2036,9 +2034,9 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 35488 strings out of 493638
- 736396 string characters out of 6146796
- 805958 words of memory out of 5000000
+ 35485 strings out of 493638
+ 736320 string characters out of 6146796
+ 803958 words of memory out of 5000000
  38237 multiletter control sequences out of 15000+600000
  9138 words of font info for 73 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191

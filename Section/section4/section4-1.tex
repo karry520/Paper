@@ -5,15 +5,16 @@
 	\caption{labelImg界面}
 \end{uscfigure}
 \subsubsection{数据集}
-\textbf{VOC数据集介绍:}PASCAL VOC为图像识别和分类提供了一整套标准化的优秀的数据集。
+\textbf{VOC数据集介绍:}PASCAL VOC为图像识别和分类提供了一整套标准化的优秀的数据集。对于目标检测任务，我们只需要使用JPEGImage、Annotations、ImageSets三个文件夹。
 
 其目录结构
 
-- JPEGImage
+- JPEGImage:文件夹包含了PASCAL VOC所提供的所有的图片信息，包括了训练图片和测试图片。
 
-- Annotations
+- Annotations:文件夹中存放的是xml格式的标签文件，每一个xml文件都对应于JPEGImages文件夹中的一张图片。
 
-- ImageSet
+- ImageSet:存放的是每一种类型的challenge对应的图像数据。
+
 
 \subsubsection{Pytorch介绍}
 PyTorch是一个比较新的深度学习框架，正在研究人员中迅速普及。和深度学习框架Chainer类似，PyTorch支持动态计算图，这个功能使 PyTorch 对使用文本与时间序列的研究者和工程师很有吸引力。TensorFlow解决了质量控制和包装的问题。它提供了一种 Theano 风格的编程模式，所以它是一种非常底层的深度学习框架。由于TensorFlow本身是非常底层的框架，所以许多基于TensorFlow的前端框架应运而生，比如TF-slim和Keras。这样的框架目前有10到15个，仅Google就可能有四五个。
