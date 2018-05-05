@@ -11,7 +11,10 @@ An algorithm which decays the detection scores of all other objects as a continu
 
 换句话说就是用稍低一点的分数来代替原有的分数，而不是直接置零。另外由于Soft NMS可以很方便地引入到object detection算法中，不需要重新训练原有的模型，因此这是该算法的一大优点。
 
-{\huge 这里插入一个图片}
+\begin{uscfigure}
+	\includegraphics[width=\textwidth]{./Pictures/soft-nms.jpeg}	
+	\caption{softnms}
+\end{uscfigure}
 
 传统的NMS处理方法可以通过以下的分数智重置函数(Rescoring Function)来表示：
 \begin{equation}
