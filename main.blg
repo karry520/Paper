@@ -11,11 +11,12 @@ A level-1 auxiliary file: ./Section/section4-algorithm-implementation.aux
 A level-1 auxiliary file: ./Section/section5-experimental-results-and-analysis.aux
 A level-1 auxiliary file: ./Section/section6-summary-and-outlook.aux
 A level-1 auxiliary file: ./Section/section7-acknowledgements.aux
+A level-1 auxiliary file: ./Section/section8-appendix.tex.aux
 The style file: plain.bst
 Database file #1: reference.bib
 You've used 9 entries,
             2118 wiz_defined-function locations,
-            559 strings with 6006 characters,
+            560 strings with 6041 characters,
 and the built_in function-call counts, 3989 in all, are:
 = -- 403
 > -- 181
