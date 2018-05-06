@@ -1,35 +1,4 @@
+{\huge 讲讲损失函数的伪代码}
 \begin{lstlisting}[caption={损失函数}]
-pos_mask = pos.unsqueeze(2).expand_as(loc_preds)    
-pos_loc_preds = loc_preds[pos_mask].view(-1,4)     
-pos_loc_targets = loc_targets[pos_mask].view(-1,4) 
-loc_loss = F.smooth_l1_loss(
-	pos_loc_preds,
-	pos_loc_targets, 
-	size_average=False
-)
-
-conf_loss = self.cross_entropy_loss(
-	conf_preds.view(-1,self.num_classes), 
-	conf_targets.view(-1)
-)
-	 
-neg = self.hard_negative_mining(conf_loss, pos)   
-
-pos_mask = pos.unsqueeze(2).expand_as(conf_preds)  
-neg_mask = neg.unsqueeze(2).expand_as(conf_preds)  
-mask = (pos_mask+neg_mask).gt(0)
-
-pos_and_neg = (pos+neg).gt(0)
-preds = conf_preds[mask].view(-1,self.num_classes)  
-targets = conf_targets[pos_and_neg]              
-conf_loss = F.cross_entropy(
-	preds, 
-	targets, 
-	size_average=False
-)
-
-loc_loss /= num_matched_boxes
-conf_loss /= num_matched_boxes
-print('%f %f' % (loc_loss.data[0], conf_loss.data[0]), end=' ')
-return loc_loss + conf_loss
+	a ^2 + b^2 = c^2
 \end{lstlisting}

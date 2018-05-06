@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  6 MAY 2018 00:11
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  6 MAY 2018 10:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2117,24 +2117,24 @@ LaTeX Font Warning: Font shape `TU/ppl/bx/n' undefined
  [3]
 \openout2 = `./Section/zh-abstract.aux'.
 
- (./Section/zh-abstract.tex [4
+ (./Section/zh-abstract.tex) [1
 
-])
+]
 \openout2 = `./Section/en-abstract.aux'.
 
- (./Section/en-abstract.tex) [5
+ (./Section/en-abstract.tex) [2
 
 
 ]
 \openout2 = `./Section/section1-introduction.aux'.
 
  (./Section/section1-introduction.tex
-(./Section/section1/subsection1-1.tex [6
+(./Section/section1/subsection1-1.tex [1
 
 
 ])
-(./Section/section1/subsection1-2.tex [7])
-(./Section/section1/subsection1-3.tex [8])) [9]
+(./Section/section1/subsection1-2.tex [2])
+(./Section/section1/subsection1-3.tex [3])) [4]
 \openout2 = `./Section/section2-object-detection-correlation-algorithm.aux'.
 
 
@@ -2144,44 +2144,44 @@ LaTeX Font Warning: Font shape `TU/ppl/bx/n' undefined
 LaTeX Font Warning: Font shape `TU/ppl/m/it' undefined
 (Font)              using `TU/ppl/m/n' instead on input line 1.
 
-[10
+[5
 
 
 ]) (./Section/section2/section2-3.tex) (./Section/section2/section2-4.tex
-[11]
+[6]
 File: ./Pictures/rcnn-regions_with_cnn_features.png Graphic file (type bmp)
 <./Pictures/rcnn-regions_with_cnn_features.png>
 
 Overfull \hbox (32.91685pt too wide) in paragraph at lines 38--40
 []\TU/FandolSong-Regular(1)/bx/n/12.045 解 决 问 题 二、|  训 练 集。|  \TU/FandolSong-Re
-gular(1)/m/n/12.045 经 典 的 目 标 检 测 算 法 在 区 域 中 提 取 人 工 设 定 的 特 征 \TU/ppl/m/it/12
-.045 (Haar,HOG)\TU/FandolSong-Regular(1)/m/n/12.045 。|
+gular(0)/m/n/12.045 经 典 的 目 标 检 测 算 法 在 区 域 中 提 取 人 工 设 定 的 特 征 \TU/ppl/m/it/12
+.045 (Haar,HOG)\TU/FandolSong-Regular(0)/m/n/12.045 。|
  []
 
-[12]
+[7]
 File: ./Pictures/sppnet_crop_warp.jpg Graphic file (type bmp)
 <./Pictures/sppnet_crop_warp.jpg>
- [13]
+ [8]
 File: ./Pictures/sppnet_pool_layer.jpg Graphic file (type bmp)
 <./Pictures/sppnet_pool_layer.jpg>
 File: ./Pictures/fast_rcnn.png Graphic file (type bmp)
 <./Pictures/fast_rcnn.png>
- [14]
+ [9]
 File: ./Pictures/fast-rcnn-model.png Graphic file (type bmp)
 <./Pictures/fast-rcnn-model.png>
- [15]
+ [10]
 File: ./Pictures/faster_rcnn.jpg Graphic file (type bmp)
 <./Pictures/faster_rcnn.jpg>
- [16]
+ [11]
 File: ./Pictures/rpn.png Graphic file (type bmp)
 <./Pictures/rpn.png>
 File: ./Pictures/faster_rcnn_anchor.png Graphic file (type bmp)
 <./Pictures/faster_rcnn_anchor.png>
- [17] [18]) (./Section/section2/section2-5.tex
+ [12] [13]) (./Section/section2/section2-5.tex
 File: ./Pictures/od_regressor.png Graphic file (type bmp)
 <./Pictures/od_regressor.png>
- [19])
-(./Section/section2/section2-6.tex)) [20]
+ [14])
+(./Section/section2/section2-6.tex)) [15]
 \openout2 = `./Section/section3-algorithm-design.aux'.
 
 
@@ -2194,25 +2194,25 @@ File: ./Pictures/ssd_modual.jpg Graphic file (type bmp)
 <./Pictures/ssd_modual.jpg>
 File: ./Pictures/ssd_(1).jpg Graphic file (type bmp)
 <./Pictures/ssd_(1).jpg>
- [21
+ [16
 
 
 ]
 File: ./Pictures/ssd_(2).jpg Graphic file (type bmp)
 <./Pictures/ssd_(2).jpg>
- [22]
+ [17]
 File: ./Pictures/ssd_(3).jpg Graphic file (type bmp)
 <./Pictures/ssd_(3).jpg>
 )
-(./Section/section3/section3-3.tex) [23] (./Section/section3/section3-7.tex
-[24] [25]
+(./Section/section3/section3-3.tex) [18] (./Section/section3/section3-7.tex
+[19] [20]
 Missing character: There is no γ in font [lmroman12-regular]:mapping=tex-text;!
 ) (./Section/section3/section3-4.tex)
-(./Section/section3/section3-5.tex [26]
+(./Section/section3/section3-5.tex [21]
 File: ./Pictures/soft-nms.jpeg Graphic file (type bmp)
 <./Pictures/soft-nms.jpeg>
- [27])
-(./Section/section3/section3-6.tex)) [28]
+ [22])
+(./Section/section3/section3-6.tex)) [23]
 \openout2 = `./Section/section4-algorithm-implementation.aux'.
 
 
@@ -2220,21 +2220,21 @@ File: ./Pictures/soft-nms.jpeg Graphic file (type bmp)
 (./Section/section4/section4-1.tex
 File: ./Pictures/labelimg.jpg Graphic file (type bmp)
 <./Pictures/labelimg.jpg>
- [29
+ [24
 
 
-]) (./Section/section4/section4-2.tex
+]
 *************************************************
 * fontspec warning: "script-not-exist"
 * 
 * Font 'FandolFang-Regular' does not contain script 'CJK'.
 *************************************************
 \g__fontspec_family_FandolFang-Regular_int=\count330
-LaTeX Font Info:    Try loading font information for TU+pcr on input line 1.
-LaTeX Font Info:    No file TUpcr.fd. on input line 1.
+LaTeX Font Info:    Try loading font information for TU+pcr on input line 26.
+LaTeX Font Info:    No file TUpcr.fd. on input line 26.
 
 LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 1.
+(Font)              using `TU/lmr/m/n' instead on input line 26.
 
 .................................................
 . fontspec info: "defining-font"
@@ -2247,40 +2247,40 @@ LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
 . - 'normal' (m/n) with NFSS spec.: <->"[FandolFang-Regular.otf]/OT"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
+) (./Section/section4/section4-2.tex
 
 LaTeX Font Warning: Font shape `TU/pcr/bx/n' undefined
-(Font)              using `TU/pcr/m/n' instead on input line 2.
+(Font)              using `TU/pcr/m/n' instead on input line 3.
 
 
 LaTeX Font Warning: Font shape `TU/pcr/m/it' undefined
-(Font)              using `TU/pcr/m/n' instead on input line 8.
+(Font)              using `TU/pcr/m/n' instead on input line 20.
 
-[30] [31] [32]) (./Section/section4/section4-3.tex [33])
-(./Section/section4/section4-4.tex)) [34]
+[25]) (./Section/section4/section4-3.tex) (./Section/section4/section4-4.tex))
+[26]
 \openout2 = `./Section/section5-experimental-results-and-analysis.aux'.
 
-
-(./Section/section5-experimental-results-and-analysis.tex) [35
+ (./Section/section5-experimental-results-and-analysis.tex) [27
 
 
 ]
 \openout2 = `./Section/section6-summary-and-outlook.aux'.
 
 
-(./Section/section6-summary-and-outlook.tex) [36
+(./Section/section6-summary-and-outlook.tex) [28
 
 
 ]
 \openout2 = `./Section/section7-acknowledgements.aux'.
 
 
-(./Section/section7-acknowledgements.tex) [37
+(./Section/section7-acknowledgements.tex) [29
 
 
 ] (./main.bbl)
 
 AED: lastpage setting LastPage
-[38
+[30
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 26.
@@ -2305,12 +2305,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
  ) 
 Here is how much of TeX's memory you used:
- 41822 strings out of 492998
- 847247 string characters out of 6136604
- 980529 words of memory out of 5000000
- 45124 multiletter control sequences out of 15000+600000
- 535768 words of font info for 73 fonts, out of 8000000 for 9000
+ 41744 strings out of 492998
+ 844827 string characters out of 6136604
+ 970904 words of memory out of 5000000
+ 45045 multiletter control sequences out of 15000+600000
+ 535776 words of font info for 74 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 63i,12n,71p,10439b,1965s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,71p,10439b,1157s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (38 pages).
+Output written on main.pdf (35 pages).
