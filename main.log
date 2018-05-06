@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  6 MAY 2018 10:40
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  6 MAY 2018 14:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1860,12 +1860,49 @@ tly
 (rerunfilecheck)             and the loading of the package is aborted.
 )
 \Hy@SectionHShift=\skip75
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 44.
+\cftparskip=\skip76
+\cftbeforetoctitleskip=\skip77
+\cftaftertoctitleskip=\skip78
+\cftbeforepartskip=\skip79
+\cftpartnumwidth=\skip80
+\cftpartindent=\skip81
+\cftbeforesecskip=\skip82
+\cftsecindent=\skip83
+\cftsecnumwidth=\skip84
+\cftbeforesubsecskip=\skip85
+\cftsubsecindent=\skip86
+\cftsubsecnumwidth=\skip87
+\cftbeforesubsubsecskip=\skip88
+\cftsubsubsecindent=\skip89
+\cftsubsubsecnumwidth=\skip90
+\cftbeforeparaskip=\skip91
+\cftparaindent=\skip92
+\cftparanumwidth=\skip93
+\cftbeforesubparaskip=\skip94
+\cftsubparaindent=\skip95
+\cftsubparanumwidth=\skip96
+\cftbeforeloftitleskip=\skip97
+\cftafterloftitleskip=\skip98
+\cftbeforefigskip=\skip99
+\cftfigindent=\skip100
+\cftfignumwidth=\skip101
+\c@lofdepth=\count324
+\c@lotdepth=\count325
+\cftbeforelottitleskip=\skip102
+\cftafterlottitleskip=\skip103
+\cftbeforetabskip=\skip104
+\cfttabindent=\skip105
+\cfttabnumwidth=\skip106
 ))
 (./Style/usc-cs-glossary.tex)
 (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2017/08/07 v3.5.0 xeCJK patch file for listings
-\l__xeCJK_listings_max_char_int=\count324
-\l__xeCJK_listings_flag_int=\count325
+\l__xeCJK_listings_max_char_int=\count326
+\l__xeCJK_listings_flag_int=\count327
 )
 (./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
 (./Section/en-abstract.aux) (./Section/section1-introduction.aux)
@@ -2018,7 +2055,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 7.
 ABD: EveryShipout initializing macros
-\c@lstlisting=\count326
+\c@lstlisting=\count328
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -2031,7 +2068,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count327
+\c@section@level=\count329
 )
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
@@ -2070,7 +2107,7 @@ File: ./Pictures/usc.png Graphic file (type bmp)
 * 
 * Font 'FandolKai-Regular' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_FandolKai-Regular_int=\count328
+\g__fontspec_family_FandolKai-Regular_int=\count330
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -2085,14 +2122,26 @@ File: ./Pictures/usc.png Graphic file (type bmp)
 ) [1]
 
 LaTeX Font Warning: Font shape `TU/ppl/bx/n' undefined
-(Font)              using `TU/ppl/m/n' instead on input line 11.
+(Font)              using `TU/ppl/m/n' instead on input line 12.
 
+(./main.toc [2
+
+
+
+])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ [3]
+\openout2 = `./Section/zh-abstract.aux'.
+
+ (./Section/zh-abstract.tex
 *************************************************
 * fontspec warning: "script-not-exist"
 * 
 * Font 'FandolHei-Regular' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_FandolHei-Regular_int=\count329
+\g__fontspec_family_FandolHei-Regular_int=\count331
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -2106,18 +2155,7 @@ LaTeX Font Warning: Font shape `TU/ppl/bx/n' undefined
 . - 'bold' (bx/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT"
 . - 'bold small caps'  (bx/sc) with NFSS spec.: 
 .................................................
-(./main.toc [2
-
-
-
-])
-\tf@toc=\write5
-\openout5 = `main.toc'.
-
- [3]
-\openout2 = `./Section/zh-abstract.aux'.
-
- (./Section/zh-abstract.tex) [1
+) [1
 
 ]
 \openout2 = `./Section/en-abstract.aux'.
@@ -2229,7 +2267,7 @@ File: ./Pictures/labelimg.jpg Graphic file (type bmp)
 * 
 * Font 'FandolFang-Regular' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_FandolFang-Regular_int=\count330
+\g__fontspec_family_FandolFang-Regular_int=\count332
 LaTeX Font Info:    Try loading font information for TU+pcr on input line 26.
 LaTeX Font Info:    No file TUpcr.fd. on input line 26.
 
@@ -2283,8 +2321,8 @@ AED: lastpage setting LastPage
 [30
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 26.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 26.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 28.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 28.
  (./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
 (./Section/en-abstract.aux) (./Section/section1-introduction.aux)
 (./Section/section2-object-detection-correlation-algorithm.aux)
@@ -2293,8 +2331,8 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 26.
 (./Section/section5-experimental-results-and-analysis.aux)
 (./Section/section6-summary-and-outlook.aux)
 (./Section/section7-acknowledgements.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 26.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 26.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 28.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 28.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2302,14 +2340,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 28.
  ) 
 Here is how much of TeX's memory you used:
- 41744 strings out of 492998
- 844827 string characters out of 6136604
- 970904 words of memory out of 5000000
- 45045 multiletter control sequences out of 15000+600000
- 535776 words of font info for 74 fonts, out of 8000000 for 9000
+ 41994 strings out of 492998
+ 848618 string characters out of 6136604
+ 975048 words of memory out of 5000000
+ 45290 multiletter control sequences out of 15000+600000
+ 535784 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  63i,12n,71p,10439b,1157s stack positions out of 5000i,500n,10000p,200000b,80000s
 
