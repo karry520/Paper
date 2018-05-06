@@ -51,10 +51,11 @@
 \contentsline {subsubsection}{\numberline {4.3.1}loc\_loss}{26}{subsubsection.4.3.1}
 \contentsline {subsubsection}{\numberline {4.3.2}conf\_loss}{26}{subsubsection.4.3.2}
 \contentsline {subsection}{\numberline {4.4}模型训练/测试}{27}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}训练策略}{27}{subsubsection.4.4.1}
 \contentsline {section}{\numberline {第五章}实验结果与分析}{28}{section.5}
 \contentsline {subsection}{\numberline {5.1}改进SSD算法的实验结果}{28}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}改进SSD对瓦片损害检测的准确率实验}{28}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}SSD 与修改了focus loss 的算法进行mAP、速度的比较}{28}{subsection.5.3}
-\contentsline {section}{\numberline {第六章}总结及展望}{29}{section.6}
-\contentsline {section}{\numberline {第七章}致谢}{30}{section.7}
-\contentsline {section}{\numberline {第八章}附录}{31}{section.8}
+\contentsline {section}{\numberline {第六章}总结及展望}{30}{section.6}
+\contentsline {section}{\numberline {第七章}致谢}{31}{section.7}
+\contentsline {section}{\numberline {第八章}附录}{32}{section.8}

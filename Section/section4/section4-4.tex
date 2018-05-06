@@ -1,5 +1,12 @@
-
-{\huge 讲如何训练如何测试}
-\begin{lstlisting}[caption={损失函数}]
-a ^2 + b^2 = c^2
+\subsubsection{训练策略}
+\begin{lstlisting}[caption={训练方法}]
+for batch_idx, (images, loc_targets,conf_targets) 
+	in enumerate(trainloader):
+	optimizer.zero_grad()
+	loc_preds, conf_preds = net(images)
+	loss = criterion(loc_preds,
+			conf_preds,
+			conf_targets)
+	loss.backward()
+	optimizer.step()
 \end{lstlisting}

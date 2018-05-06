@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  6 MAY 2018 18:40
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  6 MAY 2018 19:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2299,32 +2299,35 @@ LaTeX Font Warning: Font shape `TU/pcr/m/it' undefined
 \openout2 = `./Section/section5-experimental-results-and-analysis.aux'.
 
 
-(./Section/section5-experimental-results-and-analysis.tex) [28
+(./Section/section5-experimental-results-and-analysis.tex
+File: ./Pictures/test.jpg Graphic file (type bmp)
+<./Pictures/test.jpg>
+) [28
 
 
-]
+] [29]
 \openout2 = `./Section/section6-summary-and-outlook.aux'.
 
 
-(./Section/section6-summary-and-outlook.tex) [29
+(./Section/section6-summary-and-outlook.tex) [30
 
 
 ]
 \openout2 = `./Section/section7-acknowledgements.aux'.
 
 
-(./Section/section7-acknowledgements.tex) [30
+(./Section/section7-acknowledgements.tex) [31
 
 
 ]
 \openout2 = `./Section/section8-appendix.aux'.
 
- (./Section/section8-appendix.tex) [31
+ (./Section/section8-appendix.tex) [32
 
 
 ] (./main.bbl) 
 AED: lastpage setting LastPage
-[32
+[33
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 29.
@@ -2349,12 +2352,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 29.
  ) 
 Here is how much of TeX's memory you used:
- 42029 strings out of 492998
- 849254 string characters out of 6136604
- 980235 words of memory out of 5000000
- 45318 multiletter control sequences out of 15000+600000
- 535784 words of font info for 75 fonts, out of 8000000 for 9000
+ 42041 strings out of 492998
+ 849371 string characters out of 6136604
+ 981349 words of memory out of 5000000
+ 45331 multiletter control sequences out of 15000+600000
+ 535768 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  63i,12n,71p,10439b,1849s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (37 pages).
+Output written on main.pdf (38 pages).

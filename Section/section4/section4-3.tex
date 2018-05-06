@@ -1,18 +1,13 @@
 \subsubsection{loc\_loss}
 \begin{lstlisting}[caption={location损失}]
-	loc_loss = SmoothL1Loss(
-					pos_loc_preds, 
-					pos_loc_targets
-				)
+	loc_loss = SmoothL1Loss(pos_loc_preds, 
+					pos_loc_targets)
 \end{lstlisting}
 \subsubsection{conf\_loss}
 \begin{lstlisting}[caption={confidence损失}]
-	conf_loss = CrossEntropyLoss(
-					pos_conf_preds,
+	conf_loss = CrossEntropyLoss(pos_conf_preds,
 					pos_conf_targets
-				) + 
-				CrossEntropyLoss(
+				) + CrossEntropyLoss(
 					neg_conf_preds,
-					neg_conf_targets
-				)
+					neg_conf_targets)
 \end{lstlisting}
