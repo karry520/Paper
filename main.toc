@@ -44,12 +44,12 @@
 \contentsline {subsubsection}{\numberline {4.1.5}将图片切割成300px大小}{25}{subsubsection.4.1.5}
 \contentsline {subsection}{\numberline {4.2}网络模型实现}{25}{subsection.4.2}
 \contentsline {subsubsection}{\numberline {4.2.1}模型设计}{25}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}L2Norm2d}{25}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}SSD Layer}{25}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.2}L2Norm2d}{26}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}SSD Layer}{26}{subsubsection.4.2.3}
 \contentsline {subsubsection}{\numberline {4.2.4}Multibox Layer}{26}{subsubsection.4.2.4}
-\contentsline {subsection}{\numberline {4.3}损失函数}{26}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}loc\_loss}{26}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}conf\_loss}{26}{subsubsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3}损失函数}{27}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}loc\_loss}{27}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}conf\_loss}{27}{subsubsection.4.3.2}
 \contentsline {subsection}{\numberline {4.4}模型训练/测试}{27}{subsection.4.4}
 \contentsline {subsubsection}{\numberline {4.4.1}训练策略}{27}{subsubsection.4.4.1}
 \contentsline {section}{\numberline {第五章}实验结果与分析}{28}{section.5}
@@ -58,4 +58,3 @@
 \contentsline {subsection}{\numberline {5.3}SSD 与修改了focus loss 的算法进行mAP、速度的比较}{28}{subsection.5.3}
 \contentsline {section}{\numberline {第六章}总结及展望}{30}{section.6}
 \contentsline {section}{\numberline {第七章}致谢}{31}{section.7}
-\contentsline {section}{\numberline {第八章}附录}{32}{section.8}

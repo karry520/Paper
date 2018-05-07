@@ -4,7 +4,10 @@
 2、Conv\{ 4-12 \}:额外添加的层，生成feature map
 
 3、将对conv4的处理抽象成一个类名为L2Norm2d
-
+\begin{uscfigure}
+	\includegraphics[width=\textwidth]{./Pictures/layers.jpg}	
+	\caption{SSD模型设计框架}
+\end{uscfigure}
 \subsubsection{L2Norm2d}
 \begin{lstlisting}[caption={L2Norm2d}]
 class L2Norm2d(nn.Module):
