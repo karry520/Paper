@@ -17,16 +17,16 @@
  g_j^{cx} &= \left( g_j ^{cx} - d_i ^{cx} \right) / d_i ^w 
 \end{align*}
 
-\subsubsection{改进损失函数-Focus Loss}
-我们知道object detection的算法主要可以分为两大类：two-stage detector和one-stage detector。前者是指类似Faster RCNN，RFCN这样需要region proposal的检测算法，这类算法可以达到很高的准确率，但是速度较慢。虽然可以通过减少proposal的数量或降低输入图像的分辨率等方式达到提速，但是速度并没有质的提升。后者是指类似YOLO，SSD这样不需要region proposal，直接回归的检测算法，这类算法速度很快，但是准确率不如前者。作者提出focal loss的出发点也是希望one-stage detector可以达到two-stage detector的准确率，同时不影响原有的速度。
+\subsubsection{改进损失函数-Focal Loss}
+作者提出Focal Loss的出发点也是希望One-Stage Detector可以达到Two Stage Detector的准确率，同时不影响原有的速度。
 
-既然有了出发点，那么就要找one-stage detector的准确率不如two-stage detector的原因，作者认为原因是：样本的类别不均衡导致的。我们知道在object detection领域，一张图像可能生成成千上万的candidate locations，但是其中只有很少一部分是包含object的，这就带来了类别不均衡。那么类别不均衡会带来什么后果呢？引用原文讲的两个后果：
+先分析One Stage Detector的准确率不如Two Stage Detector的原因，作者认为原因是：样本的类别不均衡导致的。我们知道在object detection领域，一张图像可能生成成千上万的candidate locations，但是其中只有很少一部分是包含object的，这就带来了类别不均衡。那么类别不均衡会带来什么后果呢？引用原文讲的两个后果：
 
 (1) training is inefficient as most locations are easy negatives that contribute no useful learning signal; 
 
-(2) en masse, the easy negatives can overwhelm training and lead to degenerate models. 
+(2) en masse, the easy negatives can overwhelm training and lead to degenerate models. \cite{focal-loss}
 
-什么意思呢？负样本数量太大，占总的loss的大部分，而且多是容易分类的，因此使得模型的优化方向并不是我们所希望的那样。其实先前也有一些算法来处理类别不均衡的问题，比如OHEM（online hard example mining），OHEM的主要思想可以用原文的一句话概括：In OHEM each example is scored by its loss, non-maximum suppression (nms) is then applied, and a minibatch is constructed with the highest-loss examples。OHEM算法虽然增加了错分类样本的权重，但是OHEM算法忽略了容易分类的样本。因此针对类别不均衡问题，作者提出一种新的损失函数：focal loss，这个损失函数是在标准交叉熵损失基础上修改得到的。这个函数可以通过减少易分类样本的权重，使得模型在训练时更专注于难分类的样本。为了证明focal loss的有效性，作者设计了一个dense detector：RetinaNet，并且在训练时采用focal loss训练。实验证明RetinaNet不仅可以达到one-stage detector的速度，也能有two-stage detector的准确率。
+什么意思呢？负样本数量太大，占总的loss的大部分，而且多是容易分类的，因此使得模型的优化方向并不是我们所希望的那样。其实先前也有一些算法来处理类别不均衡的问题，比如OHEM(Online Hard Example Mining)\cite{ohem}，OHEM的主要思想可以用原文的一句话概括：In OHEM each example is scored by its loss, non-maximum suppression (NMS) is then applied, and a minibatch is constructed with the highest-loss examples。\cite{ohem}OHEM算法虽然增加了错分类样本的权重，但是OHEM算法忽略了容易分类的样本。因此针对类别不均衡问题，Focal Loss这个损失函数是在标准交叉熵损失基础上修改得到的。这个函数可以通过减少易分类样本的权重，使得模型在训练时更专注于难分类的样本。
 
 \textbf{标准交叉熵损失函数}
 
@@ -56,7 +56,7 @@ CE表示cross entropy,p表示预测样本属于1的概率，y表示label，y的�
 	CE(p_t) = -\alpha \log (p_t)
 \]
 
-\textbf{focal-loss定义}
+\textbf{Focal-Loss定义}
 
 作者实际上解决的是easy example和hard example不均衡的问题，这个和训练时候正负样本不均衡是两码事，因为正负样本里面都会有简单的样本和容易分错的样本。作者提出的focal loss，相当于是对各个样本加上了各自的权重，这个权重是和网络预测该样本属于true class的概率相关的，显然，如果网络预测的该样本属于true class的概率很大，那么这个样本对网络来说就属于easy(well-classified) example。如果网络预测的该样本属于true class的概率很小，那么这个样本对网络来说就属于hard example。为了训练一个有效的classification part，显然应该降低绝大部分easy example的权重，相对增大hard example的权重。作者提出的focal loss如下式所示： 
 \[

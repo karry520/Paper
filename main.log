@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  11 MAY 2018 09:48
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  13 MAY 2018 00:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1906,17 +1906,17 @@ Package: xeCJK-listings 2017/08/07 v3.5.0 xeCJK patch file for listings
 )
 (./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
 (./Section/en-abstract.aux) (./Section/section1-introduction.aux)
-(./Section/section2-object-detection-correlation-algorithm.aux)
-(./Section/section3-algorithm-design.aux
+(./Section/section2-object-detection-correlation-algorithm.aux
+
+LaTeX Warning: Label `sppnet' multiply defined.
+
+) (./Section/section3-algorithm-design.aux
 
 LaTeX Warning: Label `rcnn' multiply defined.
 
 ) (./Section/section4-algorithm-implementation.aux)
-(./Section/section5-experimental-results-and-analysis.aux
-
-LaTeX Warning: Label `' multiply defined.
-
-) (./Section/section6-summary-and-outlook.aux)
+(./Section/section5-experimental-results-and-analysis.aux)
+(./Section/section6-summary-and-outlook.aux)
 (./Section/section7-acknowledgements.aux) (./Section/section8-appendix.aux))
 \openout1 = `main.aux'.
 
@@ -2164,59 +2164,64 @@ LaTeX Font Warning: Font shape `TU/ppl/bx/n' undefined
 \openout2 = `./Section/section1-introduction.aux'.
 
  (./Section/section1-introduction.tex
-(./Section/section1/subsection1-1.tex [1
+(./Section/section1/subsection1-1.tex) (./Section/section1/subsection1-2.tex
+[1
 
 
-])
-(./Section/section1/subsection1-2.tex [2])
-(./Section/section1/subsection1-3.tex [3])) [4]
+]) (./Section/section1/subsection1-3.tex [2])) [3]
 \openout2 = `./Section/section2-object-detection-correlation-algorithm.aux'.
 
 
 (./Section/section2-object-detection-correlation-algorithm.tex
-(./Section/section2/section2-1.tex) (./Section/section2/section2-2.tex
+(./Section/section2/section2-1.tex
 
 LaTeX Font Warning: Font shape `TU/ppl/m/it' undefined
 (Font)              using `TU/ppl/m/n' instead on input line 1.
 
-[5
+) (./Section/section2/section2-2.tex) (./Section/section2/section2-3.tex)
+Overfull \hbox (27.88857pt too wide) in paragraph at lines 1--11
+[]\TU/ppl/m/it/12.045 Viola-Jones \TU/FandolSong-Regular(0)/m/n/12.045 人 脸 检 测 
+器 之 后，|  在 \TU/ppl/m/it/12.045 2009 \TU/FandolSong-Regular(0)/m/n/12.045 年 出 现 
+了 另 外 一 个 重 要 的 方 法 \TU/ppl/m/it/12.045 DPM:Deformable
+ []
+
+[4
 
 
-]) (./Section/section2/section2-3.tex) (./Section/section2/section2-4.tex
-[6]
+] (./Section/section2/section2-4.tex
+File: ./Pictures/rcnn.jpg Graphic file (type bmp)
+<./Pictures/rcnn.jpg>
 File: ./Pictures/rcnn-regions_with_cnn_features.png Graphic file (type bmp)
 <./Pictures/rcnn-regions_with_cnn_features.png>
-
-Overfull \hbox (32.91685pt too wide) in paragraph at lines 38--40
+ [5]
+Overfull \hbox (32.91685pt too wide) in paragraph at lines 23--25
 []\TU/FandolSong-Regular(1)/bx/n/12.045 解 决 问 题 二、|  训 练 集。|  \TU/FandolSong-Re
 gular(0)/m/n/12.045 经 典 的 目 标 检 测 算 法 在 区 域 中 提 取 人 工 设 定 的 特 征 \TU/ppl/m/it/12
 .045 (Haar,HOG)\TU/FandolSong-Regular(0)/m/n/12.045 。|
  []
 
-[7]
+[6]
 File: ./Pictures/sppnet_crop_warp.jpg Graphic file (type bmp)
 <./Pictures/sppnet_crop_warp.jpg>
- [8]
 File: ./Pictures/sppnet_pool_layer.jpg Graphic file (type bmp)
 <./Pictures/sppnet_pool_layer.jpg>
+ [7]
 File: ./Pictures/fast_rcnn.png Graphic file (type bmp)
 <./Pictures/fast_rcnn.png>
- [9]
+ [8]
 File: ./Pictures/fast-rcnn-model.png Graphic file (type bmp)
 <./Pictures/fast-rcnn-model.png>
- [10]
+ [9]
 File: ./Pictures/faster_rcnn.jpg Graphic file (type bmp)
 <./Pictures/faster_rcnn.jpg>
- [11]
-File: ./Pictures/rpn.png Graphic file (type bmp)
-<./Pictures/rpn.png>
+ [10]
 File: ./Pictures/faster_rcnn_anchor.png Graphic file (type bmp)
 <./Pictures/faster_rcnn_anchor.png>
- [12] [13]) (./Section/section2/section2-5.tex
+) (./Section/section2/section2-5.tex [11]
 File: ./Pictures/od_regressor.png Graphic file (type bmp)
 <./Pictures/od_regressor.png>
- [14])
-(./Section/section2/section2-6.tex)) [15]
+ [12])
+(./Section/section2/section2-6.tex)) [13]
 \openout2 = `./Section/section3-algorithm-design.aux'.
 
 
@@ -2229,25 +2234,21 @@ File: ./Pictures/ssd_modual.jpg Graphic file (type bmp)
 <./Pictures/ssd_modual.jpg>
 File: ./Pictures/ssd_(1).jpg Graphic file (type bmp)
 <./Pictures/ssd_(1).jpg>
- [16
+ [14
 
 
 ]
 File: ./Pictures/ssd_(2).jpg Graphic file (type bmp)
 <./Pictures/ssd_(2).jpg>
- [17]
+ [15]
 File: ./Pictures/ssd_(3).jpg Graphic file (type bmp)
 <./Pictures/ssd_(3).jpg>
 )
-(./Section/section3/section3-3.tex) [18] (./Section/section3/section3-7.tex
-[19] [20]
+(./Section/section3/section3-3.tex) (./Section/section3/section3-7.tex [16]
+[17]
 Missing character: There is no γ in font [lmroman12-regular]:mapping=tex-text;!
-) (./Section/section3/section3-4.tex)
-(./Section/section3/section3-5.tex [21]
-File: ./Pictures/soft-nms.jpeg Graphic file (type bmp)
-<./Pictures/soft-nms.jpeg>
- [22])
-(./Section/section3/section3-6.tex)) [23]
+ [18]) (./Section/section3/section3-4.tex)
+(./Section/section3/section3-6.tex)) [19]
 \openout2 = `./Section/section4-algorithm-implementation.aux'.
 
 
@@ -2255,7 +2256,7 @@ File: ./Pictures/soft-nms.jpeg Graphic file (type bmp)
 (./Section/section4/section4-1.tex
 File: ./Pictures/labelimg.jpg Graphic file (type bmp)
 <./Pictures/labelimg.jpg>
- [24
+ [20
 
 
 ]
@@ -2285,7 +2286,7 @@ LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
 ) (./Section/section4/section4-2.tex
 File: ./Pictures/layers.jpg Graphic file (type bmp)
 <./Pictures/layers.jpg>
- [25]
+ [21]
 
 LaTeX Font Warning: Font shape `TU/pcr/bx/n' undefined
 (Font)              using `TU/pcr/m/n' instead on input line 13.
@@ -2294,39 +2295,252 @@ LaTeX Font Warning: Font shape `TU/pcr/bx/n' undefined
 LaTeX Font Warning: Font shape `TU/pcr/m/it' undefined
 (Font)              using `TU/pcr/m/n' instead on input line 30.
 
-[26]) (./Section/section4/section4-3.tex) (./Section/section4/section4-4.tex))
-[27]
+[22]) (./Section/section4/section4-3.tex) (./Section/section4/section4-4.tex))
+[23]
 \openout2 = `./Section/section5-experimental-results-and-analysis.aux'.
 
  (./Section/section5-experimental-results-and-analysis.tex
 File: ./Pictures/result.jpg Graphic file (type bmp)
 <./Pictures/result.jpg>
-) [28
+ [24
 
 
-] [29]
+]) [25]
 \openout2 = `./Section/section6-summary-and-outlook.aux'.
 
 
-(./Section/section6-summary-and-outlook.tex) [30
+(./Section/section6-summary-and-outlook.tex) [26
 
 
 ]
 \openout2 = `./Section/section7-acknowledgements.aux'.
 
 
-(./Section/section7-acknowledgements.tex) [31
+(./Section/section7-acknowledgements.tex) [27
 
 
-] (./main.bbl) [32
+] (./main.bbl [28
 
-]
+]) [29]
 \openout2 = `./Section/section8-appendix.aux'.
 
 
-(./Section/section8-appendix.tex) [33
+(./Section/section8-appendix.tex [30
 
-] 
+] [31] [32]
+Overfull \hbox (4.66061pt too wide) in paragraph at lines 130--132
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[33]
+Overfull \hbox (80.54483pt too wide) in paragraph at lines 205--208
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[34]
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 218--219
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 219--220
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 220--222
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (29.95535pt too wide) in paragraph at lines 222--224
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.63167pt too wide) in paragraph at lines 227--229
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.63167pt too wide) in paragraph at lines 230--232
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (29.95535pt too wide) in paragraph at lines 251--253
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[35]
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 278--279
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+[36]
+Overfull \hbox (219.6659pt too wide) in paragraph at lines 316--317
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (232.31326pt too wide) in paragraph at lines 317--319
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.9843pt too wide) in paragraph at lines 326--327
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[37] [38]
+Overfull \hbox (10.9843pt too wide) in paragraph at lines 389--391
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (156.42905pt too wide) in paragraph at lines 392--393
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.66061pt too wide) in paragraph at lines 400--401
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.66061pt too wide) in paragraph at lines 403--404
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.9843pt too wide) in paragraph at lines 412--413
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.86852pt too wide) in paragraph at lines 413--415
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 416--417
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (61.57378pt too wide) in paragraph at lines 417--418
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (137.458pt too wide) in paragraph at lines 418--419
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 419--421
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (200.69484pt too wide) in paragraph at lines 422--423
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[39]
+Overfull \hbox (80.54483pt too wide) in paragraph at lines 437--439
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (55.25009pt too wide) in paragraph at lines 443--444
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.9843pt too wide) in paragraph at lines 452--453
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[40]
+Overfull \hbox (124.81062pt too wide) in paragraph at lines 501--503
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+[41]
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 514--515
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 515--516
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 519--520
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 520--521
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 529--530
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 530--532
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (67.89746pt too wide) in paragraph at lines 536--538
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.63167pt too wide) in paragraph at lines 538--539
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (137.458pt too wide) in paragraph at lines 543--544
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+[42]
+Overfull \hbox (23.63167pt too wide) in paragraph at lines 567--568
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.63167pt too wide) in paragraph at lines 569--570
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (74.22115pt too wide) in paragraph at lines 590--591
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[43]
+Overfull \hbox (67.89746pt too wide) in paragraph at lines 631--633
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[44]
+Overfull \hbox (118.48694pt too wide) in paragraph at lines 643--644
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [45] 
 AED: lastpage setting LastPage
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
@@ -2350,12 +2564,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 30.
  ) 
 Here is how much of TeX's memory you used:
- 42045 strings out of 492998
- 849465 string characters out of 6136604
- 983387 words of memory out of 5000000
- 45334 multiletter control sequences out of 15000+600000
+ 42164 strings out of 492998
+ 848504 string characters out of 6136604
+ 1004780 words of memory out of 5000000
+ 45458 multiletter control sequences out of 15000+600000
  535768 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 63i,12n,71p,10439b,1845s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,71p,10439b,1892s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (38 pages).
+Output written on main.pdf (50 pages).

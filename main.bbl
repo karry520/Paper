@@ -1,15 +1,27 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{dpm}
-Pedro Felzenszwalb, David McAllester, and Deva Ramanan.
-\newblock A discriminatively trained, multiscale, deformable part model.
-\newblock In {\em Computer Vision and Pattern Recognition, 2008. CVPR 2008.
-  IEEE Conference on}, pages 1--8. IEEE, 2008.
+\bibitem{ssd}
+Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed,
+  Cheng-Yang Fu, and Alexander~C Berg.
+\newblock Ssd: Single shot multibox detector.
+\newblock In {\em European conference on computer vision}, pages 21--37.
+  Springer, 2016.
 
-\bibitem{fastrcnn}
-Ross Girshick.
-\newblock Fast r-cnn.
-\newblock {\em arXiv preprint arXiv:1504.08083}, 2015.
+\bibitem{focal-loss}
+tsung-yi lin, priya goyal, ross girshick, kaiming he, and piotr doll{\'a}r.
+\newblock focal loss for dense object detection.
+\newblock {\em arxiv preprint arxiv:1708.02002}, 2017.
+
+\bibitem{soft-nms}
+Navaneeth Bodla, Bharat Singh, Rama Chellappa, and Larry~S Davis.
+\newblock Soft-nms—improving object detection with one line of code.
+\newblock In {\em 2017 IEEE International Conference on Computer Vision
+  (ICCV)}, pages 5562--5570. IEEE, 2017.
+
+\bibitem{hkq}
+黄凯奇, 任伟强, 谭铁牛, et~al.
+\newblock 图像物体分类与检测算法综述.
+\newblock {\em 计算机学报}, 37(6):1225--1240, 2014.
 
 \bibitem{rcnn}
 Ross Girshick, Jeff Donahue, Trevor Darrell, and Jitendra Malik.
@@ -25,18 +37,10 @@ Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
 \newblock In {\em european conference on computer vision}, pages 346--361.
   Springer, 2014.
 
-\bibitem{ssd}
-Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed,
-  Cheng-Yang Fu, and Alexander~C Berg.
-\newblock Ssd: Single shot multibox detector.
-\newblock In {\em European conference on computer vision}, pages 21--37.
-  Springer, 2016.
-
-\bibitem{yolo}
-Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi.
-\newblock You only look once: Unified, real-time object detection.
-\newblock In {\em Proceedings of the IEEE conference on computer vision and
-  pattern recognition}, pages 779--788, 2016.
+\bibitem{fastrcnn}
+Ross Girshick.
+\newblock Fast r-cnn.
+\newblock {\em arXiv preprint arXiv:1504.08083}, 2015.
 
 \bibitem{fasterrcnn}
 Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun.
@@ -44,6 +48,12 @@ Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun.
   networks.
 \newblock In {\em Advances in neural information processing systems}, pages
   91--99, 2015.
+
+\bibitem{yolo}
+Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi.
+\newblock You only look once: Unified, real-time object detection.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 779--788, 2016.
 
 \bibitem{repid}
 Paul Viola and Michael Jones.
@@ -56,5 +66,24 @@ Paul Viola and Michael Jones.
 Paul Viola and Michael~J Jones.
 \newblock Robust real-time face detection.
 \newblock {\em International journal of computer vision}, 57(2):137--154, 2004.
+
+\bibitem{dpm}
+Pedro Felzenszwalb, David McAllester, and Deva Ramanan.
+\newblock A discriminatively trained, multiscale, deformable part model.
+\newblock In {\em Computer Vision and Pattern Recognition, 2008. CVPR 2008.
+  IEEE Conference on}, pages 1--8. IEEE, 2008.
+
+\bibitem{ss}
+Jasper~RR Uijlings, Koen~EA Van De~Sande, Theo Gevers, and Arnold~WM Smeulders.
+\newblock Selective search for object recognition.
+\newblock {\em International journal of computer vision}, 104(2):154--171,
+  2013.
+
+\bibitem{ohem}
+Abhinav Shrivastava, Abhinav Gupta, and Ross Girshick.
+\newblock Training region-based object detectors with online hard example
+  mining.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 761--769, 2016.
 
 \end{thebibliography}

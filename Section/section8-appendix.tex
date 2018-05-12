@@ -1,2 +1,651 @@
 \section*{附录}
-代码＋数据
+\addcontentsline{toc}{section}{附录}
+\subsection*{源代码}
+\subsubsection*{datagen.py}
+\begin{lstlisting}[caption={datagen.py}]
+'''Load image/class/box from a annotation file.
+
+The annotation file is organized as:
+image_name #obj xmin ymin xmax ymax class_index ..
+'''
+from __future__ import print_function
+
+import os
+import sys
+import os.path
+
+import random
+import numpy as np
+
+import torch
+import torch.utils.data as data
+import torchvision.transforms as transforms
+
+from encoder import DataEncoder
+from PIL import Image, ImageOps
+
+
+class ListDataset(data.Dataset):
+img_size = 300
+
+def __init__(self, root, list_file, train, transform):
+'''
+Args:
+root: (str) ditectory to images.
+list_file: (str) path to index file.
+train: (boolean) train or test.
+transform: ([transforms]) image transforms.
+'''
+self.root = root
+self.train = train
+self.transform = transform
+
+self.fnames = []
+self.boxes = []
+self.labels = []
+
+self.data_encoder = DataEncoder()
+
+with open(list_file) as f:
+lines = f.readlines()
+self.num_samples = len(lines)
+
+for line in lines:
+splited = line.strip().split()
+self.fnames.append(splited[0])
+
+num_objs = int(splited[1])
+box = []
+label = []
+for i in range(num_objs):
+xmin = splited[2+5*i]
+ymin = splited[3+5*i]
+xmax = splited[4+5*i]
+ymax = splited[5+5*i]
+c = splited[6+5*i]
+box.append([float(xmin),float(ymin),float(xmax),float(ymax)])
+label.append(int(c))
+self.boxes.append(torch.Tensor(box))
+self.labels.append(torch.LongTensor(label))
+
+def __getitem__(self, idx):
+'''Load a image, and encode its bbox locations and class labels.
+
+Args:
+idx: (int) image index.
+
+Returns:
+img: (tensor) image tensor.
+loc_target: (tensor) location targets, sized [8732,4].
+conf_target: (tensor) label targets, sized [8732,].
+'''
+# Load image and bbox locations.
+fname = self.fnames[idx]
+img = Image.open(os.path.join(self.root, fname))
+boxes = self.boxes[idx].clone()
+labels = self.labels[idx]
+
+# Data augmentation while training.
+if self.train:
+img, boxes = self.random_flip(img, boxes)
+img, boxes, labels = self.random_crop(img, boxes, labels)
+
+# Scale bbox locaitons to [0,1].
+w,h = img.size
+boxes /= torch.Tensor([w,h,w,h]).expand_as(boxes)
+
+img = img.resize((self.img_size,self.img_size))
+img = self.transform(img)
+
+# Encode loc & conf targets.
+loc_target, conf_target = self.data_encoder.encode(boxes, labels)
+return img, loc_target, conf_target
+
+def random_flip(self, img, boxes):
+'''Randomly flip the image and adjust the bbox locations.
+
+For bbox (xmin, ymin, xmax, ymax), the flipped bbox is:
+(w-xmax, ymin, w-xmin, ymax).
+
+Args:
+img: (PIL.Image) image.
+boxes: (tensor) bbox locations, sized [#obj, 4].
+
+Returns:
+img: (PIL.Image) randomly flipped image.
+boxes: (tensor) randomly flipped bbox locations, sized [#obj, 4].
+'''
+if random.random() < 0.5:
+img = img.transpose(Image.FLIP_LEFT_RIGHT)
+w = img.width
+xmin = w - boxes[:,2]
+xmax = w - boxes[:,0]
+boxes[:,0] = xmin
+boxes[:,2] = xmax
+return img, boxes
+
+def random_crop(self, img, boxes, labels):
+'''Randomly crop the image and adjust the bbox locations.
+
+For more details, see 'Chapter2.2: Data augmentation' of the paper.
+
+Args:
+img: (PIL.Image) image.
+boxes: (tensor) bbox locations, sized [#obj, 4].
+labels: (tensor) bbox labels, sized [#obj,].
+
+Returns:
+img: (PIL.Image) cropped image.
+selected_boxes: (tensor) selected bbox locations.
+labels: (tensor) selected bbox labels.
+'''
+imw, imh = img.size
+while True:
+min_iou = random.choice([None, 0.1, 0.3, 0.5, 0.7, 0.9])
+if min_iou is None:
+return img, boxes, labels
+
+for _ in range(100):
+w = random.randrange(int(0.1*imw), imw)
+h = random.randrange(int(0.1*imh), imh)
+
+if h > 2*w or w > 2*h:
+continue
+
+x = random.randrange(imw - w)
+y = random.randrange(imh - h)
+roi = torch.Tensor([[x, y, x+w, y+h]])
+
+center = (boxes[:,:2] + boxes[:,2:]) / 2  # [N,2]
+roi2 = roi.expand(len(center), 4)  # [N,4]
+mask = (center > roi2[:,:2]) & (center < roi2[:,2:])  # [N,2]
+mask = mask[:,0] & mask[:,1]  #[N,]
+if not mask.any():
+continue
+
+selected_boxes = boxes.index_select(0, mask.nonzero().squeeze(1))
+
+iou = self.data_encoder.iou(selected_boxes, roi)
+if iou.min() < min_iou:
+continue
+
+img = img.crop((x, y, x+w, y+h))
+selected_boxes[:,0].add_(-x).clamp_(min=0, max=w)
+selected_boxes[:,1].add_(-y).clamp_(min=0, max=h)
+selected_boxes[:,2].add_(-x).clamp_(min=0, max=w)
+selected_boxes[:,3].add_(-y).clamp_(min=0, max=h)
+return img, selected_boxes, labels[mask]
+
+def __len__(self):
+return self.num_samples
+\end{lstlisting}
+\subsubsection*{ssd.py}
+\begin{lstlisting}
+import math
+import itertools
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.nn.init as init
+
+from torch.autograd import Variable
+
+from multibox_layer import MultiBoxLayer
+
+
+class L2Norm2d(nn.Module):
+'''L2Norm layer across all channels.'''
+def __init__(self, scale):
+super(L2Norm2d, self).__init__()
+self.scale = scale
+
+def forward(self, x, dim=1):
+'''out = scale * x / sqrt(\sum x_i^2)'''
+return self.scale * x * x.pow(2).sum(dim).clamp(min=1e-12).rsqrt().expand_as(x)
+
+
+class SSD300(nn.Module):
+input_size = 300
+
+def __init__(self):
+super(SSD300, self).__init__()
+
+# model
+self.base = self.VGG16()
+self.norm4 = L2Norm2d(20)
+
+self.conv5_1 = nn.Conv2d(512, 512, kernel_size=3, padding=1, dilation=1)
+self.conv5_2 = nn.Conv2d(512, 512, kernel_size=3, padding=1, dilation=1)
+self.conv5_3 = nn.Conv2d(512, 512, kernel_size=3, padding=1, dilation=1)
+
+self.conv6 = nn.Conv2d(512, 1024, kernel_size=3, padding=6, dilation=6)
+
+self.conv7 = nn.Conv2d(1024, 1024, kernel_size=1)
+
+self.conv8_1 = nn.Conv2d(1024, 256, kernel_size=1)
+self.conv8_2 = nn.Conv2d(256, 512, kernel_size=3, padding=1, stride=2)
+
+self.conv9_1 = nn.Conv2d(512, 128, kernel_size=1)
+self.conv9_2 = nn.Conv2d(128, 256, kernel_size=3, padding=1, stride=2)
+
+self.conv10_1 = nn.Conv2d(256, 128, kernel_size=1)
+self.conv10_2 = nn.Conv2d(128, 256, kernel_size=3)
+
+self.conv11_1 = nn.Conv2d(256, 128, kernel_size=1)
+self.conv11_2 = nn.Conv2d(128, 256, kernel_size=3)
+
+# multibox layer
+self.multibox = MultiBoxLayer()
+
+def forward(self, x):
+hs = []
+h = self.base(x)
+hs.append(self.norm4(h))  # conv4_3
+
+h = F.max_pool2d(h, kernel_size=2, stride=2, ceil_mode=True)
+
+h = F.relu(self.conv5_1(h))
+h = F.relu(self.conv5_2(h))
+h = F.relu(self.conv5_3(h))
+h = F.max_pool2d(h, kernel_size=3, padding=1, stride=1, ceil_mode=True)
+
+h = F.relu(self.conv6(h))
+h = F.relu(self.conv7(h))
+hs.append(h)  # conv7
+
+h = F.relu(self.conv8_1(h))
+h = F.relu(self.conv8_2(h))
+hs.append(h)  # conv8_2
+
+h = F.relu(self.conv9_1(h))
+h = F.relu(self.conv9_2(h))
+hs.append(h)  # conv9_2
+
+h = F.relu(self.conv10_1(h))
+h = F.relu(self.conv10_2(h))
+hs.append(h)  # conv10_2
+
+h = F.relu(self.conv11_1(h))
+h = F.relu(self.conv11_2(h))
+hs.append(h)  # conv11_2
+
+loc_preds, conf_preds = self.multibox(hs)
+return loc_preds, conf_preds
+
+def VGG16(self):
+'''VGG16 layers.'''
+cfg = [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 'M', 512, 512, 512]
+layers = []
+in_channels = 3
+for x in cfg:
+if x == 'M':
+layers += [nn.MaxPool2d(kernel_size=2, stride=2, ceil_mode=True)]
+else:
+layers += [nn.Conv2d(in_channels, x, kernel_size=3, padding=1),
+nn.ReLU(True)]
+in_channels = x
+return nn.Sequential(*layers)
+\end{lstlisting}
+
+\subsubsection*{multibox\_layer.py}
+\begin{lstlisting}
+from __future__ import print_function
+
+import math
+
+import torch
+import torch.nn as nn
+import torch.nn.init as init
+import torch.nn.functional as F
+
+from torch.autograd import Variable
+
+
+class MultiBoxLayer(nn.Module):
+num_classes = 21
+num_anchors = [4,6,6,6,4,4]
+in_planes = [512,1024,512,256,256,256]
+
+def __init__(self):
+super(MultiBoxLayer, self).__init__()
+
+self.loc_layers = nn.ModuleList()
+self.conf_layers = nn.ModuleList()
+for i in range(len(self.in_planes)):
+self.loc_layers.append(nn.Conv2d(self.in_planes[i], self.num_anchors[i]*4, kernel_size=3, padding=1))
+self.conf_layers.append(nn.Conv2d(self.in_planes[i], self.num_anchors[i]*21, kernel_size=3, padding=1))
+
+def forward(self, xs):
+'''
+Args:
+xs: (list) of tensor containing intermediate layer outputs.
+
+Returns:
+loc_preds: (tensor) predicted locations, sized [N,8732,4].
+conf_preds: (tensor) predicted class confidences, sized [N,8732,21].
+'''
+y_locs = []
+y_confs = []
+for i,x in enumerate(xs):
+y_loc = self.loc_layers[i](x)
+N = y_loc.size(0)
+y_loc = y_loc.permute(0,2,3,1).contiguous()
+y_loc = y_loc.view(N,-1,4)
+y_locs.append(y_loc)
+
+y_conf = self.conf_layers[i](x)
+y_conf = y_conf.permute(0,2,3,1).contiguous()
+y_conf = y_conf.view(N,-1,21)
+y_confs.append(y_conf)
+
+loc_preds = torch.cat(y_locs, 1)
+conf_preds = torch.cat(y_confs, 1)
+return loc_preds, conf_preds
+\end{lstlisting}
+
+\subsubsection*{multibox\_loss.py}
+\begin{lstlisting}
+from __future__ import print_function
+
+import math
+
+import torch
+import torch.nn as nn
+import torch.nn.init as init
+import torch.nn.functional as F
+
+from torch.autograd import Variable
+
+
+class MultiBoxLoss(nn.Module):
+num_classes = 21
+
+def __init__(self):
+super(MultiBoxLoss, self).__init__()
+
+def cross_entropy_loss(self, x, y):
+'''Cross entropy loss w/o averaging across all samples.
+
+Args:
+x: (tensor) sized [N,D].
+y: (tensor) sized [N,].
+
+Return:
+(tensor) cross entroy loss, sized [N,].
+'''
+xmax = x.data.max()
+log_sum_exp = torch.log(torch.sum(torch.exp(x-xmax), 1)) + xmax
+return log_sum_exp - x.gather(1, y.view(-1,1))
+
+def test_cross_entropy_loss(self):
+a = Variable(torch.randn(10,4))
+b = Variable(torch.ones(10).long())
+loss = self.cross_entropy_loss(a,b)
+print(loss.mean())
+print(F.cross_entropy(a,b))
+
+def hard_negative_mining(self, conf_loss, pos):
+'''Return negative indices that is 3x the number as postive indices.
+
+Args:
+conf_loss: (tensor) cross entroy loss between conf_preds and conf_targets, sized [N*8732,].
+pos: (tensor) positive(matched) box indices, sized [N,8732].
+
+Return:
+(tensor) negative indices, sized [N,8732].
+'''
+batch_size, num_boxes = pos.size()
+
+conf_loss[pos] = 0  # set pos boxes = 0, the rest are neg conf_loss
+conf_loss = conf_loss.view(batch_size, -1)  # [N,8732]
+
+_,idx = conf_loss.sort(1, descending=True)  # sort by neg conf_loss
+_,rank = idx.sort(1)  # [N,8732]
+
+num_pos = pos.long().sum(1)  # [N,1]
+num_neg = torch.clamp(3*num_pos, max=num_boxes-1)  # [N,1]
+
+neg = rank < num_neg.expand_as(rank)  # [N,8732]
+return neg
+
+def forward(self, loc_preds, loc_targets, conf_preds, conf_targets):
+'''Compute loss between (loc_preds, loc_targets) and (conf_preds, conf_targets).
+
+Args:
+loc_preds: (tensor) predicted locations, sized [batch_size, 8732, 4].
+loc_targets: (tensor) encoded target locations, sized [batch_size, 8732, 4].
+conf_preds: (tensor) predicted class confidences, sized [batch_size, 8732, num_classes].
+conf_targets: (tensor) encoded target classes, sized [batch_size, 8732].
+
+loss:
+(tensor) loss = SmoothL1Loss(loc_preds, loc_targets) + CrossEntropyLoss(conf_preds, conf_targets).
+'''
+batch_size, num_boxes, _ = loc_preds.size()
+
+pos = conf_targets>0  # [N,8732], pos means the box matched.
+num_matched_boxes = pos.data.long().sum()
+if num_matched_boxes == 0:
+return Variable(torch.Tensor([0]))
+
+################################################################
+# loc_loss = SmoothL1Loss(pos_loc_preds, pos_loc_targets)
+################################################################
+pos_mask = pos.unsqueeze(2).expand_as(loc_preds)    # [N,8732,4]
+pos_loc_preds = loc_preds[pos_mask].view(-1,4)      # [#pos,4]
+pos_loc_targets = loc_targets[pos_mask].view(-1,4)  # [#pos,4]
+loc_loss = F.smooth_l1_loss(pos_loc_preds, pos_loc_targets, size_average=False)
+
+################################################################
+# conf_loss = CrossEntropyLoss(pos_conf_preds, pos_conf_targets)
+#           + CrossEntropyLoss(neg_conf_preds, neg_conf_targets)
+################################################################
+conf_loss = self.cross_entropy_loss(conf_preds.view(-1,self.num_classes), \
+conf_targets.view(-1))  # [N*8732,]
+neg = self.hard_negative_mining(conf_loss, pos)    # [N,8732]
+
+pos_mask = pos.unsqueeze(2).expand_as(conf_preds)  # [N,8732,21]
+neg_mask = neg.unsqueeze(2).expand_as(conf_preds)  # [N,8732,21]
+mask = (pos_mask+neg_mask).gt(0)
+
+pos_and_neg = (pos+neg).gt(0)
+preds = conf_preds[mask].view(-1,self.num_classes)  # [#pos+#neg,21]
+targets = conf_targets[pos_and_neg]                 # [#pos+#neg,]
+conf_loss = F.cross_entropy(preds, targets, size_average=False)
+
+loc_loss /= num_matched_boxes
+conf_loss /= num_matched_boxes
+print('%f %f' % (loc_loss.data[0], conf_loss.data[0]), end=' ')
+return loc_loss + conf_loss
+\end{lstlisting}
+\subsubsection*{encoder.py}
+\begin{lstlisting}
+'''Encode target locations and labels.'''
+import torch
+
+import math
+import itertools
+
+class DataEncoder:
+def __init__(self):
+'''Compute default box sizes with scale and aspect transform.'''
+scale = 300.
+steps = [s / scale for s in (8, 16, 32, 64, 100, 300)]
+sizes = [s / scale for s in (30, 60, 111, 162, 213, 264, 315)]
+aspect_ratios = ((2,), (2,3), (2,3), (2,3), (2,), (2,))
+feature_map_sizes = (38, 19, 10, 5, 3, 1)
+
+num_layers = len(feature_map_sizes)
+
+boxes = []
+for i in range(num_layers):
+fmsize = feature_map_sizes[i]
+for h,w in itertools.product(range(fmsize), repeat=2):
+cx = (w + 0.5)*steps[i]
+cy = (h + 0.5)*steps[i]
+
+s = sizes[i]
+boxes.append((cx, cy, s, s))
+
+s = math.sqrt(sizes[i] * sizes[i+1])
+boxes.append((cx, cy, s, s))
+
+s = sizes[i]
+for ar in aspect_ratios[i]:
+boxes.append((cx, cy, s * math.sqrt(ar), s / math.sqrt(ar)))
+boxes.append((cx, cy, s / math.sqrt(ar), s * math.sqrt(ar)))
+
+self.default_boxes = torch.Tensor(boxes)
+
+def iou(self, box1, box2):
+'''Compute the intersection over union of two set of boxes, each box is [x1,y1,x2,y2].
+
+Args:
+box1: (tensor) bounding boxes, sized [N,4].
+box2: (tensor) bounding boxes, sized [M,4].
+
+Return:
+(tensor) iou, sized [N,M].
+'''
+N = box1.size(0)
+M = box2.size(0)
+
+lt = torch.max(
+box1[:,:2].unsqueeze(1).expand(N,M,2),  # [N,2] -> [N,1,2] -> [N,M,2]
+box2[:,:2].unsqueeze(0).expand(N,M,2),  # [M,2] -> [1,M,2] -> [N,M,2]
+)
+
+rb = torch.min(
+box1[:,2:].unsqueeze(1).expand(N,M,2),  # [N,2] -> [N,1,2] -> [N,M,2]
+box2[:,2:].unsqueeze(0).expand(N,M,2),  # [M,2] -> [1,M,2] -> [N,M,2]
+)
+
+wh = rb - lt  # [N,M,2]
+wh[wh<0] = 0  # clip at 0
+inter = wh[:,:,0] * wh[:,:,1]  # [N,M]
+
+area1 = (box1[:,2]-box1[:,0]) * (box1[:,3]-box1[:,1])  # [N,]
+area2 = (box2[:,2]-box2[:,0]) * (box2[:,3]-box2[:,1])  # [M,]
+area1 = area1.unsqueeze(1).expand_as(inter)  # [N,] -> [N,1] -> [N,M]
+area2 = area2.unsqueeze(0).expand_as(inter)  # [M,] -> [1,M] -> [N,M]
+
+iou = inter / (area1 + area2 - inter)
+return iou
+
+def encode(self, boxes, classes, threshold=0.5):
+'''Transform target bounding boxes and class labels to SSD boxes and classes.
+
+Match each object box to all the default boxes, pick the ones with the
+Jaccard-Index > 0.5:
+Jaccard(A,B) = AB / (A+B-AB)
+
+Args:
+boxes: (tensor) object bounding boxes (xmin,ymin,xmax,ymax) of a image, sized [#obj, 4].
+classes: (tensor) object class labels of a image, sized [#obj,].
+threshold: (float) Jaccard index threshold
+
+Returns:
+boxes: (tensor) bounding boxes, sized [#obj, 8732, 4].
+classes: (tensor) class labels, sized [8732,]
+'''
+default_boxes = self.default_boxes
+num_default_boxes = default_boxes.size(0)
+num_objs = boxes.size(0)
+
+iou = self.iou(  # [#obj,8732]
+boxes,
+torch.cat([default_boxes[:,:2] - default_boxes[:,2:]/2,
+default_boxes[:,:2] + default_boxes[:,2:]/2], 1)
+)
+
+iou, max_idx = iou.max(0)  # [1,8732]
+max_idx.squeeze_(0)        # [8732,]
+iou.squeeze_(0)            # [8732,]
+
+boxes = boxes[max_idx]     # [8732,4]
+variances = [0.1, 0.2]
+cxcy = (boxes[:,:2] + boxes[:,2:])/2 - default_boxes[:,:2]  # [8732,2]
+cxcy /= variances[0] * default_boxes[:,2:]
+wh = (boxes[:,2:] - boxes[:,:2]) / default_boxes[:,2:]      # [8732,2]
+wh = torch.log(wh) / variances[1]
+loc = torch.cat([cxcy, wh], 1)  # [8732,4]
+
+conf = 1 + classes[max_idx]   # [8732,], background class = 0
+conf[iou<threshold] = 0       # background
+return loc, conf
+
+def nms(self, bboxes, scores, threshold=0.5, mode='union'):
+'''Non maximum suppression.
+
+Args:
+bboxes: (tensor) bounding boxes, sized [N,4].
+scores: (tensor) bbox scores, sized [N,].
+threshold: (float) overlap threshold.
+mode: (str) 'union' or 'min'.
+
+Returns:
+keep: (tensor) selected indices.
+
+Ref:
+https://github.com/rbgirshick/py-faster-rcnn/blob/master/lib/nms/py_cpu_nms.py
+'''
+x1 = bboxes[:,0]
+y1 = bboxes[:,1]
+x2 = bboxes[:,2]
+y2 = bboxes[:,3]
+
+areas = (x2-x1) * (y2-y1)
+_, order = scores.sort(0, descending=True)
+
+keep = []
+while order.numel() > 0:
+i = order[0]
+keep.append(i)
+
+if order.numel() == 1:
+break
+
+xx1 = x1[order[1:]].clamp(min=x1[i])
+yy1 = y1[order[1:]].clamp(min=y1[i])
+xx2 = x2[order[1:]].clamp(max=x2[i])
+yy2 = y2[order[1:]].clamp(max=y2[i])
+
+w = (xx2-xx1).clamp(min=0)
+h = (yy2-yy1).clamp(min=0)
+inter = w*h
+
+if mode == 'union':
+ovr = inter / (areas[i] + areas[order[1:]] - inter)
+elif mode == 'min':
+ovr = inter / areas[order[1:]].clamp(max=areas[i])
+else:
+raise TypeError('Unknown nms mode: %s.' % mode)
+
+ids = (ovr<=threshold).nonzero().squeeze()
+if ids.numel() == 0:
+break
+order = order[ids+1]
+return torch.LongTensor(keep)
+
+def decode(self, loc, conf):
+'''Transform predicted loc/conf back to real bbox locations and class labels.
+
+Args:
+loc: (tensor) predicted loc, sized [8732,4].
+conf: (tensor) predicted conf, sized [8732,21].
+
+Returns:
+boxes: (tensor) bbox locations, sized [#obj, 4].
+labels: (tensor) class labels, sized [#obj,1].
+'''
+variances = [0.1, 0.2]
+wh = torch.exp(loc[:,2:]*variances[1]) * self.default_boxes[:,2:]
+cxcy = loc[:,:2] * variances[0] * self.default_boxes[:,2:] + self.default_boxes[:,:2]
+boxes = torch.cat([cxcy-wh/2, cxcy+wh/2], 1)  # [8732,4]
+
+max_conf, labels = conf.max(1)  # [8732,1]
+ids = labels.squeeze(1).nonzero().squeeze(1)  # [#boxes,]
+
+keep = self.nms(boxes[ids], max_conf[ids].squeeze(1))
+return boxes[ids][keep], labels[ids][keep], max_conf[ids][keep]
+\end{lstlisting}

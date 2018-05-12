@@ -16,7 +16,7 @@ SSD和YOLO一样都是采用一个CNN网络来进行检测，但是却采用了�
 	\caption{采用多尺度用于检测}
 	\label{multiscale}
 \end{uscfigure}
-一个比较大的特征图和一个比较小的特征图，它们都用来做检测。这样做的好处是比较大的特征图来用来检测相对较小的目标，而小的特征图负责检测大目标，如图\ref{featuremap}所示，8x8的特征图可以划分更多的单元，但是其每个单元的先验框尺度比较小。
+不同尺度下的特征图都用来做检测。这样做的好处是比较大的特征图来用来检测相对较小的目标，而小的特征图负责检测大目标，如图\ref{featuremap}所示，8x8的特征图可以划分更多的单元，但是其每个单元的先验框尺度比较小。
 \begin{uscfigure}
 	\includegraphics[width=\textwidth]{./Pictures/ssd_(2).jpg}	
 	\caption{8x8与4x4的特征图}
