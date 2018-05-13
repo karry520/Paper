@@ -1,4 +1,4 @@
-2001年，Viola和Jones发表了经典的\textit{Rapid Object Detection using a Boosted Cascade of Simple Features} \cite{repid}和\textit{Robust Real-Time Face Detection} \cite{robust}，在AdaBoost算法的基础上，使用Haar-like小波特征和积分图方法进行人脸检测，并对AdaBoost训练出的强分类器进行级联。这是人脸检测史上里程碑式的一笔，这个算法被人们称为Viola-Jones检测器。
+2001年，Viola和Jones发表了经典的\textit{Rapid Object Detection using a Boosted Cascade of Simple Features} \cite{repid}和\textit{Robust Real-Time Face Detection} \cite{robust}两篇文章，在AdaBoost算法的基础上，使用Haar-like小波特征和积分图方法进行人脸检测，并对AdaBoost训练出的强分类器进行级联。这是人脸检测史上里程碑式的一笔，这个算法被人们称为Viola-Jones检测器。
 
 Viola-Jones人脸检测器基本的思路就是用一个固定大小的窗口在输入图像进行滑动，窗口框定的区域会被送入到分类器，去判断是人脸窗口还是非人脸窗口。滑动的窗口其大小是固定的，但是人脸的大小则多种多样，为了检测不同大小的人脸，还需要把输入图像缩放到不同大小，使得不同大小的人脸能够在某个尺度上和窗口大小相匹配。这种滑动窗口式的做法有一个很明显的问题，就是有太多的位置要去检查，去判断是人脸还是非人脸。
 

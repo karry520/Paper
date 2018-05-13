@@ -1,6 +1,6 @@
-目标检测是计算机视觉领域的基础问题，在2010年左右其发展就开始停滞不前了。自2013年——\textit{Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation}\cite{rcnn}的发表，目标检测从原始的传统手工提取特征方法变成了基于卷积神经网络的特征提取，从此一发不可收拾。根着历史的潮流，本章简要地探讨“目标检测”算法的两种思想和这些思想引申出的具有代表性的算法。
+目标检测是人工智能领域的基础问题，在2010年左右其发展就开始停滞不前了。自2013年\textit{Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation}\cite{rcnn}一文的发表，目标检测从传统手工提取特征方法变成了基于卷积神经网络的特征提取，从此一发不可收拾。跟着历史的潮流，本章简要地探讨“目标检测”算法的两种思想和这些思想引申出的具有代表性的算法。
 
-“目标检测”算法大家族主要划分为两大派系，一个是以R-CNN为代表的“Two Stage”，另一个则是以YOLO为代表的"One Stage"。下面分别解释一下“Two Stage”和“One Stage”。
+“目标检测”算法大家族主要划分为两大派系，一个是以R-CNN为代表的“Two Stage”方法，另一个则是以YOLO为代表的"One Stage"方法。下面分别解释一下“Two Stage”方法和“One Stage”方法。
 
 \textbf{Two Stage:}顾名思义，分两步进行目标检测：1、生成可能区域(Region Proposal) \& CNN提取特征。2、放入分类器分类并修正位置。这一流派的算法都离不开Region Proposal，即是优点也是缺点，主要代表算法就是Faster R-CNN。
 
