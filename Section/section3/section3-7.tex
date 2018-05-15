@@ -1,36 +1,38 @@
 \subsubsection{SSD中采用的损失函数}
-\textbf{联合LOSS FUNCTION:}SSD网络对于每个Stage输出的特征图都进行边框回归和分类操作。SSD网络中作者设计了一个联合损失函数
-\[
+\textbf{联合Loss Function:}SSD网络对于每个阶段输出的特征图都进行边框回归和分类操作。SSD网络中作者设计了一个联合损失函数
+\begin{equation}
 	L(x,c,l,g) = \frac{1}{N}(L_{conf}(x,c) + \alpha L_{loc}(x,l,g)
-\]
+\end{equation}
 其中：
 
- 1、$L_{conf}$代表的是分类误差，采用的是多分类的softmax loss
+ 1、$L_{conf}$表示分类误差，采用多分类的softmax loss
  
- 2、$L_{loc}$代表的是回归误差，采用的是Smooth L1 loss
+ 2、$L_{loc}$表示回归误差，采用Smooth L1 loss
  
  3、$\alpha$取1
  
- 回归loss,smoothL1:
-\begin{align*}
- L_{loc}(x,l,g) &= \sum _{i \in Pos} ^{N} \sum_{m \in \{cx,cy,w,h\}} x_{ij}^k smooth _{L1} (l_i ^m - g_j ^m) \\
- g_j^{cx} &= \left( g_j ^{cx} - d_i ^{cx} \right) / d_i ^w 
-\end{align*}
+回归loss,smoothL1:
+\begin{align}
+	L_{loc}(x,l,g) &= \sum _{i \in Pos} ^{N} \sum_{m \in \{cx,cy,w,h\}} x_{ij}^k smooth _{L1} (l_i ^m - g_j ^m) \\
+	g_j^{cx} &= \left( g_j ^{cx} - d_i ^{cx} \right) / d_i ^w 
+\end{align}	
 
 \subsubsection{改进损失函数-Focal Loss}
-作者提出Focal Loss的出发点也是希望One-Stage Detector可以达到Two Stage Detector的准确率，同时不影响原有的速度。
+提出Focal Loss的初衷是希望既有”One-Stage Detector“的速度，也有”Two Stage Detector“的准确率。
 
-先分析One Stage Detector的准确率不如Two Stage Detector的原因，作者认为原因是：样本的类别不均衡导致的。我们知道在object detection领域，一张图像可能生成成千上万的candidate locations，但是其中只有很少一部分是包含object的，这就带来了类别不均衡。那么类别不均衡会带来什么后果呢？引用原文讲的两个后果：
+\textbf{１、为什么"One Stage Detector"的准确率低？}
+
+其作者认为主要原因是：不同类别的训练样本数量的不均衡。在目标检测领域，一张原始图像可能生成非常多的预测区域，但是包含目标的图片数量占比非常低，这就带来了类别不均衡。那么不同类别的训练样本数量不均衡会带来什么后果呢？引用原文讲的两个后果：
 
 (1) training is inefficient as most locations are easy negatives that contribute no useful learning signal; 
 
 (2) en masse, the easy negatives can overwhelm training and lead to degenerate models. \cite{focal-loss}
 
-什么意思呢？负样本数量太大，占总的loss的大部分，而且多是容易分类的，因此使得模型的优化方向并不是我们所希望的那样。其实先前也有一些算法来处理类别不均衡的问题，比如OHEM(Online Hard Example Mining)\cite{ohem}，OHEM的主要思想可以用原文的一句话概括：In OHEM each example is scored by its loss, non-maximum suppression (NMS) is then applied, and a minibatch is constructed with the highest-loss examples。\cite{ohem}OHEM算法虽然增加了错分类样本的权重，但是OHEM算法忽略了容易分类的样本。因此针对类别不均衡问题，Focal Loss这个损失函数是在标准交叉熵损失基础上修改得到的。这个函数可以通过减少易分类样本的权重，使得模型在训练时更专注于难分类的样本。
+负样本数量占比过高，使得对总的loss的影响过大，因此使得模型不会按我们所希望的方向进行优化。这也不是新鲜的问题了，先前也有存在一些算法来处理不同类别的训练样本数量不均衡的问题，比如OHEM(Online Hard Example Mining)\cite{ohem}，OHEM算法的主要思想可以用原文的一句话概括：In OHEM each example is scored by its loss, non-maximum suppression (NMS\cite{soft-nms}) is then applied, and a minibatch is constructed with the highest-loss examples。\cite{ohem}可以看出OHEM算法加大了对错分类样本的权重，不过OHEM算法忽略了对容易分类的样本的权重处理。Focal Loss是从标准交叉熵损失基础上改进所得。这个函数可以通过调整易分类样本的权重，使得模型在训练时对难分类的样本更专注。
 
 \textbf{标准交叉熵损失函数}
 
-原来的分类loss是各个训练样本交叉熵的直接求和，也就是各个样本的权重是一样的。如下图所示:
+没有经过加权的分类损失是各个训练样本交叉熵的和，如下图所示:
 
 \begin{equation}
 CE(p,y)=\left\{
@@ -45,24 +47,25 @@ CE(p,y)=\left\{
 
 CE表示cross entropy,p表示预测样本属于1的概率，y表示label，y的取值为{+1,-1}，这里仅仅以二分类为例，多分类以此类推。为了表示简便，我们用$p_t$表示样本属于true class的概率。所以上式可以写成
 
-\[
-	CE(p,y) = CE(p_t) = -\log (p_t)
-\]
-
+\begin{equation}
+	CE(p,y) = CE(p_t) = -\log (p_t)	
+\end{equation}
+	
 \textbf{平衡交叉熵}
 
-既然"one stage detector"在训练的时候正负样本的数量差距很大，那么一种常见的做法就是给正负样本加上权重，负样本出现的频次多，那么就降低负样本的权重，正样本数量少，就相对提高正样本的权重，如下式所示：
-\[
+我们知道了"One Stage Detector"在训练的时候正负样本的数量差距很大，那么一种常见的做法就是给正负样本加上权重，负样本出现的频次多，那么就降低负样本的权重，正样本数量少，就相对提高正样本的权重，如下式所示：
+\begin{equation}
 	CE(p_t) = -\alpha \log (p_t)
-\]
-
+\end{equation}
+	
 \textbf{Focal-Loss定义}
 
-作者实际上解决的是easy example和hard example不均衡的问题，这个和训练时候正负样本不均衡是两码事，因为正负样本里面都会有简单的样本和容易分错的样本。作者提出的focal loss，相当于是对各个样本加上了各自的权重，这个权重是和网络预测该样本属于true class的概率相关的，显然，如果网络预测的该样本属于true class的概率很大，那么这个样本对网络来说就属于easy(well-classified) example。如果网络预测的该样本属于true class的概率很小，那么这个样本对网络来说就属于hard example。为了训练一个有效的classification part，显然应该降低绝大部分easy example的权重，相对增大hard example的权重。作者提出的focal loss如下式所示： 
-\[
+通过上述分析，此文作者解决了easy example与hard example数量不均衡的问题，Focal Loss相当于是对各个样本根据网络模型预测该样本属于真实类别的概率设置各自的权重，如果网络对该样本属于真实类别的预测后的概率很大，那么这个样本就属于easy　example，相反，对这个网络来说该样本就属于hard example。所以降低绝大部分简单样本的权重，相对增大复杂样本的权重就能训练出一个有效的分类器。Focal Loss的形式如下： 
+\begin{equation}
 	FL(p_t) = -(1 - p_t)^\gamma \log (p_t)
-\]
-参数$\gamma$大于0。当参数$\gamma = 0$的时候，就是普通的交叉熵，作者的实验中发现$\gamma = 2$效果最高。可以看到，当γ一定的时候，比如等于2，一样easy example($p_t = 0.9$)的loss要比标准的交叉熵loss小100+倍，当$p_t=0.968$时，要小1000+倍，但是对于hard example($p_t < 0.5$)，loss最多小了4倍。这样的话hard example的权重相对就提升了很多。实际实验中，作者和3.2一样，对正负样本又做了一个reweighting 
-\[
+\end{equation}
+参数$\gamma　> 0$。当参数$\gamma = 0$的时候，就是普通的交叉熵，作者经过实验发现当$\gamma = 2$时效果最好。从公式中可以发现，当$\gamma
+$是一个定值时，比如说等于2，简单样本($p_t = 0.9$)的loss要比标准的交叉熵计算出的loss小100多倍，当$p_t=0.968$时，要小1000多倍，对于困难样本($p_t < 0.5$)，loss最多小了4倍。这样的话困难样本的权重相对就提升了很多。 
+\begin{equation}
 	FL(p_t) = -\alpha _t(1 - p_t)^\gamma \log (p_t)
-\]
+\end{equation}

@@ -1,10 +1,10 @@
-目标检测是人工智能领域的基础问题，在2010年左右其发展就开始停滞不前了。自2013年\textit{Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation}\cite{rcnn}一文的发表，目标检测从传统手工提取特征方法变成了基于卷积神经网络的特征提取，从此一发不可收拾。跟着历史的潮流，本章简要地探讨“目标检测”算法的两种思想和这些思想引申出的具有代表性的算法。
+目标检测是人工智能领域的基础问题\cite{dl}，纵观其发展历程，2010年是一个转折点。自2013年\textit{Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation}\cite{rcnn}一文的发表，基于卷积神经网络的特征提取代替了传统手工提取特征方法，从此为目标检测领域引入了深度学习这个高效的方法。跟着历史的潮流，本章将简要梳理“目标检测”算法的两种重要思想和扼要地介绍在这些重要思想影响下的那些具有代表性的算法。
 
-“目标检测”算法大家族主要划分为两大派系，一个是以R-CNN为代表的“Two Stage”方法，另一个则是以YOLO为代表的"One Stage"方法。下面分别解释一下“Two Stage”方法和“One Stage”方法。
+概括地说，“目标检测”系列算法宏观上可以划分为两类，一个是以R-CNN\cite{rcnn}为代表的“Two-Stage”方法，另一个则是以YOLO\cite{yolo}为代表的"One-Stage"方法。下面分别解释一下什么是“One-Stage”方法和“Two-Stage”方法。
 
-\textbf{Two Stage:}顾名思义，分两步进行目标检测：1、生成可能区域(Region Proposal) \& CNN提取特征。2、放入分类器分类并修正位置。这一流派的算法都离不开Region Proposal，即是优点也是缺点，主要代表算法就是Faster R-CNN。
+\textbf{One Stage:}顾名思义，对预测的目标物体直接进行检测，即直接利用位置回归进行目标检测，其特点是简单快速，但是精度要低于“Two Stage”方法，其代表算法是YOLO\cite{yolo}和SSD\cite{ssd}。
 
-\textbf{One Stage:}顾名思义，对预测的目标物体直接进行检测：直接利用回归进行目标检测，其特点简单快速，但是有损精度，主要代表算法是YOLO和SSD。
+\textbf{Two-Stage:}顾名思义，分两步进行目标检测：1、生成可能区域(Region Proposal) \& 利用CNN提取特征。2、放入分类器进行分类，与此同时修正位置。这一流派的算法都离不开Region Proposal，优缺点参半，一方面提高了精度，另一方面却损失了速度，其代表算法是Faster R-CNN\cite{fasterrcnn}。
 
-无论“Two Stage”还是“One Stage”，他们都是在同一个天平下选取一个平衡点、或者选取一个极端——要么准，要么快。"Two　Stage"的天平主要倾向准，“One Stage”的天平主要倾向快。但最后大家也找到了自己的平衡，平衡点的有略微的不同。接下来将分别介绍这两个派系的算法。
+总的说来，“One-Stage”和“Two-Stage”方法，都是在同一个衡量标准下寻找速度与精度的平衡点。“One-Stage”的方法倾向快，"Two-Stage"的方法更倾向于准。接下来将分别介绍在两种重要思路影响下的具有代表性的算法。
 

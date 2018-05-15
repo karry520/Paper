@@ -1,30 +1,28 @@
 \section{总结及展望}
 % 一些关于序号的设置
 \setcounter{figure}{0}
-\textbf{目前业界出现的目标检测算法有一下几种：}
+\textbf{目标检测算法出现了以下几种：}
 
-1、传统的目标检测算法：Cascade + Haar / SVM + HOG / DPM ；
+1、传统的目标检测算法：Cascade\cite{repid} + Haar\cite{haar} / SVM\cite{svm} + HOG / DPM ；
 
-2、候选窗+深度学习分类：通过提取候选区域，并对相应区域进行以深度学习方法为主的分类的方案，如：RCNN / SPP-net/ Fast-RCNN / Faster-RCNN  / R-FCN 系列方法；
+2、候选窗+深度学习分类：通过提取候选区域，并对相应区域进行以深度学习方法为主的分类的方案，如：RCNN / SPP-net/ Fast-RCNN / Faster-RCNN  / R-FCN\cite{rfcn}系列方法；
 
-3、基于深度学习的回归方法：YOLO / SSD / DenseBox 等方法；
+3、基于深度学习的回归方法：YOLO / SSD / DenseBox\cite{densebox}等方法；
 
-4、结合RNN算法的RRC detection；结合DPM的Deformable CNN等方法；
+4、结合RNN算法的RRC Detection；结合DPM的Deformable CNN\cite{deformable}等方法；
 
 \textbf{基于深度学习方法的几个可能的方向：}
 
-1、从原始图像、低层的feature map层，以及高层的语义层获取更多的信息，从而得到对目标bounding box的更准确的估计；
+1、从原始图像、低层的Feature Map层，以及高层的语义层获取更多的信息，从而得到对目标Bounding Box的更准确的估计；
 
-2、对bounding box的估计可以结合图片的一些由粗到细（coarse-to-fine）的分割信息；
+2、对Bounding Box的估计可以结合图片的一些由粗到细(coarse-to-fine)的分割信息；
 
 3、对bounding box的估计需要引入更多的局部的content的信息；
 
 4、目标检测数据集的标注难度非常大，如何把其他如classfication领域学习到的知识用于检测当中，甚至是将classification的数据和检测数据集做co-training（如YOLO9000）的方式，可以从数据层面获得更多的信息；
 
-5、更好的启发式的学习方式，人在识别物体的时候，第一次可能只是知道这是一个单独的物体，也知道bounding box，但是不知道类别；当人类通过其他渠道学习到类别的时候，下一次就能够识别了；目标检测也是如此，我们不可能标注所有的物体的类别，但是如何将这种快速学习的机制引入，也是一个问题；
+5、RRC，deformable cnn中卷积和其他的很好的图片的操作、机器学习的思想的结合未来也有很大的空间；
 
-6、RRC，deformable cnn中卷积和其他的很好的图片的操作、机器学习的思想的结合未来也有很大的空间；
+6、语意信息和分割的结合，可能能够为目标检测提供更多的有用的信息；
 
-7、语意信息和分割的结合，可能能够为目标检测提供更多的有用的信息；
-
-8、场景信息也会为目标检测提供更多信息；比如天空不会出现汽车等等。
+7、场景信息也会为目标检测提供更多信息；比如天空不会出现汽车等等。
