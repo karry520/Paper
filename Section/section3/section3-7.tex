@@ -69,3 +69,31 @@ $是一个定值时，比如说等于2，简单样本($p_t = 0.9$)的loss要比�
 \begin{equation}
 	FL(p_t) = -\alpha _t(1 - p_t)^\gamma \log (p_t)
 \end{equation}
+
+\subsubsection{改进NMS,采用Soft-NMS}
+本设计中使用到了NMS-非极大值抑制\cite{nms}进行后处理。NMS通常的做法是将检测框按得分排序，然后保留得分最高的框，同时删除与该框重叠面积大于一定比例的其它框。这种贪心式方法存在如图所示的问题： 
+\begin{uscfigure}
+	\includegraphics[width=\textwidth]{./Pictures/soft-nms.jpeg}	
+	\caption{非极大值抑制}
+	\label{soft-nms}
+\end{uscfigure}
+红色框和绿色框是当前的检测结果，二者的得分分别是0.95和0.80。如果按照传统的NMS进行处理，首先选中得分最高的红色框，然后绿色框就会因为与之重叠面积过大而被删掉。另一方面，NMS的阈值也不太容易确定，设小了会出现下图的情况（绿色框因为和红色框重叠面积较大而被删掉），设置过高又容易增大误检。
+
+Soft-NMS采用的策略是用降低置信度来取代直接删除掉IOU大于阈值的框。原来的NMS可以描述如下：
+\begin{equation}
+s_i=\left\{
+\begin{aligned}
+& s_i 	&iou(M,b_i) < N_t,\\
+& 0 	&otherwise
+\end{aligned}
+\right.
+\end{equation}
+现在我们将其替换成如下形式：
+\begin{equation}
+s_i=\left\{
+\begin{aligned}
+& s_i 	&iou(M, b_i) < N_t\\
+& s_i(1 - iou(M, b_i)) 	&otherwise
+\end{aligned}
+\right.
+\end{equation}

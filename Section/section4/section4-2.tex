@@ -5,9 +5,11 @@
 
 3、将对conv4的处理抽象成一个类名为L2Norm2d
 \begin{uscfigure}
-	\includegraphics[width=\textwidth]{./Pictures/layers.jpg}	
+	\includegraphics[width=\textwidth]{./Pictures/SSD.png}	
 	\caption{SSD模型设计框架}
+	\label{algor}
 \end{uscfigure}
+如图\ref{algor}显示了SSD网络模型实现代码的主要元素。其包括SSD类的参数：阶段(训练/测试)、类别(前景/损害)、配置参数(数据集的路径/图片的大小的设定...)，还有前向传播的forword()方法，以及构成SSD网络的三个基础网络——VGG16、Extra、Multibox。
 \subsubsection{L2Norm2d}
 \begin{lstlisting}[caption={L2Norm2d}]
 class L2Norm2d(nn.Module):
@@ -21,6 +23,8 @@ class L2Norm2d(nn.Module):
 				clamp(min=1e-12).	\
 				rsqrt().expand_as(x)
 \end{lstlisting}
+
+基础网络部分特征图分辨率高，原图中信息更完整，感受野较小，可以用来检测图像中的小目标，这也是SSD相对于YOLO检测小目标的优势所在。增加对基础网络conv4\_3的特征图的检测可以使mAP提升4\%。L2Norm2d类为对conv4\_3进行处理的代码。
 \subsubsection{SSD Layer}
 \begin{lstlisting}[caption={SSD layer}]
 class SSD300(nn.Module):
@@ -35,6 +39,7 @@ class SSD300(nn.Module):
 	self.conv(8~12)(1~2)
 \end{lstlisting}
 
+上述代码是对SSD网络模型的实现，其主要的结构包括了VGG16、Extra(SSD添加的几层，其作用是产生不同尺度的特征图)、Multibox。
 \subsubsection{Multibox Layer}
 1、Multibox Layer作为生成Anchor的网络
 
@@ -60,3 +65,5 @@ class MultiBoxLayer(nn.Module):
 			)
 		)
 \end{lstlisting}
+
+Multibox Layer是将不同层产生的特征图进行预测其位置偏移和类别的运算的层。其中Multibox loss是对损失函数的实现，采用了全网络结构，也就是说所有的计算都在一个网络中进行。

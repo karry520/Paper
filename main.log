@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  20 MAY 2018 10:48
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  25 MAY 2018 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1322,6 +1322,22 @@ s
 \f@nch@O@olf=\skip70
 \f@nch@O@orf=\skip71
 )
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen198
+\captionmargin@=\dimen199
+\captionwidth=\dimen256
+\caption@tempdima=\dimen257
+\caption@indent=\dimen258
+\caption@parindent=\dimen259
+\caption@hangindent=\dimen260
+)
+\c@ContinuedFloat=\count271
+)
 (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
@@ -1335,8 +1351,8 @@ Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks21
-\pgfutil@tempdima=\dimen198
-\pgfutil@tempdimb=\dimen199
+\pgfutil@tempdima=\dimen261
+\pgfutil@tempdimb=\dimen262
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -1362,20 +1378,20 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 ex
 \pgfkeys@tmptoks=\toks24
 ))
-\pgf@x=\dimen256
-\pgf@y=\dimen257
-\pgf@xa=\dimen258
-\pgf@ya=\dimen259
-\pgf@xb=\dimen260
-\pgf@yb=\dimen261
-\pgf@xc=\dimen262
-\pgf@yc=\dimen263
+\pgf@x=\dimen263
+\pgf@y=\dimen264
+\pgf@xa=\dimen265
+\pgf@ya=\dimen266
+\pgf@xb=\dimen267
+\pgf@yb=\dimen268
+\pgf@xc=\dimen269
+\pgf@yc=\dimen270
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count271
-\c@pgf@countb=\count272
-\c@pgf@countc=\count273
-\c@pgf@countd=\count274
+\c@pgf@counta=\count272
+\c@pgf@countb=\count273
+\c@pgf@countc=\count274
+\c@pgf@countd=\count275
 \t@pgf@toka=\toks25
 \t@pgf@tokb=\toks26
 \t@pgf@tokc=\toks27
@@ -1394,13 +1410,13 @@ File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
 f
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )
-\pgfsys@objnum=\count275
+\pgfsys@objnum=\count276
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count276
-\pgfsyssoftpath@bigbuffer@items=\count277
+\pgfsyssoftpath@smallbuffer@items=\count277
+\pgfsyssoftpath@bigbuffer@items=\count278
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -1428,8 +1444,8 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen264
-\pgfmath@count=\count278
+\pgfmath@dimen=\dimen271
+\pgfmath@count=\count279
 \pgfmath@box=\box55
 \pgfmath@toks=\toks28
 \pgfmath@stack@operand=\toks29
@@ -1453,37 +1469,37 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count279
+\c@pgfmathroundto@lastzeros=\count280
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen265
-\pgf@picmaxx=\dimen266
-\pgf@picminy=\dimen267
-\pgf@picmaxy=\dimen268
-\pgf@pathminx=\dimen269
-\pgf@pathmaxx=\dimen270
-\pgf@pathminy=\dimen271
-\pgf@pathmaxy=\dimen272
-\pgf@xx=\dimen273
-\pgf@xy=\dimen274
-\pgf@yx=\dimen275
-\pgf@yy=\dimen276
-\pgf@zx=\dimen277
-\pgf@zy=\dimen278
+\pgf@picminx=\dimen272
+\pgf@picmaxx=\dimen273
+\pgf@picminy=\dimen274
+\pgf@picmaxy=\dimen275
+\pgf@pathminx=\dimen276
+\pgf@pathmaxx=\dimen277
+\pgf@pathminy=\dimen278
+\pgf@pathmaxy=\dimen279
+\pgf@xx=\dimen280
+\pgf@xy=\dimen281
+\pgf@yx=\dimen282
+\pgf@yy=\dimen283
+\pgf@zx=\dimen284
+\pgf@zy=\dimen285
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen279
-\pgf@path@lasty=\dimen280
+\pgf@path@lastx=\dimen286
+\pgf@path@lasty=\dimen287
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen281
-\pgf@shorten@start@additional=\dimen282
+\pgf@shorten@end@additional=\dimen288
+\pgf@shorten@start@additional=\dimen289
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
@@ -1491,19 +1507,19 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box56
 \pgf@hbox=\box57
 \pgf@layerbox@main=\box58
-\pgf@picture@serial@count=\count280
+\pgf@picture@serial@count=\count281
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen283
+\pgflinewidth=\dimen290
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen284
-\pgf@pt@y=\dimen285
-\pgf@pt@temp=\dimen286
+\pgf@pt@x=\dimen291
+\pgf@pt@y=\dimen292
+\pgf@pt@temp=\dimen293
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -1519,12 +1535,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen287
+\pgfarrowsep=\dimen294
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen288
-\pgf@sys@shading@range@num=\count281
+\pgf@max=\dimen295
+\pgf@sys@shading@range@num=\count282
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -1555,8 +1571,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen289
-\pgf@nodesepend=\dimen290
+\pgf@nodesepstart=\dimen296
+\pgf@nodesepend=\dimen297
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -1570,8 +1586,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen291
-\pgffor@skip=\dimen292
+\pgffor@iter=\dimen298
+\pgffor@skip=\dimen299
 \pgffor@stack=\toks31
 \pgffor@toks=\toks32
 ))
@@ -1581,31 +1597,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count282
-\pgfplotmarksize=\dimen293
+\pgf@plot@mark@count=\count283
+\pgfplotmarksize=\dimen300
 )
-\tikz@lastx=\dimen294
-\tikz@lasty=\dimen295
-\tikz@lastxsaved=\dimen296
-\tikz@lastysaved=\dimen297
-\tikzleveldistance=\dimen298
-\tikzsiblingdistance=\dimen299
+\tikz@lastx=\dimen301
+\tikz@lasty=\dimen302
+\tikz@lastxsaved=\dimen303
+\tikz@lastysaved=\dimen304
+\tikzleveldistance=\dimen305
+\tikzsiblingdistance=\dimen306
 \tikz@figbox=\box61
 \tikz@figbox@bg=\box62
 \tikz@tempbox=\box63
 \tikz@tempbox@bg=\box64
-\tikztreelevel=\count283
-\tikznumberofchildren=\count284
-\tikznumberofcurrentchild=\count285
-\tikz@fig@count=\count286
+\tikztreelevel=\count284
+\tikznumberofchildren=\count285
+\tikznumberofcurrentchild=\count286
+\tikz@fig@count=\count287
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count287
-\pgfmatrixcurrentcolumn=\count288
-\pgf@matrix@numberofcolumns=\count289
+\pgfmatrixcurrentrow=\count288
+\pgfmatrixcurrentcolumn=\count289
+\pgf@matrix@numberofcolumns=\count290
 )
-\tikz@expandcount=\count290
+\tikz@expandcount=\count291
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1628,25 +1644,25 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen300
+\arrowsize=\dimen307
 )) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count291
+\lst@mode=\count292
 \lst@gtempboxa=\box65
 \lst@token=\toks33
-\lst@length=\count292
-\lst@currlwidth=\dimen301
-\lst@column=\count293
-\lst@pos=\count294
-\lst@lostspace=\dimen302
-\lst@width=\dimen303
-\lst@newlines=\count295
-\lst@lineno=\count296
-\lst@maxwidth=\dimen304
+\lst@length=\count293
+\lst@currlwidth=\dimen308
+\lst@column=\count294
+\lst@pos=\count295
+\lst@lostspace=\dimen309
+\lst@width=\dimen310
+\lst@newlines=\count296
+\lst@lineno=\count297
+\lst@maxwidth=\dimen311
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count297
-\lst@skipnumbers=\count298
+\c@lstnumber=\count298
+\lst@skipnumbers=\count299
 \lst@framebox=\box66
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -1654,23 +1670,6 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen305
-\captionmargin@=\dimen306
-\captionwidth=\dimen307
-\caption@tempdima=\dimen308
-\caption@indent=\dimen309
-\caption@parindent=\dimen310
-\caption@hangindent=\dimen311
-)
-\c@ContinuedFloat=\count299
-Package caption Info: listings package is loaded.
-)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1915,11 +1914,8 @@ LaTeX Warning: Label `sppnet' multiply defined.
 LaTeX Warning: Label `rcnn' multiply defined.
 
 ) (./Section/section4-algorithm-implementation.aux)
-(./Section/section5-experimental-results-and-analysis.aux
-
-LaTeX Warning: Label `result' multiply defined.
-
-) (./Section/section6-summary-and-outlook.aux)
+(./Section/section5-experimental-results-and-analysis.aux)
+(./Section/section6-summary-and-outlook.aux)
 (./Section/section7-acknowledgements.aux))
 \openout1 = `main.aux'.
 
@@ -2054,11 +2050,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 7.
-ABD: EveryShipout initializing macros
-\c@lstlisting=\count328
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+ABD: EveryShipout initializing macros
+\c@lstlisting=\count328
 \AtBeginShipoutBox=\box70
 Package hyperref Info: Link coloring OFF on input line 7.
 
@@ -2119,6 +2116,11 @@ File: ./Pictures/usc.png Graphic file (type bmp)
 . - 'normal' (m/n) with NFSS spec.: <->"[FandolKai-Regular.otf]/OT"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+[]|\TU/FandolSong-Regular(1)/m/n/16.06 　
+ []
+
 ) [1]
 
 LaTeX Font Warning: Font shape `TU/ppl/bx/n' undefined
@@ -2251,8 +2253,15 @@ File: ./Pictures/ssd_(3).jpg Graphic file (type bmp)
 (./Section/section3/section3-3.tex) (./Section/section3/section3-7.tex [15]
 [16]
 Missing character: There is no 　 in font [lmroman12-regular]:mapping=tex-text;!
-) (./Section/section3/section3-4.tex [17])
-(./Section/section3/section3-6.tex)) [18]
+
+
+LaTeX Warning: Citation `nms' on page 17 undefined on input line 74.
+
+[17]
+File: ./Pictures/soft-nms.jpeg Graphic file (type bmp)
+<./Pictures/soft-nms.jpeg>
+) (./Section/section3/section3-4.tex [18])
+(./Section/section3/section3-6.tex)) [19]
 \openout2 = `./Section/section4-algorithm-implementation.aux'.
 
 
@@ -2260,7 +2269,7 @@ Missing character: There is no 　 in font [lmroman12-regular]:mapping=tex-text;
 (./Section/section4/section4-1.tex
 File: ./Pictures/labelimg.jpg Graphic file (type bmp)
 <./Pictures/labelimg.jpg>
- [19
+ [20
 
 
 ]
@@ -2288,54 +2297,57 @@ LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
 ) (./Section/section4/section4-2.tex
-File: ./Pictures/layers.jpg Graphic file (type bmp)
-<./Pictures/layers.jpg>
+File: ./Pictures/SSD.png Graphic file (type bmp)
+<./Pictures/SSD.png>
 
 
 LaTeX Font Warning: Font shape `TU/pcr/bx/n' undefined
-(Font)              using `TU/pcr/m/n' instead on input line 13.
+(Font)              using `TU/pcr/m/n' instead on input line 15.
 
-[20]
+[21]
 
 LaTeX Font Warning: Font shape `TU/pcr/m/it' undefined
-(Font)              using `TU/pcr/m/n' instead on input line 30.
+(Font)              using `TU/pcr/m/n' instead on input line 34.
 
-) (./Section/section4/section4-3.tex [21]) (./Section/section4/section4-4.tex))
-[22]
+[22]) (./Section/section4/section4-3.tex) (./Section/section4/section4-4.tex))
+[23] [24]
 \openout2 = `./Section/section5-experimental-results-and-analysis.aux'.
 
  (./Section/section5-experimental-results-and-analysis.tex
-File: ./Pictures/result.jpg Graphic file (type bmp)
-<./Pictures/result.jpg>
- [23
-
-
-]
 File: ./Pictures/loss.png Graphic file (type bmp)
 <./Pictures/loss.png>
-) [24]
+File: ./Pictures/result.jpg Graphic file (type bmp)
+<./Pictures/result.jpg>
+
+
+LaTeX Warning: Float too large for page by 10.15428pt on input line 17.
+
+[25
+
+
+] [26]
+File: ./Pictures/damage.jpg Graphic file (type bmp)
+<./Pictures/damage.jpg>
+) [27]
 \openout2 = `./Section/section6-summary-and-outlook.aux'.
 
+ (./Section/section6-summary-and-outlook.tex) [28
 
-(./Section/section6-summary-and-outlook.tex) [25
 
+] (./main.bbl
+[29
 
-]
+]) [30]
 \openout2 = `./Section/section7-acknowledgements.aux'.
 
+ (./Section/section7-acknowledgements.tex) [31
 
-(./Section/section7-acknowledgements.tex) [26
-
-
-] (./main.bbl [27
-
-])
+]
 
 AED: lastpage setting LastPage
-[28]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
- (./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
+(./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
 (./Section/en-abstract.aux) (./Section/section1-introduction.aux)
 (./Section/section2-object-detection-correlation-algorithm.aux)
 (./Section/section3-algorithm-design.aux)
@@ -2358,12 +2370,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
  ) 
 Here is how much of TeX's memory you used:
- 41971 strings out of 492998
- 848189 string characters out of 6136604
- 981116 words of memory out of 5000000
- 45277 multiletter control sequences out of 15000+600000
+ 41988 strings out of 492998
+ 848699 string characters out of 6136604
+ 979622 words of memory out of 5000000
+ 45291 multiletter control sequences out of 15000+600000
  535768 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 63i,12n,71p,10439b,1847s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,71p,10439b,1845s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (33 pages).
+Output written on main.pdf (36 pages).

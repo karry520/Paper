@@ -10,3 +10,15 @@ for batch_idx, (images, loc_targets,conf_targets)
 	loss.backward()
 	optimizer.step()
 \end{lstlisting}
+
+通常不同的学习策略，产生的训练效果也有所不同，本设计采用原作者的训练策略。即：
+
+1、参数初始化——清零
+
+2、用DataLoader接口产生一批数据，将其传入网络中进行计算
+　
+3、前向传播
+
+4、自动求导，并更新参数
+
+5、跳到第2步
