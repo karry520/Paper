@@ -14,9 +14,13 @@
 回归loss,smoothL1:
 \begin{align}
 	L_{loc}(x,l,g) &= \sum _{i \in Pos} ^{N} \sum_{m \in \{cx,cy,w,h\}} x_{ij}^k smooth _{L1} (l_i ^m - g_j ^m) \\
-	g_j^{cx} &= \left( g_j ^{cx} - d_i ^{cx} \right) / d_i ^w 
+	g_j^{cx} &= \left( g_j ^{cx} - d_i ^{cx} \right) / d_i ^w \quad g_j^{cy} = (g_j^{cy} - d_i^{cy}) / d_i ^h \\
+	g_j^w &= \log(\frac{g_j^w}{d_i^w}) \quad g_j^h = \log(\frac{g_j^h}{d_i^h})
 \end{align}	
-
+分类误差，采用Softmax Loss：
+\begin{equation}
+L_{conf}(x, c) = -\sum_{i \in Pos}^N x_{ij}^p\log(c_i^0) \quad where \quad c_i^p = \frac{exp(c_i^p)}{\sum_{p}exp(c_i^p)} 
+\end{equation}
 \subsubsection{改进损失函数-Focal Loss}
 提出Focal Loss的初衷是希望既有”One-Stage Detector“的速度，也有”Two Stage Detector“的准确率。
 
