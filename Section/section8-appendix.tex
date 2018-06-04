@@ -202,7 +202,8 @@ self.scale = scale
 
 def forward(self, x, dim=1):
 '''out = scale * x / sqrt(\sum x_i^2)'''
-return self.scale * x * x.pow(2).sum(dim).clamp(min=1e-12).rsqrt().expand_as(x)
+return self.scale * x * x.pow(2).sum(dim).clamp(min=1e-12).
+	rsqrt().expand_as(x)
 
 
 class SSD300(nn.Module):
@@ -313,8 +314,10 @@ super(MultiBoxLayer, self).__init__()
 self.loc_layers = nn.ModuleList()
 self.conf_layers = nn.ModuleList()
 for i in range(len(self.in_planes)):
-self.loc_layers.append(nn.Conv2d(self.in_planes[i], self.num_anchors[i]*4, kernel_size=3, padding=1))
-self.conf_layers.append(nn.Conv2d(self.in_planes[i], self.num_anchors[i]*21, kernel_size=3, padding=1))
+self.loc_layers.append(nn.Conv2d(self.in_planes[i],
+ self.num_anchors[i]*4, kernel_size=3, padding=1))
+self.conf_layers.append(nn.Conv2d(self.in_planes[i],
+ self.num_anchors[i]*21, kernel_size=3, padding=1))
 
 def forward(self, xs):
 '''
@@ -323,7 +326,8 @@ xs: (list) of tensor containing intermediate layer outputs.
 
 Returns:
 loc_preds: (tensor) predicted locations, sized [N,8732,4].
-conf_preds: (tensor) predicted class confidences, sized [N,8732,21].
+conf_preds: (tensor) predicted class confidences,
+ sized [N,8732,21].
 '''
 y_locs = []
 y_confs = []
@@ -386,10 +390,12 @@ print(loss.mean())
 print(F.cross_entropy(a,b))
 
 def hard_negative_mining(self, conf_loss, pos):
-'''Return negative indices that is 3x the number as postive indices.
+'''Return negative indices that is 3x the 
+number as postive indices.
 
 Args:
-conf_loss: (tensor) cross entroy loss between conf_preds and conf_targets, sized [N*8732,].
+conf_loss: (tensor) cross entroy loss 
+between conf_preds and conf_targets, sized [N*8732,].
 pos: (tensor) positive(matched) box indices, sized [N,8732].
 
 Return:
@@ -397,7 +403,8 @@ Return:
 '''
 batch_size, num_boxes = pos.size()
 
-conf_loss[pos] = 0  # set pos boxes = 0, the rest are neg conf_loss
+conf_loss[pos] = 0  # set pos boxes = 0, 
+the rest are neg conf_loss
 conf_loss = conf_loss.view(batch_size, -1)  # [N,8732]
 
 _,idx = conf_loss.sort(1, descending=True)  # sort by neg conf_loss
@@ -440,7 +447,8 @@ loc_loss = F.smooth_l1_loss(pos_loc_preds, pos_loc_targets, size_average=False)
 # conf_loss = CrossEntropyLoss(pos_conf_preds, pos_conf_targets)
 #           + CrossEntropyLoss(neg_conf_preds, neg_conf_targets)
 ################################################################
-conf_loss = self.cross_entropy_loss(conf_preds.view(-1,self.num_classes), \
+conf_loss = self.cross_entropy_loss(conf_preds.view(
+-1,self.num_classes), 
 conf_targets.view(-1))  # [N*8732,]
 neg = self.hard_negative_mining(conf_loss, pos)    # [N,8732]
 
@@ -498,7 +506,8 @@ boxes.append((cx, cy, s / math.sqrt(ar), s * math.sqrt(ar)))
 self.default_boxes = torch.Tensor(boxes)
 
 def iou(self, box1, box2):
-'''Compute the intersection over union of two set of boxes, each box is [x1,y1,x2,y2].
+'''Compute the intersection over union of 
+two set of boxes, each box is [x1,y1,x2,y2].
 
 Args:
 box1: (tensor) bounding boxes, sized [N,4].
@@ -533,14 +542,17 @@ iou = inter / (area1 + area2 - inter)
 return iou
 
 def encode(self, boxes, classes, threshold=0.5):
-'''Transform target bounding boxes and class labels to SSD boxes and classes.
+'''Transform target bounding boxes and class labels 
+to SSD boxes and classes.
 
-Match each object box to all the default boxes, pick the ones with the
+Match each object box to all the default boxes, pick 
+the ones with the
 Jaccard-Index > 0.5:
 Jaccard(A,B) = AB / (A+B-AB)
 
 Args:
-boxes: (tensor) object bounding boxes (xmin,ymin,xmax,ymax) of a image, sized [#obj, 4].
+boxes: (tensor) object bounding boxes
+ (xmin,ymin,xmax,ymax) of a image, sized [#obj, 4].
 classes: (tensor) object class labels of a image, sized [#obj,].
 threshold: (float) Jaccard index threshold
 
@@ -587,7 +599,8 @@ Returns:
 keep: (tensor) selected indices.
 
 Ref:
-https://github.com/rbgirshick/py-faster-rcnn/blob/master/lib/nms/py_cpu_nms.py
+https://github.com/rbgirshick/py-faster-rcnn/
+blob/master/lib/nms/py_cpu_nms.py
 '''
 x1 = bboxes[:,0]
 y1 = bboxes[:,1]
@@ -628,7 +641,8 @@ order = order[ids+1]
 return torch.LongTensor(keep)
 
 def decode(self, loc, conf):
-'''Transform predicted loc/conf back to real bbox locations and class labels.
+'''Transform predicted loc/conf back to real bbox
+ locations and class labels.
 
 Args:
 loc: (tensor) predicted loc, sized [8732,4].
@@ -640,7 +654,8 @@ labels: (tensor) class labels, sized [#obj,1].
 '''
 variances = [0.1, 0.2]
 wh = torch.exp(loc[:,2:]*variances[1]) * self.default_boxes[:,2:]
-cxcy = loc[:,:2] * variances[0] * self.default_boxes[:,2:] + self.default_boxes[:,:2]
+cxcy = loc[:,:2] * variances[0] *
+ self.default_boxes[:,2:] + self.default_boxes[:,:2]
 boxes = torch.cat([cxcy-wh/2, cxcy+wh/2], 1)  # [8732,4]
 
 max_conf, labels = conf.max(1)  # [8732,1]

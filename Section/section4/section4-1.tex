@@ -5,7 +5,7 @@
 	\caption{labelImg界面}
 \end{uscfigure}
 \subsubsection{数据集}
-\textbf{VOC数据集介绍:}PASCAL VOC为图像分类、目标检测等任务的需要提供了标准的数据库。我们的目标检测任务只需要使用JPEGImage、Annotations、ImageSets三个文件夹。将受损的瓦片图片放入JPEGImage文件夹，将对应的保存为.xml文件的标注信息放入Annotations文件夹。
+\textbf{VOC数据集介绍:}PASCAL VOC为图像分类、目标检测等任务的需要提供了标准的数据库。系统的目标检测任务只需要使用JPEGImage、Annotations、ImageSets三个文件夹。将受损的瓦片图片放入JPEGImage文件夹，将对应的保存为.xml文件的标注信息放入Annotations文件夹。
 
 其目录结构为：
 
@@ -13,7 +13,7 @@
 
 - Annotations:将JPEGImages文件夹中对应图片的标注信息放入此文件夹，其文件格式为xml；
 
-- ImageSet:此处我们将训练、测试、验证等图片的信息放到此处，方便程序的读写。
+- ImageSet:此处将训练、测试、验证等图片的信息放到此处，方便程序的读写。
 
 
 \subsubsection{Pytorch介绍}

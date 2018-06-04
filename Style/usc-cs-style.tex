@@ -6,6 +6,8 @@
 % 用于调整目录行距
 \RequirePackage{setspace}
 
+\RequirePackage{titletoc}
+\RequirePackage{titlesec}
 
 % 版面设置
 \RequirePackage{geometry}
@@ -19,7 +21,7 @@
 \chead{\songti \zihao{-5}南华大学计算机学院毕业设计}
 \rhead{}
 \lfoot{}
-\cfoot{第\thepage 页\quad 共\pageref{LastPage}页}
+\cfoot{\songti \zihao{-5} 第 \thepage  页\quad 共 \pageref{LastPage} 页}
 \rfoot{}
 
 % 字体字号
@@ -33,8 +35,10 @@
 % \setlength{\parskip}{0.5\baselineskip}
 \setlength{\parskip}{0em}
 % 设置行间距1.5倍
-\setlength{\baselineskip}{1.5\baselineskip}
+% \setlength{\baselineskip}{2.0\baselineskip}
 % \linespread{1.3}\selectfont
+\renewcommand{\baselinestretch}{1.8}
+% \linespread{1.6}
 
 % 脚注设置
 \renewcommand{\thefigure}{\thesection .\arabic{figure}}
@@ -46,10 +50,6 @@
 \RequirePackage{palatino}
 \RequirePackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows}
-
-% 流程图定义基本形状
-\tikzstyle{Node} = [rectangle, rounded corners, minimum width = 2cm, minimum height=1cm,text centered, draw = black, fill = blue!40]
-\tikzstyle{arrow} = [->,>=stealth]
 
 % 代码格式
 \usepackage{listings}
@@ -78,6 +78,20 @@
 
 %　公式编号与章节关联
 \numberwithin{equation}{section}
+
+%　目录设置
+\renewcommand{\contentsname}{
+	\rule{0pt}{0pt}
+	\par 目录\par \rule{0pt}{0pt}}
+
+\titlecontents{section}[0pt]{\addvspace{2pt}\filright　\heiti \zihao{-4}}   {\contentspush{\thecontentslabel\ }}              
+{}{\titlerule*[8pt]{.}\contentspage}
+
+\titlecontents{subsection}[1cm]{\addvspace{2pt}\filright \songti \zihao{-4}}   {\contentspush{\thecontentslabel\ }}              
+{}{\titlerule*[8pt]{.}\contentspage}
+
+\titlecontents{subsubsection}[1cm]{\addvspace{2pt}\filright \songti \zihao{5}}   {\contentspush{\thecontentslabel\ }}              
+{}{\titlerule*[8pt]{.}\contentspage}
 
 
 

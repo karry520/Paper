@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  25 MAY 2018 18:28
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  4 JUN 2018 10:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -290,7 +290,17 @@ might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
 l.17 ^^Ig_j^{cx} &
-                  = \left( g_j ^{cx} - d_i ^{cx} \right) / d_i ^w
+                  = \left( g_j ^{cx} - d_i ^{cx} \right) / d_i ^w \quad g_j^...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.18 ^^Ig_j^w &
+               = \log(\frac{g_j^w}{d_i^w}) \quad g_j^h = \log(\frac{g_j^h}{d...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -305,7 +315,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 \end{align}
+l.19 \end{align}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -314,7 +324,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.18 \end{align}
+l.19 \end{align}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -322,57 +332,96 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+Missing character: There is no 分 in font nullfont!
+Missing character: There is no 类 in font nullfont!
+Missing character: There is no 误 in font nullfont!
+Missing character: There is no 差 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 采 in font nullfont!
+Missing character: There is no 用 in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ： in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 14--19
+Overfull \hbox (20.0pt too wide) in paragraph at lines 14--21
 []
  []
 
 
-Overfull \hbox (51.83687pt too wide) in paragraph at lines 14--19
+Overfull \hbox (51.83687pt too wide) in paragraph at lines 14--21
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; l; g\OT1/cmr/m/n/10 ) =
  []
 
 
-Overfull \hbox (179.70903pt too wide) in paragraph at lines 14--19
+Overfull \hbox (179.70903pt too wide) in paragraph at lines 14--21
 [][] [][] \OML/cmm/m/it/10 x[]smooth[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l[] \OM
 S/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (16.61348pt too wide) in paragraph at lines 14--19
+Overfull \hbox (16.61348pt too wide) in paragraph at lines 14--21
 \OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 )[] 
  []
 
 
-Overfull \hbox (24.29245pt too wide) in paragraph at lines 14--19
+Overfull \hbox (24.29245pt too wide) in paragraph at lines 14--21
 \OML/cmm/m/it/10 g[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (67.28404pt too wide) in paragraph at lines 14--19
-[] \OML/cmm/m/it/10 =d[]$ 
+Overfull \hbox (91.34851pt too wide) in paragraph at lines 14--21
+[] \OML/cmm/m/it/10 =d[] g[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (25.17566pt too wide) in paragraph at lines 14--21
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[] \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (32.86089pt too wide) in paragraph at lines 14--21
+\OML/cmm/m/it/10 d[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =d[][] 
+ []
+
+
+Overfull \hbox (22.15738pt too wide) in paragraph at lines 14--21
+\OML/cmm/m/it/10 g[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (53.80255pt too wide) in paragraph at lines 14--21
+[]\OT1/cmr/m/n/10 ([]) \OML/cmm/m/it/10 g[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (31.89514pt too wide) in paragraph at lines 14--21
+[]\OT1/cmr/m/n/10 ([])$
+ []
+
+
+Overfull \hbox (238.15353pt too wide) detected at line 23
+\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; c\OT1/cmr/m/n/10 ) = \
+OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 x[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
+ c[]\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 where c[] \OT1/cmr/m/n/10 = []
  []
 
 ! Undefined control sequence.
-l.20 \subsubsection
+l.24 \subsubsection
                    {改进损失函数-Focal Loss}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 \subsubsection{改
-                       进损失函数-Focal Loss}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no 改 in font nullfont!
 Missing character: There is no 进 in font nullfont!
@@ -458,18 +507,13 @@ Missing character: There is no 确 in font nullfont!
 Missing character: There is no 率 in font nullfont!
 Missing character: There is no 。 in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 20--22
-[]
- []
-
-
 ! LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23 ...么"One Stage Detector"的准确率低？}
+l.27 ...么"One Stage Detector"的准确率低？}
                                                   
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -486,27 +530,27 @@ Missing character: There is no 率 in font [lmroman10-bold]:mapping=tex-text;!
 Missing character: There is no 低 in font [lmroman10-bold]:mapping=tex-text;!
 Missing character: There is no ？ in font [lmroman10-bold]:mapping=tex-text;!
 
-Overfull \hbox (60.01pt too wide) in paragraph at lines 23--24
+Overfull \hbox (60.01pt too wide) in paragraph at lines 27--28
 []\TU/lmr/bx/n/10 １、为什么”One
  []
 
 
-Overfull \hbox (27.47pt too wide) in paragraph at lines 23--24
+Overfull \hbox (27.47pt too wide) in paragraph at lines 27--28
 \TU/lmr/bx/n/10 Stage
  []
 
 
-Overfull \hbox (17.92pt too wide) in paragraph at lines 23--24
+Overfull \hbox (17.92pt too wide) in paragraph at lines 27--28
 \TU/lmr/bx/n/10 De-
  []
 
 
-Overfull \hbox (18.68001pt too wide) in paragraph at lines 23--24
+Overfull \hbox (18.68001pt too wide) in paragraph at lines 27--28
 \TU/lmr/bx/n/10 tec-
  []
 
 
-Overfull \hbox (37.47pt too wide) in paragraph at lines 23--24
+Overfull \hbox (37.47pt too wide) in paragraph at lines 27--28
 \TU/lmr/bx/n/10 tor”的准确率低？ 
  []
 
@@ -517,7 +561,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 其
+l.29 其
         作者认为主要原因是：不同类别的训练样本数量的�...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -642,7 +686,7 @@ Missing character: There is no 后 in font nullfont!
 Missing character: There is no 果 in font nullfont!
 Missing character: There is no ： in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 25--26
+Overfull \hbox (20.0pt too wide) in paragraph at lines 29--30
 [] 
  []
 
@@ -653,7 +697,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.27 (
+l.31 (
       1) training is inefficient as most locations are easy negatives that c...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -752,7 +796,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 27--28
+Overfull \hbox (20.0pt too wide) in paragraph at lines 31--32
 []
  []
 
@@ -763,7 +807,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29 (
+l.33 (
       2) en masse, the easy negatives can overwhelm training and lead to deg...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -847,7 +891,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .^^J
-l.29 ...ad to degenerate models. \cite{focal-loss}
+l.33 ...ad to degenerate models. \cite{focal-loss}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -856,16 +900,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `focal-loss' on page  undefined on input line 29.
+LaTeX Warning: Citation `focal-loss' on page  undefined on input line 33.
 
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 29--30
+Overfull \hbox (20.0pt too wide) in paragraph at lines 33--34
 []
  []
 
 
-Overfull \hbox (5.43pt too wide) in paragraph at lines 29--30
+Overfull \hbox (5.43pt too wide) in paragraph at lines 33--34
 [] 
  []
 
@@ -876,7 +920,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.31 负
+l.35 负
         样本数量占比过高，使得对总的loss的影响过大，因�...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1007,7 +1051,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .^^J
-l.31 ...HEM(Online Hard Example Mining)\cite{ohem}
+l.35 ...HEM(Online Hard Example Mining)\cite{ohem}
                                                   ，OHEM算法的主要思�...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1016,7 +1060,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `ohem' on page  undefined on input line 31.
+LaTeX Warning: Citation `ohem' on page  undefined on input line 35.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ， in font nullfont!
@@ -1109,7 +1153,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .^^J
-l.31 ...on-maximum suppression (NMS\cite{soft-nms}
+l.35 ...on-maximum suppression (NMS\cite{soft-nms}
                                                   ) is then applied, and a m...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1118,7 +1162,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `soft-nms' on page  undefined on input line 31.
+LaTeX Warning: Citation `soft-nms' on page  undefined on input line 35.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ) in font nullfont!
@@ -1195,7 +1239,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .^^J
-l.31 ...th the highest-loss examples。\cite{ohem}
+l.35 ...th the highest-loss examples。\cite{ohem}
                                                   可以看出OHEM算法加�...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1204,7 +1248,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `ohem' on page  undefined on input line 31.
+LaTeX Warning: Citation `ohem' on page  undefined on input line 35.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no 可 in font nullfont!
@@ -1320,22 +1364,22 @@ Missing character: There is no 专 in font nullfont!
 Missing character: There is no 注 in font nullfont!
 Missing character: There is no 。 in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 31--32
+Overfull \hbox (20.0pt too wide) in paragraph at lines 35--36
 []
  []
 
 
-Overfull \hbox (5.43pt too wide) in paragraph at lines 31--32
+Overfull \hbox (5.43pt too wide) in paragraph at lines 35--36
 []
  []
 
 
-Overfull \hbox (5.43pt too wide) in paragraph at lines 31--32
+Overfull \hbox (5.43pt too wide) in paragraph at lines 35--36
 []
  []
 
 
-Overfull \hbox (5.43pt too wide) in paragraph at lines 31--32
+Overfull \hbox (5.43pt too wide) in paragraph at lines 35--36
 []
  []
 
@@ -1346,7 +1390,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 \textbf{标准交叉熵损失函数}
+l.37 \textbf{标准交叉熵损失函数}
                                          
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1361,7 +1405,7 @@ Missing character: There is no 失 in font [lmroman10-bold]:mapping=tex-text;!
 Missing character: There is no 函 in font [lmroman10-bold]:mapping=tex-text;!
 Missing character: There is no 数 in font [lmroman10-bold]:mapping=tex-text;!
 
-Overfull \hbox (45.2pt too wide) in paragraph at lines 33--34
+Overfull \hbox (45.2pt too wide) in paragraph at lines 37--38
 []\TU/lmr/bx/n/10 标准交叉熵损失函数 
  []
 
@@ -1372,7 +1416,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 没
+l.39 没
         有经过加权的分类损失是各个训练样本交叉熵的和�...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1409,7 +1453,7 @@ Missing character: There is no 所 in font nullfont!
 Missing character: There is no 示 in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 35--36
+Overfull \hbox (20.0pt too wide) in paragraph at lines 39--40
 [] 
  []
 
@@ -1420,13 +1464,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.37 \begin{equation}
+l.41 \begin{equation}
                      
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 37--37
+Overfull \hbox (20.0pt too wide) in paragraph at lines 41--41
 [] 
  []
 
@@ -1437,14 +1481,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 \begin{aligned}
+l.43 \begin{aligned}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Misplaced alignment tab character &.
-l.40 &
+l.44 &
        -\log (p) ^^I&if y = 1\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1454,7 +1498,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.40 & -\log (p) ^^I&
+l.44 & -\log (p) ^^I&
                      if y = 1\\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1466,7 +1510,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.41 &
+l.45 &
        -\log (1-p) ^^I&otherwise
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1476,7 +1520,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.41 & -\log (1-p) ^^I&
+l.45 & -\log (1-p) ^^I&
                        otherwise
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1486,20 +1530,20 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-! LaTeX Error: \begin{equation} on input line 37 ended by \end{aligned}.
+! LaTeX Error: \begin{equation} on input line 41 ended by \end{aligned}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.42 \end{aligned}
+l.46 \end{aligned}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (225.10422pt too wide) detected at line 44
+Overfull \hbox (225.10422pt too wide) detected at line 48
 \OML/cmm/m/it/10 CE\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p; y\OT1/cmr/m/n/10 ) = []
 
  []
@@ -1511,7 +1555,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.46 其
+l.50 其
         中：
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1520,7 +1564,7 @@ Missing character: There is no 其 in font nullfont!
 Missing character: There is no 中 in font nullfont!
 Missing character: There is no ： in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 46--47
+Overfull \hbox (20.0pt too wide) in paragraph at lines 50--51
 [] 
  []
 
@@ -1531,7 +1575,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.48 C
+l.52 C
       E表示cross entropy,p表示预测样本属于1的概率，y表示labe...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1645,12 +1689,12 @@ Missing character: There is no 以 in font nullfont!
 Missing character: There is no 写 in font nullfont!
 Missing character: There is no 成 in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 48--49
+Overfull \hbox (20.0pt too wide) in paragraph at lines 52--53
 []
  []
 
 
-Overfull \hbox (8.5521pt too wide) in paragraph at lines 48--49
+Overfull \hbox (8.5521pt too wide) in paragraph at lines 52--53
 \OML/cmm/m/it/10 p[]$
  []
 
@@ -1661,18 +1705,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.50 \begin{equation}
+l.54 \begin{equation}
                      
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 50--50
+Overfull \hbox (20.0pt too wide) in paragraph at lines 54--54
 [] 
  []
 
 
-Overfull \hbox (135.84401pt too wide) detected at line 52
+Overfull \hbox (135.84401pt too wide) detected at line 56
 \OML/cmm/m/it/10 CE\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p; y\OT1/cmr/m/n/10 ) = \O
 ML/cmm/m/it/10 CE\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 ) = \OMS/
 cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 )
@@ -1685,7 +1729,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.54 \textbf{平衡交叉熵}
+l.58 \textbf{平衡交叉熵}
                              
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1696,7 +1740,7 @@ Missing character: There is no 交 in font [lmroman10-bold]:mapping=tex-text;!
 Missing character: There is no 叉 in font [lmroman10-bold]:mapping=tex-text;!
 Missing character: There is no 熵 in font [lmroman10-bold]:mapping=tex-text;!
 
-Overfull \hbox (34.0pt too wide) in paragraph at lines 54--55
+Overfull \hbox (34.0pt too wide) in paragraph at lines 58--59
 []\TU/lmr/bx/n/10 平衡交叉熵 
  []
 
@@ -1707,7 +1751,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.56 我
+l.60 我
         们知道了"One Stage Detector"在训练的时候正负样本的数...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1823,12 +1867,12 @@ Missing character: There is no 所 in font nullfont!
 Missing character: There is no 示 in font nullfont!
 Missing character: There is no ： in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 56--57
+Overfull \hbox (20.0pt too wide) in paragraph at lines 60--61
 []
  []
 
 
-Overfull \hbox (90.60896pt too wide) detected at line 59
+Overfull \hbox (90.60896pt too wide) detected at line 63
 \OML/cmm/m/it/10 CE\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 ) = \OM
 S/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 ^^K []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p[]\O
 T1/cmr/m/n/10 )
@@ -1841,7 +1885,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 \textbf{Focal-Loss定义}
+l.65 \textbf{Focal-Loss定义}
                               
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1849,12 +1893,12 @@ If that doesn't work, type  X <return>  to quit.
 Missing character: There is no 定 in font [lmroman10-bold]:mapping=tex-text;!
 Missing character: There is no 义 in font [lmroman10-bold]:mapping=tex-text;!
 
-Overfull \hbox (50.07pt too wide) in paragraph at lines 61--62
+Overfull \hbox (50.07pt too wide) in paragraph at lines 65--66
 []\TU/lmr/bx/n/10 Focal-
  []
 
 
-Overfull \hbox (27.35pt too wide) in paragraph at lines 61--62
+Overfull \hbox (27.35pt too wide) in paragraph at lines 65--66
 \TU/lmr/bx/n/10 Loss定义 
  []
 
@@ -1865,7 +1909,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.63 通
+l.67 通
         过上述分析，此文作者解决了easy example与hard example�...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -2094,12 +2138,12 @@ Missing character: There is no 如 in font nullfont!
 Missing character: There is no 下 in font nullfont!
 Missing character: There is no ： in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 63--64
+Overfull \hbox (20.0pt too wide) in paragraph at lines 67--68
 []
  []
 
 
-Overfull \hbox (117.21794pt too wide) detected at line 66
+Overfull \hbox (117.21794pt too wide) detected at line 70
 \OML/cmm/m/it/10 FL\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 ) = \OM
 S/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 p[]\O
 T1/cmr/m/n/10 )[] [](\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 )
@@ -2251,43 +2295,43 @@ Missing character: There is no 很 in font nullfont!
 Missing character: There is no 多 in font nullfont!
 Missing character: There is no 。 in font nullfont!
 
-Overfull \hbox (16.28836pt too wide) in paragraph at lines 66--69
+Overfull \hbox (16.28836pt too wide) in paragraph at lines 70--73
 $\OML/cmm/m/it/10 ^^M >
  []
 
 
-Overfull \hbox (21.28838pt too wide) in paragraph at lines 66--69
+Overfull \hbox (21.28838pt too wide) in paragraph at lines 70--73
 \OT1/cmr/m/n/10 0$$\OML/cmm/m/it/10 ^^M \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (21.28838pt too wide) in paragraph at lines 66--69
+Overfull \hbox (21.28838pt too wide) in paragraph at lines 70--73
 \OT1/cmr/m/n/10 0$$\OML/cmm/m/it/10 ^^M \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (29.84047pt too wide) in paragraph at lines 66--69
+Overfull \hbox (29.84047pt too wide) in paragraph at lines 70--73
 \OT1/cmr/m/n/10 2$$\OML/cmm/m/it/10 ^^M$$p[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (31.88542pt too wide) in paragraph at lines 66--69
+Overfull \hbox (31.88542pt too wide) in paragraph at lines 70--73
 \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 9$$\OML/cmm/m/it/10 p[] \OT1
 /cmr/m/n/10 =
  []
 
 
-Overfull \hbox (41.88545pt too wide) in paragraph at lines 66--69
+Overfull \hbox (41.88545pt too wide) in paragraph at lines 70--73
 \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 968$$\OML/cmm/m/it/10 p[] <
  []
 
 
-Overfull \hbox (12.77782pt too wide) in paragraph at lines 66--69
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 70--73
 \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5$ 
  []
 
 
-Overfull \hbox (127.1358pt too wide) detected at line 71
+Overfull \hbox (127.1358pt too wide) detected at line 75
 \OML/cmm/m/it/10 FL\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 ) = \OM
 S/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 ^^K[]\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ 
 \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 )[] [](\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 
@@ -2295,7 +2339,7 @@ S/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 ^^K[]\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@
  []
 
 ! Undefined control sequence.
-l.73 \subsubsection
+l.77 \subsubsection
                    {改进NMS,采用Soft-NMS}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2310,7 +2354,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.73 \subsubsection{改
+l.77 \subsubsection{改
                        进NMS,采用Soft-NMS}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2350,11 +2394,11 @@ Missing character: There is no 值 in font nullfont!
 Missing character: There is no 抑 in font nullfont!
 Missing character: There is no 制 in font nullfont!
 Missing character: There is no [ in font nullfont!
-\citation{nms}
+\citation{soft-nms}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .^^J
-l.74 ...�用到了NMS-非极大值抑制\cite{nms}
+l.78 ...��了NMS-非极大值抑制\cite{soft-nms}
                                                   进行后处理。NMS通�...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2363,7 +2407,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `nms' on page  undefined on input line 74.
+LaTeX Warning: Citation `soft-nms' on page  undefined on input line 78.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no 进 in font nullfont!
@@ -2448,14 +2492,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.75 \begin{uscfigure}
+l.79 \begin{uscfigure}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.76 ^^I\includegraphics
+l.80 ^^I\includegraphics
                         [width=\textwidth]{./Pictures/soft-nms.jpeg}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2473,7 +2517,7 @@ Missing character: There is no = in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.76 ^^I\includegraphics[width=\textwidth]
+l.80 ^^I\includegraphics[width=\textwidth]
                                           {./Pictures/soft-nms.jpeg}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2482,7 +2526,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.76 ^^I\includegraphics[width=\textwidth]
+l.80 ^^I\includegraphics[width=\textwidth]
                                           {./Pictures/soft-nms.jpeg}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, bp, or sp; but yours is a new one!
@@ -2523,7 +2567,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.77 ^^I\caption
+l.81 ^^I\caption
                 {非极大值抑制}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2541,7 +2585,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.79 \end{uscfigure}
+l.83 \end{uscfigure}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2696,12 +2740,12 @@ Missing character: There is no 误 in font nullfont!
 Missing character: There is no 检 in font nullfont!
 Missing character: There is no 。 in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 73--81
+Overfull \hbox (20.0pt too wide) in paragraph at lines 77--85
 []
  []
 
 
-Overfull \hbox (5.43pt too wide) in paragraph at lines 73--81
+Overfull \hbox (5.43pt too wide) in paragraph at lines 77--85
 []
  []
 
@@ -2712,7 +2756,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.82 S
+l.86 S
       oft-NMS采用的策略是用降低置信度来取代直接删除掉IOU...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -2756,6 +2800,184 @@ Missing character: There is no 值 in font nullfont!
 Missing character: There is no 的 in font nullfont!
 Missing character: There is no 框 in font nullfont!
 Missing character: There is no 。 in font nullfont!
+Missing character: There is no 原 in font nullfont!
+Missing character: There is no 来 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no 可 in font nullfont!
+Missing character: There is no 以 in font nullfont!
+Missing character: There is no 描 in font nullfont!
+Missing character: There is no 述 in font nullfont!
+Missing character: There is no 如 in font nullfont!
+Missing character: There is no 下 in font nullfont!
+Missing character: There is no ： in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 86--87
+[] 
+ []
+
+
+! LaTeX Error: Environment aligned undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89 \begin{aligned}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.90 &
+       s_i ^^I&iou(M,b_i) < N_t,\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.90 & s_i ^^I&
+               iou(M,b_i) < N_t,\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.91 &
+       0 ^^I&otherwise
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.91 & 0 ^^I&
+             otherwise
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+! LaTeX Error: \begin{equation} on input line 87 ended by \end{aligned}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 \end{aligned}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (157.8789pt too wide) detected at line 94
+\OML/cmm/m/it/10 s[] \OT1/cmr/m/n/10 = []
+ []
+
+Missing character: There is no 现 in font nullfont!
+Missing character: There is no 在 in font nullfont!
+Missing character: There is no 我 in font nullfont!
+Missing character: There is no 们 in font nullfont!
+Missing character: There is no 将 in font nullfont!
+Missing character: There is no 其 in font nullfont!
+Missing character: There is no 替 in font nullfont!
+Missing character: There is no 换 in font nullfont!
+Missing character: There is no 成 in font nullfont!
+Missing character: There is no 如 in font nullfont!
+Missing character: There is no 下 in font nullfont!
+Missing character: There is no 形 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+Missing character: There is no ： in font nullfont!
+
+! LaTeX Error: Environment aligned undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 \begin{aligned}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.99 &
+       s_i ^^I&iou(M, b_i) < N_t\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.99 & s_i ^^I&
+               iou(M, b_i) < N_t\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.100 &
+        s_i(1 - iou(M, b_i)) ^^I&otherwise
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.100 & s_i(1 - iou(M, b_i)) ^^I&
+                                 otherwise
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+! LaTeX Error: \begin{equation} on input line 96 ended by \end{aligned}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101 \end{aligned}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (225.54741pt too wide) detected at line 103
+\OML/cmm/m/it/10 s[] \OT1/cmr/m/n/10 = []
+ []
+
 )
 ! Emergency stop.
 <*> section3-7.tex
@@ -2764,10 +2986,10 @@ Missing character: There is no 。 in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 23 strings out of 492998
- 339 string characters out of 6136604
- 64710 words of memory out of 5000000
- 4099 multiletter control sequences out of 15000+600000
+ 22 strings out of 492998
+ 334 string characters out of 6136604
+ 66710 words of memory out of 5000000
+ 4098 multiletter control sequences out of 15000+600000
  3656 words of font info for 16 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  18i,3n,21p,482b,97s stack positions out of 5000i,500n,10000p,200000b,80000s

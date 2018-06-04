@@ -1,56 +1,59 @@
-\contentsline {section}{摘要}{i}{section*.2}
-\contentsline {section}{Abstract}{ii}{section*.3}
+\contentsline {section}{摘要}{i}{Doc-Start}
+\contentsline {section}{Abstract}{ii}{Doc-Start}
 \contentsline {section}{\numberline {第一章}绪论}{1}{section.1}
 \contentsline {subsection}{\numberline {1.1}课题背景及研究意义}{1}{subsection.1.1}
 \contentsline {subsubsection}{\numberline {1.1.1}研究背景}{1}{subsubsection.1.1.1}
 \contentsline {subsubsection}{\numberline {1.1.2}研究意义}{1}{subsubsection.1.1.2}
 \contentsline {subsection}{\numberline {1.2}研究现状及发展难点}{2}{subsection.1.2}
 \contentsline {subsubsection}{\numberline {1.2.1}研究现状}{2}{subsubsection.1.2.1}
-\contentsline {subsubsection}{\numberline {1.2.2}发展难点}{2}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2}发展难点}{3}{subsubsection.1.2.2}
 \contentsline {subsection}{\numberline {1.3}研究内容及章节安排}{3}{subsection.1.3}
-\contentsline {section}{\numberline {第二章}目标检测相关算法}{4}{section.2}
-\contentsline {subsection}{\numberline {2.1}目标检测算法概述}{4}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}R-CNN系列}{4}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}R-CNN}{5}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}SPP Net}{6}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Fast R-CNN}{7}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Faster R-CNN}{9}{subsubsection.2.2.4}
-\contentsline {subsection}{\numberline {2.3}YOLO系列}{11}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}YOLO}{11}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}SSD}{12}{subsubsection.2.3.2}
-\contentsline {subsection}{\numberline {2.4}本章小结}{12}{subsection.2.4}
-\contentsline {section}{\numberline {第三章}瓦片损害检测算法设计}{13}{section.3}
-\contentsline {subsection}{\numberline {3.1}瓦片损害检测流程}{13}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}SSD算法核心思想}{13}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}SSD模型结构}{15}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}损失函数}{16}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}SSD中采用的损失函数}{16}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}改进损失函数-Focal Loss}{16}{subsubsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.3}改进NMS,采用Soft-NMS}{18}{subsubsection.3.4.3}
-\contentsline {subsection}{\numberline {3.5}SSD模型训练}{19}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}本章小结}{19}{subsection.3.6}
-\contentsline {section}{\numberline {第四章}瓦片损害检测算法实现}{20}{section.4}
-\contentsline {subsection}{\numberline {4.1}图像预处理}{20}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}标注工具}{20}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}数据集}{20}{subsubsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.3}Pytorch介绍}{20}{subsubsection.4.1.3}
-\contentsline {subsubsection}{\numberline {4.1.4}OpenCV介绍}{20}{subsubsection.4.1.4}
-\contentsline {subsubsection}{\numberline {4.1.5}将图片切割成300px大小}{21}{subsubsection.4.1.5}
-\contentsline {subsection}{\numberline {4.2}网络模型实现}{21}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}模型设计}{21}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}L2Norm2d}{21}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}SSD Layer}{22}{subsubsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.4}Multibox Layer}{22}{subsubsection.4.2.4}
-\contentsline {subsection}{\numberline {4.3}损失函数}{23}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}loc\_loss}{23}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}conf\_loss}{23}{subsubsection.4.3.2}
-\contentsline {subsection}{\numberline {4.4}模型训练/测试}{23}{subsection.4.4}
-\contentsline {subsubsection}{\numberline {4.4.1}训练策略}{23}{subsubsection.4.4.1}
-\contentsline {section}{\numberline {第五章}实验结果与分析}{25}{section.5}
-\contentsline {subsection}{\numberline {5.1}训练时的损失敛散情况}{25}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}改进SSD算法的实验结果}{25}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}改进SSD对瓦片损害检测的准确率实验}{25}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}实验结果分析}{27}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}算法改进建议}{27}{subsection.5.5}
-\contentsline {section}{\numberline {第六章}总结及展望}{28}{section.6}
-\contentsline {section}{谢辞}{31}{section*.26}
+\contentsline {section}{\numberline {第二章}目标检测相关算法}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}目标检测算法概述}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}R-CNN系列}{5}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}R-CNN}{6}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}SPP Net}{7}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Fast R-CNN}{9}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Faster R-CNN}{12}{subsubsection.2.2.4}
+\contentsline {subsection}{\numberline {2.3}YOLO系列}{13}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}YOLO}{14}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}SSD}{15}{subsubsection.2.3.2}
+\contentsline {subsection}{\numberline {2.4}本章小结}{15}{subsection.2.4}
+\contentsline {section}{\numberline {第三章}瓦片损害检测算法设计}{16}{section.3}
+\contentsline {subsection}{\numberline {3.1}瓦片损害检测流程}{16}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}SSD算法核心思想}{16}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}SSD模型结构}{18}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}损失函数}{19}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}SSD中采用的损失函数}{19}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}改进损失函数-Focal Loss}{20}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}改进NMS,采用Soft-NMS}{22}{subsubsection.3.4.3}
+\contentsline {subsection}{\numberline {3.5}SSD模型训练}{23}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}本章小结}{24}{subsection.3.6}
+\contentsline {section}{\numberline {第四章}瓦片损害检测算法实现}{25}{section.4}
+\contentsline {subsection}{\numberline {4.1}图像预处理}{25}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}标注工具}{25}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}数据集}{25}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.3}Pytorch介绍}{26}{subsubsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.4}OpenCV介绍}{26}{subsubsection.4.1.4}
+\contentsline {subsubsection}{\numberline {4.1.5}将图片切割成300px大小}{26}{subsubsection.4.1.5}
+\contentsline {subsection}{\numberline {4.2}网络模型实现}{26}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}模型设计}{26}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}L2Norm2d}{27}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}SSD Layer}{27}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Multibox Layer}{28}{subsubsection.4.2.4}
+\contentsline {subsection}{\numberline {4.3}损失函数}{29}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}loc\_loss}{29}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}conf\_loss}{29}{subsubsection.4.3.2}
+\contentsline {subsection}{\numberline {4.4}模型训练/测试}{29}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}训练策略}{29}{subsubsection.4.4.1}
+\contentsline {section}{\numberline {第五章}实验结果与分析}{31}{section.5}
+\contentsline {subsection}{\numberline {5.1}训练时的损失敛散情况}{31}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}改进SSD算法的实验结果}{31}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}改进SSD对瓦片损害检测的准确率实验}{31}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}实验结果分析}{33}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}算法改进建议}{33}{subsection.5.5}
+\contentsline {section}{\numberline {第六章}总结及展望}{35}{section.6}
+\contentsline {section}{参考文献}{38}{section.6}
+\contentsline {section}{谢辞}{39}{section.6}
+\contentsline {section}{附录}{40}{section.6}
+\contentsfinish 

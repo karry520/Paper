@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  26 MAY 2018 11:31
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.12.28)  4 JUN 2018 18:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1230,7 +1230,7 @@ File: ctex.cfg 2017/08/07 v2.4.10 Configuration file (CTEX)
 * ctex warning: "deprecated-command"
 * 
 * Command \CTEXsetup is deprecated.
-* \ctexset { section = { beforeskip={0em},afterskip={8pt} } } is set.
+* \ctexset { section = { beforeskip={0em},afterskip={0pt} } } is set.
 *************************************************
 *************************************************
 * ctex warning: "deprecated-command"
@@ -1280,6 +1280,22 @@ Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2011/12/15 v1.6 TOC entries
+\ttl@leftsep=\dimen190
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box54
+\beforetitleunit=\skip63
+\aftertitleunit=\skip64
+\ttl@plus=\dimen191
+\ttl@minus=\dimen192
+\ttl@toksa=\toks20
+\titlewidth=\dimen193
+\titlewidthlast=\dimen194
+\titlewidthfirst=\dimen195
+)
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -1296,15 +1312,15 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count268
 \Gm@cntv=\count269
 \c@Gm@tempcnt=\count270
-\Gm@bindingoffset=\dimen190
-\Gm@wd@mp=\dimen191
-\Gm@odd@mp=\dimen192
-\Gm@even@mp=\dimen193
-\Gm@layoutwidth=\dimen194
-\Gm@layoutheight=\dimen195
-\Gm@layouthoffset=\dimen196
-\Gm@layoutvoffset=\dimen197
-\Gm@dimlist=\toks20
+\Gm@bindingoffset=\dimen196
+\Gm@wd@mp=\dimen197
+\Gm@odd@mp=\dimen198
+\Gm@even@mp=\dimen199
+\Gm@layoutwidth=\dimen256
+\Gm@layoutheight=\dimen257
+\Gm@layouthoffset=\dimen258
+\Gm@layoutvoffset=\dimen259
+\Gm@dimlist=\toks21
 )
 (/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
@@ -1312,15 +1328,15 @@ Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip63
-\f@nch@O@elh=\skip64
-\f@nch@O@erh=\skip65
-\f@nch@O@olh=\skip66
-\f@nch@O@orh=\skip67
-\f@nch@O@elf=\skip68
-\f@nch@O@erf=\skip69
-\f@nch@O@olf=\skip70
-\f@nch@O@orf=\skip71
+\f@nch@headwidth=\skip65
+\f@nch@O@elh=\skip66
+\f@nch@O@erh=\skip67
+\f@nch@O@olh=\skip68
+\f@nch@O@orh=\skip69
+\f@nch@O@elf=\skip70
+\f@nch@O@erf=\skip71
+\f@nch@O@olf=\skip72
+\f@nch@O@orf=\skip73
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -1328,13 +1344,13 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen198
-\captionmargin@=\dimen199
-\captionwidth=\dimen256
-\caption@tempdima=\dimen257
-\caption@indent=\dimen258
-\caption@parindent=\dimen259
-\caption@hangindent=\dimen260
+\captionmargin=\dimen260
+\captionmargin@=\dimen261
+\captionwidth=\dimen262
+\caption@tempdima=\dimen263
+\caption@indent=\dimen264
+\caption@parindent=\dimen265
+\caption@hangindent=\dimen266
 )
 \c@ContinuedFloat=\count271
 )
@@ -1350,13 +1366,13 @@ Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks21
-\pgfutil@tempdima=\dimen261
-\pgfutil@tempdimb=\dimen262
+\pgfutil@everybye=\toks22
+\pgfutil@tempdima=\dimen267
+\pgfutil@tempdimb=\dimen268
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box54
+\pgfutil@abb=\box55
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -1371,30 +1387,30 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks22
-\pgfkeys@temptoks=\toks23
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
 ex
-\pgfkeys@tmptoks=\toks24
+\pgfkeys@tmptoks=\toks25
 ))
-\pgf@x=\dimen263
-\pgf@y=\dimen264
-\pgf@xa=\dimen265
-\pgf@ya=\dimen266
-\pgf@xb=\dimen267
-\pgf@yb=\dimen268
-\pgf@xc=\dimen269
-\pgf@yc=\dimen270
+\pgf@x=\dimen269
+\pgf@y=\dimen270
+\pgf@xa=\dimen271
+\pgf@ya=\dimen272
+\pgf@xb=\dimen273
+\pgf@yb=\dimen274
+\pgf@xc=\dimen275
+\pgf@yc=\dimen276
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
 \c@pgf@counta=\count272
 \c@pgf@countb=\count273
 \c@pgf@countc=\count274
 \c@pgf@countd=\count275
-\t@pgf@toka=\toks25
-\t@pgf@tokb=\toks26
-\t@pgf@tokc=\toks27
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -1444,12 +1460,12 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen271
+\pgfmath@dimen=\dimen277
 \pgfmath@count=\count279
-\pgfmath@box=\box55
-\pgfmath@toks=\toks28
-\pgfmath@stack@operand=\toks29
-\pgfmath@stack@operation=\toks30
+\pgfmath@box=\box56
+\pgfmath@toks=\toks29
+\pgfmath@stack@operand=\toks30
+\pgfmath@stack@operation=\toks31
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -1474,52 +1490,52 @@ thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen272
-\pgf@picmaxx=\dimen273
-\pgf@picminy=\dimen274
-\pgf@picmaxy=\dimen275
-\pgf@pathminx=\dimen276
-\pgf@pathmaxx=\dimen277
-\pgf@pathminy=\dimen278
-\pgf@pathmaxy=\dimen279
-\pgf@xx=\dimen280
-\pgf@xy=\dimen281
-\pgf@yx=\dimen282
-\pgf@yy=\dimen283
-\pgf@zx=\dimen284
-\pgf@zy=\dimen285
+\pgf@picminx=\dimen278
+\pgf@picmaxx=\dimen279
+\pgf@picminy=\dimen280
+\pgf@picmaxy=\dimen281
+\pgf@pathminx=\dimen282
+\pgf@pathmaxx=\dimen283
+\pgf@pathminy=\dimen284
+\pgf@pathmaxy=\dimen285
+\pgf@xx=\dimen286
+\pgf@xy=\dimen287
+\pgf@yx=\dimen288
+\pgf@yy=\dimen289
+\pgf@zx=\dimen290
+\pgf@zy=\dimen291
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen286
-\pgf@path@lasty=\dimen287
+\pgf@path@lastx=\dimen292
+\pgf@path@lasty=\dimen293
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen288
-\pgf@shorten@start@additional=\dimen289
+\pgf@shorten@end@additional=\dimen294
+\pgf@shorten@start@additional=\dimen295
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box56
-\pgf@hbox=\box57
-\pgf@layerbox@main=\box58
+\pgfpic=\box57
+\pgf@hbox=\box58
+\pgf@layerbox@main=\box59
 \pgf@picture@serial@count=\count281
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen290
+\pgflinewidth=\dimen296
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen291
-\pgf@pt@y=\dimen292
-\pgf@pt@temp=\dimen293
+\pgf@pt@x=\dimen297
+\pgf@pt@y=\dimen298
+\pgf@pt@temp=\dimen299
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -1535,11 +1551,11 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen294
+\pgfarrowsep=\dimen300
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen295
+\pgf@max=\dimen301
 \pgf@sys@shading@range@num=\count282
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
@@ -1548,7 +1564,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box59
+\pgfexternal@startupbox=\box60
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -1564,15 +1580,15 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box60
+\pgfnodeparttextbox=\box61
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen296
-\pgf@nodesepend=\dimen297
+\pgf@nodesepstart=\dimen302
+\pgf@nodesepend=\dimen303
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -1586,10 +1602,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen298
-\pgffor@skip=\dimen299
-\pgffor@stack=\toks31
-\pgffor@toks=\toks32
+\pgffor@iter=\dimen304
+\pgffor@skip=\dimen305
+\pgffor@stack=\toks32
+\pgffor@toks=\toks33
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
@@ -1598,18 +1614,18 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count283
-\pgfplotmarksize=\dimen300
+\pgfplotmarksize=\dimen306
 )
-\tikz@lastx=\dimen301
-\tikz@lasty=\dimen302
-\tikz@lastxsaved=\dimen303
-\tikz@lastysaved=\dimen304
-\tikzleveldistance=\dimen305
-\tikzsiblingdistance=\dimen306
-\tikz@figbox=\box61
-\tikz@figbox@bg=\box62
-\tikz@tempbox=\box63
-\tikz@tempbox@bg=\box64
+\tikz@lastx=\dimen307
+\tikz@lasty=\dimen308
+\tikz@lastxsaved=\dimen309
+\tikz@lastysaved=\dimen310
+\tikzleveldistance=\dimen311
+\tikzsiblingdistance=\dimen312
+\tikz@figbox=\box62
+\tikz@figbox@bg=\box63
+\tikz@tempbox=\box64
+\tikz@tempbox@bg=\box65
 \tikztreelevel=\count284
 \tikznumberofchildren=\count285
 \tikznumberofcurrentchild=\count286
@@ -1644,26 +1660,26 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen307
+\arrowsize=\dimen313
 )) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count292
-\lst@gtempboxa=\box65
-\lst@token=\toks33
+\lst@gtempboxa=\box66
+\lst@token=\toks34
 \lst@length=\count293
-\lst@currlwidth=\dimen308
+\lst@currlwidth=\dimen314
 \lst@column=\count294
 \lst@pos=\count295
-\lst@lostspace=\dimen309
-\lst@width=\dimen310
+\lst@lostspace=\dimen315
+\lst@width=\dimen316
 \lst@newlines=\count296
 \lst@lineno=\count297
-\lst@maxwidth=\dimen311
+\lst@maxwidth=\dimen317
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count298
 \lst@skipnumbers=\count299
-\lst@framebox=\box66
+\lst@framebox=\box67
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -1675,7 +1691,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/11/05 v2.16a AMS math features
-\@mathmargin=\skip72
+\@mathmargin=\skip74
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -1683,12 +1699,12 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks34
-\ex@=\dimen312
+\@emptytoks=\toks35
+\ex@=\dimen318
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen313
+\pmbraise@=\dimen319
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
@@ -1703,9 +1719,9 @@ LaTeX Info: Redefining \overline on input line 375.
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box67
-\strutbox@=\box68
-\big@size=\dimen314
+\Mathstrutbox@=\box68
+\strutbox@=\box69
+\big@size=\dimen320
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count305
@@ -1713,21 +1729,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \dotsspace@=\muskip17
 \c@parentequation=\count307
 \dspbrk@lvl=\count308
-\tag@help=\toks35
+\tag@help=\toks36
 \row@=\count309
 \column@=\count310
 \maxfields@=\count311
-\andhelp@=\toks36
-\eqnshift@=\dimen315
-\alignsep@=\dimen316
-\tagshift@=\dimen317
-\tagwidth@=\dimen318
-\totwidth@=\dimen319
-\lineht@=\dimen320
-\@envbody=\toks37
-\multlinegap=\skip73
-\multlinetaggap=\skip74
-\mathdisplay@stack=\toks38
+\andhelp@=\toks37
+\eqnshift@=\dimen321
+\alignsep@=\dimen322
+\tagshift@=\dimen323
+\tagwidth@=\dimen324
+\totwidth@=\dimen325
+\lineht@=\dimen326
+\@envbody=\toks38
+\multlinegap=\skip75
+\multlinetaggap=\skip76
+\mathdisplay@stack=\toks39
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
@@ -1784,7 +1800,7 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen321
+\@linkdim=\dimen327
 \Hy@linkcounter=\count312
 \Hy@pagecounter=\count313
 
@@ -1816,10 +1832,10 @@ Package hyperref Info: Bookmarks ON on input line 4751.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5104.
-\XeTeXLinkMargin=\dimen322
+\XeTeXLinkMargin=\dimen328
 \Fld@menulength=\count316
-\Field@Width=\dimen323
-\Fld@charsize=\dimen324
+\Field@Width=\dimen329
+\Fld@charsize=\dimen330
 Package hyperref Info: Hyper figures OFF on input line 6358.
 Package hyperref Info: Link nesting OFF on input line 6363.
 Package hyperref Info: Hyper index ON on input line 6366.
@@ -1843,7 +1859,7 @@ File: hxetex.def 2017/03/14 v6.85a Hyperref driver for XeTeX
 Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box69
+\pdfm@box=\box70
 \c@Hy@AnnotLevel=\count320
 \HyField@AnnotCount=\count321
 \Fld@listcount=\count322
@@ -1858,44 +1874,44 @@ Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
 tly
 (rerunfilecheck)             and the loading of the package is aborted.
 )
-\Hy@SectionHShift=\skip75
+\Hy@SectionHShift=\skip77
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 44.
-\cftparskip=\skip76
-\cftbeforetoctitleskip=\skip77
-\cftaftertoctitleskip=\skip78
-\cftbeforepartskip=\skip79
-\cftpartnumwidth=\skip80
-\cftpartindent=\skip81
-\cftbeforesecskip=\skip82
-\cftsecindent=\skip83
-\cftsecnumwidth=\skip84
-\cftbeforesubsecskip=\skip85
-\cftsubsecindent=\skip86
-\cftsubsecnumwidth=\skip87
-\cftbeforesubsubsecskip=\skip88
-\cftsubsubsecindent=\skip89
-\cftsubsubsecnumwidth=\skip90
-\cftbeforeparaskip=\skip91
-\cftparaindent=\skip92
-\cftparanumwidth=\skip93
-\cftbeforesubparaskip=\skip94
-\cftsubparaindent=\skip95
-\cftsubparanumwidth=\skip96
-\cftbeforeloftitleskip=\skip97
-\cftafterloftitleskip=\skip98
-\cftbeforefigskip=\skip99
-\cftfigindent=\skip100
-\cftfignumwidth=\skip101
+\cftparskip=\skip78
+\cftbeforetoctitleskip=\skip79
+\cftaftertoctitleskip=\skip80
+\cftbeforepartskip=\skip81
+\cftpartnumwidth=\skip82
+\cftpartindent=\skip83
+\cftbeforesecskip=\skip84
+\cftsecindent=\skip85
+\cftsecnumwidth=\skip86
+\cftbeforesubsecskip=\skip87
+\cftsubsecindent=\skip88
+\cftsubsecnumwidth=\skip89
+\cftbeforesubsubsecskip=\skip90
+\cftsubsubsecindent=\skip91
+\cftsubsubsecnumwidth=\skip92
+\cftbeforeparaskip=\skip93
+\cftparaindent=\skip94
+\cftparanumwidth=\skip95
+\cftbeforesubparaskip=\skip96
+\cftsubparaindent=\skip97
+\cftsubparanumwidth=\skip98
+\cftbeforeloftitleskip=\skip99
+\cftafterloftitleskip=\skip100
+\cftbeforefigskip=\skip101
+\cftfigindent=\skip102
+\cftfignumwidth=\skip103
 \c@lofdepth=\count324
 \c@lotdepth=\count325
-\cftbeforelottitleskip=\skip102
-\cftafterlottitleskip=\skip103
-\cftbeforetabskip=\skip104
-\cfttabindent=\skip105
-\cfttabnumwidth=\skip106
+\cftbeforelottitleskip=\skip104
+\cftafterlottitleskip=\skip105
+\cftbeforetabskip=\skip106
+\cfttabindent=\skip107
+\cfttabnumwidth=\skip108
 ))
 (./Style/usc-cs-glossary.tex)
 (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
@@ -1903,8 +1919,8 @@ Package: xeCJK-listings 2017/08/07 v3.5.0 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count326
 \l__xeCJK_listings_flag_int=\count327
 )
-(./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
-(./Section/en-abstract.aux) (./Section/section1-introduction.aux)
+(./main.aux (./Section/zh-abstract.aux) (./Section/en-abstract.aux)
+(./Section/section1-introduction.aux)
 (./Section/section2-object-detection-correlation-algorithm.aux
 
 LaTeX Warning: Label `sppnet' multiply defined.
@@ -1916,45 +1932,45 @@ LaTeX Warning: Label `rcnn' multiply defined.
 ) (./Section/section4-algorithm-implementation.aux)
 (./Section/section5-experimental-results-and-analysis.aux)
 (./Section/section6-summary-and-outlook.aux)
-(./Section/section7-acknowledgements.aux))
+(./Section/section7-acknowledgements.aux) (./Section/section8-appendix.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 7.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 9.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 9.
 
 (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Try loading font information for TU+ppl on input line 7.
-LaTeX Font Info:    No file TUppl.fd. on input line 7.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Try loading font information for TU+ppl on input line 9.
+LaTeX Font Info:    No file TUppl.fd. on input line 9.
 
 
 LaTeX Font Warning: Font shape `TU/ppl/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 7.
+(Font)              using `TU/lmr/m/n' instead on input line 9.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 7.
+LaTeX Info: Redefining \selectfont on input line 9.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1962,56 +1978,56 @@ LaTeX Info: Redefining \selectfont on input line 7.
 .................................................
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 7.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 7.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 7.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 7.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 7.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 7.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 7.
-LaTeX Font Info:    Redeclaring math accent \check on input line 7.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 7.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 7.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 7.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 7.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 7.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 9.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 9.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 9.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 9.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 9.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 9.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 9.
+LaTeX Font Info:    Redeclaring math accent \check on input line 9.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 9.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 9.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 9.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 9.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 9.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 7.
+(Font)              `operators' in the math version `normal' on input line 9.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/ppl/m/n on input line 7.
+(Font)                  OT1/cmr/m/n --> TU/ppl/m/n on input line 9.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 7.
+(Font)              `operators' in the math version `bold' on input line 9.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/ppl/m/n on input line 7.
+(Font)                  OT1/cmr/bx/n --> TU/ppl/m/n on input line 9.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/ppl/m/n --> TU/ppl/m/n on input line 7.
+(Font)                  TU/ppl/m/n --> TU/ppl/m/n on input line 9.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/ppl/m/it on input line 7.
+(Font)                  OT1/cmr/m/it --> TU/ppl/m/it on input line 9.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/ppl/bx/n on input line 7.
+(Font)                  OT1/cmr/bx/n --> TU/ppl/bx/n on input line 9.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 7.
+(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 9.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 7.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 9.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/ppl/m/n --> TU/ppl/bx/n on input line 7.
+(Font)                  TU/ppl/m/n --> TU/ppl/bx/n on input line 9.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/ppl/bx/it on input line 7.
+(Font)                  OT1/cmr/bx/it --> TU/ppl/bx/it on input line 9.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/phv/bx/n on input line 7.
+(Font)                  OT1/cmss/bx/n --> TU/phv/bx/n on input line 9.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/bx/n on input line 7.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/bx/n on input line 9.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -2049,15 +2065,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 7.
+(lastpage)             ! on input line 9.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count328
-\AtBeginShipoutBox=\box70
-Package hyperref Info: Link coloring OFF on input line 7.
+\AtBeginShipoutBox=\box71
+Package hyperref Info: Link coloring OFF on input line 9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -2067,20 +2083,39 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count329
 )
-LaTeX Info: Redefining \ref on input line 7.
-LaTeX Info: Redefining \pageref on input line 7.
-LaTeX Info: Redefining \nameref on input line 7.
+LaTeX Info: Redefining \ref on input line 9.
+LaTeX Info: Redefining \pageref on input line 9.
+LaTeX Info: Redefining \nameref on input line 9.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-\openout2 = `./Section/cover.aux'.
 
- (./Section/cover.tex
-File: ./Pictures/usc.png Graphic file (type bmp)
-<./Pictures/usc.png>
 
+LaTeX Font Warning: Font shape `TU/ppl/bx/n' undefined
+(Font)              using `TU/ppl/m/n' instead on input line 14.
+
+(./main.toc
+*************************************************
+* fontspec warning: "script-not-exist"
+* 
+* Font 'FandolHei-Regular' does not contain script 'CJK'.
+*************************************************
+\g__fontspec_family_FandolHei-Regular_int=\count330
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FandolHei-Regular(0)' created for font 'FandolHei-Regular' with
+. options [Script={CJK},Extension={.otf},BoldFont={FandolHei-Bold}].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. - 'bold' (bx/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+.................................................
 *************************************************
 * fontspec warning: "script-not-exist"
 * 
@@ -2099,12 +2134,26 @@ File: ./Pictures/usc.png Graphic file (type bmp)
 . - 'bold' (bx/n) with NFSS spec.: <->"[FandolSong-Bold.otf]/OT"
 . - 'bold small caps'  (bx/sc) with NFSS spec.: 
 .................................................
+[1
+
+])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ [2]
+\openout2 = `./Section/zh-abstract.aux'.
+
+ (./Section/zh-abstract.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
+
+ []
+
 *************************************************
 * fontspec warning: "script-not-exist"
 * 
 * Font 'FandolKai-Regular' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_FandolKai-Regular_int=\count330
+\g__fontspec_family_FandolKai-Regular_int=\count331
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -2116,59 +2165,13 @@ File: ./Pictures/usc.png Graphic file (type bmp)
 . - 'normal' (m/n) with NFSS spec.: <->"[FandolKai-Regular.otf]/OT"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-[]|\TU/FandolSong-Regular(1)/m/n/16.06 　
- []
-
-) [1]
-
-LaTeX Font Warning: Font shape `TU/ppl/bx/n' undefined
-(Font)              using `TU/ppl/m/n' instead on input line 13.
-
-(./main.toc [2
-
-
-
-])
-\tf@toc=\write5
-\openout5 = `main.toc'.
-
- [3]
-\openout2 = `./Section/zh-abstract.aux'.
-
- (./Section/zh-abstract.tex
-*************************************************
-* fontspec warning: "script-not-exist"
-* 
-* Font 'FandolHei-Regular' does not contain script 'CJK'.
-*************************************************
-\g__fontspec_family_FandolHei-Regular_int=\count331
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'FandolHei-Regular(0)' created for font 'FandolHei-Regular' with
-. options [Script={CJK},Extension={.otf},BoldFont={FandolHei-Bold}].
-.  
-.  This font family consists of the following NFSS series/shapes:
-.  
-. - 'normal' (m/n) with NFSS spec.: <->"[FandolHei-Regular.otf]/OT"
-. - 'small caps'  (m/sc) with NFSS spec.: 
-. - 'bold' (bx/n) with NFSS spec.: <->"[FandolHei-Bold.otf]/OT"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: 
-.................................................
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
-
- []
-
 ) [1
 
 ]
 \openout2 = `./Section/en-abstract.aux'.
 
  (./Section/en-abstract.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
+Underfull \hbox (badness 10000) in paragraph at lines 8--18
 
  []
 
@@ -2179,11 +2182,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 \openout2 = `./Section/section1-introduction.aux'.
 
  (./Section/section1-introduction.tex
-(./Section/section1/subsection1-1.tex) (./Section/section1/subsection1-2.tex
-[1
+(./Section/section1/subsection1-1.tex [1
 
 
-]) (./Section/section1/subsection1-3.tex [2])) [3]
+])
+(./Section/section1/subsection1-2.tex [2])
+(./Section/section1/subsection1-3.tex [3])) [4]
 \openout2 = `./Section/section2-object-detection-correlation-algorithm.aux'.
 
 
@@ -2196,38 +2200,35 @@ LaTeX Font Warning: Font shape `TU/ppl/m/it' undefined
 ) (./Section/section2/section2-4.tex
 File: ./Pictures/rcnn.jpg Graphic file (type bmp)
 <./Pictures/rcnn.jpg>
- [4
+ [5
 
 
 ]
 File: ./Pictures/rcnn-regions_with_cnn_features.png Graphic file (type bmp)
 <./Pictures/rcnn-regions_with_cnn_features.png>
- [5]
+ [6] [7]
 File: ./Pictures/sppnet_crop_warp.jpg Graphic file (type bmp)
 <./Pictures/sppnet_crop_warp.jpg>
- [6]
 File: ./Pictures/sppnet_pool_layer.jpg Graphic file (type bmp)
 <./Pictures/sppnet_pool_layer.jpg>
+ [8]
 File: ./Pictures/fast_rcnn.png Graphic file (type bmp)
 <./Pictures/fast_rcnn.png>
- [7]
+ [9]
 File: ./Pictures/fast-rcnn-model.png Graphic file (type bmp)
 <./Pictures/fast-rcnn-model.png>
- [8] [9]
+ [10] [11]
 File: ./Pictures/faster_rcnn.jpg Graphic file (type bmp)
 <./Pictures/faster_rcnn.jpg>
- [10]
+ [12]
 File: ./Pictures/faster_rcnn_anchor.png Graphic file (type bmp)
 <./Pictures/faster_rcnn_anchor.png>
 )
-(./Section/section2/section2-5.tex
+(./Section/section2/section2-5.tex [13]
 File: ./Pictures/od_regressor.png Graphic file (type bmp)
 <./Pictures/od_regressor.png>
- [11]
-
-LaTeX Warning: Citation `nms' on page 12 undefined on input line 16.
-
-) (./Section/section2/section2-6.tex)) [12]
+) [14]
+(./Section/section2/section2-6.tex)) [15]
 \openout2 = `./Section/section3-algorithm-design.aux'.
 
 
@@ -2236,9 +2237,9 @@ File: ./Pictures/liucheng.png Graphic file (type bmp)
 <./Pictures/liucheng.png>
 )
 (./Section/section3/section3-2.tex
-File: ./Pictures/ssd_modual.jpg Graphic file (type bmp)
-<./Pictures/ssd_modual.jpg>
- [13
+File: ./Pictures/ssd_model.jpg Graphic file (type bmp)
+<./Pictures/ssd_model.jpg>
+ [16
 
 
 ]
@@ -2246,28 +2247,26 @@ File: ./Pictures/ssd_(1).jpg Graphic file (type bmp)
 <./Pictures/ssd_(1).jpg>
 File: ./Pictures/ssd_(2).jpg Graphic file (type bmp)
 <./Pictures/ssd_(2).jpg>
- [14]
+ [17]
 File: ./Pictures/ssd_(3).jpg Graphic file (type bmp)
 <./Pictures/ssd_(3).jpg>
 )
-(./Section/section3/section3-3.tex) (./Section/section3/section3-7.tex [15]
-[16]
+(./Section/section3/section3-3.tex [18]) (./Section/section3/section3-7.tex
+[19] [20]
 Missing character: There is no 　 in font [lmroman12-regular]:mapping=tex-text;!
- [17]
-
-LaTeX Warning: Citation `nms' on page 18 undefined on input line 78.
-
+ [21]
 File: ./Pictures/soft-nms.jpeg Graphic file (type bmp)
 <./Pictures/soft-nms.jpeg>
-[18]) (./Section/section3/section3-4.tex) (./Section/section3/section3-6.tex))
-[19]
+ [22]) (./Section/section3/section3-4.tex [23])
+(./Section/section3/section3-6.tex)) [24]
 \openout2 = `./Section/section4-algorithm-implementation.aux'.
 
- (./Section/section4-algorithm-implementation.tex
+
+(./Section/section4-algorithm-implementation.tex
 (./Section/section4/section4-1.tex
 File: ./Pictures/labelimg.jpg Graphic file (type bmp)
 <./Pictures/labelimg.jpg>
- [20
+ [25
 
 
 ]
@@ -2297,21 +2296,21 @@ LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
 ) (./Section/section4/section4-2.tex
 File: ./Pictures/SSD.png Graphic file (type bmp)
 <./Pictures/SSD.png>
-
+ [26]
 
 LaTeX Font Warning: Font shape `TU/pcr/bx/n' undefined
 (Font)              using `TU/pcr/m/n' instead on input line 15.
 
-[21]
 
 LaTeX Font Warning: Font shape `TU/pcr/m/it' undefined
 (Font)              using `TU/pcr/m/n' instead on input line 34.
 
-[22]) (./Section/section4/section4-3.tex) (./Section/section4/section4-4.tex))
-[23] [24]
+[27]) [28] (./Section/section4/section4-3.tex)
+(./Section/section4/section4-4.tex [29])) [30]
 \openout2 = `./Section/section5-experimental-results-and-analysis.aux'.
 
- (./Section/section5-experimental-results-and-analysis.tex
+
+(./Section/section5-experimental-results-and-analysis.tex
 File: ./Pictures/loss.png Graphic file (type bmp)
 <./Pictures/loss.png>
 File: ./Pictures/result.jpg Graphic file (type bmp)
@@ -2320,60 +2319,199 @@ File: ./Pictures/result.jpg Graphic file (type bmp)
 
 LaTeX Warning: Float too large for page by 10.15428pt on input line 17.
 
-[25
+[31
 
 
-] [26]
+] [32]
 File: ./Pictures/damage.jpg Graphic file (type bmp)
 <./Pictures/damage.jpg>
-) [27]
+) [33] [34]
 \openout2 = `./Section/section6-summary-and-outlook.aux'.
 
- (./Section/section6-summary-and-outlook.tex) [28
+ (./Section/section6-summary-and-outlook.tex) [35
 
-
-] (./main.bbl
-[29
-
-]) [30]
-\openout2 = `./Section/section7-acknowledgements.aux'.
-
- (./Section/section7-acknowledgements.tex) [31
 
 ]
+(./main.bbl [36
 
+] [37]) [38]
+\openout2 = `./Section/section7-acknowledgements.aux'.
+
+ (./Section/section7-acknowledgements.tex) [39
+
+]
+\openout2 = `./Section/section8-appendix.aux'.
+
+
+(./Section/section8-appendix.tex [40
+
+
+] [41] [42] [43]
+Overfull \hbox (4.66061pt too wide) in paragraph at lines 130--132
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[44] [45] [46]
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 219--220
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 220--221
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 221--223
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (29.95535pt too wide) in paragraph at lines 223--225
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.63167pt too wide) in paragraph at lines 228--230
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.63167pt too wide) in paragraph at lines 231--233
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[47]
+Overfull \hbox (29.95535pt too wide) in paragraph at lines 252--254
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 279--280
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+[48] [49] [50] [51] [52]
+Overfull \hbox (4.66061pt too wide) in paragraph at lines 410--411
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.9843pt too wide) in paragraph at lines 419--420
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.86852pt too wide) in paragraph at lines 420--422
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 423--424
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (61.57378pt too wide) in paragraph at lines 424--425
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (137.458pt too wide) in paragraph at lines 425--426
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (36.27904pt too wide) in paragraph at lines 426--428
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (200.69484pt too wide) in paragraph at lines 429--430
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[53]
+Overfull \hbox (80.54483pt too wide) in paragraph at lines 444--446
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.9843pt too wide) in paragraph at lines 460--461
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[54] [55]
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 523--524
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 524--525
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 528--529
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 529--530
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[56]
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 538--539
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.30798pt too wide) in paragraph at lines 539--541
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[57]
+Overfull \hbox (23.63167pt too wide) in paragraph at lines 579--580
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (23.63167pt too wide) in paragraph at lines 581--582
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[58] [59] [60]) [61] 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
-(./main.aux (./Section/cover.aux) (./Section/zh-abstract.aux)
-(./Section/en-abstract.aux) (./Section/section1-introduction.aux)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
+(./main.aux (./Section/zh-abstract.aux) (./Section/en-abstract.aux)
+(./Section/section1-introduction.aux)
 (./Section/section2-object-detection-correlation-algorithm.aux)
 (./Section/section3-algorithm-design.aux)
 (./Section/section4-algorithm-implementation.aux)
 (./Section/section5-experimental-results-and-analysis.aux)
 (./Section/section6-summary-and-outlook.aux)
-(./Section/section7-acknowledgements.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 32.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 32.
+(./Section/section7-acknowledgements.aux) (./Section/section8-appendix.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 35.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 35.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 35.
  ) 
 Here is how much of TeX's memory you used:
- 41988 strings out of 492998
- 848699 string characters out of 6136604
- 979622 words of memory out of 5000000
- 45291 multiletter control sequences out of 15000+600000
- 535768 words of font info for 73 fonts, out of 8000000 for 9000
+ 42566 strings out of 492998
+ 855947 string characters out of 6136604
+ 1002301 words of memory out of 5000000
+ 45866 multiletter control sequences out of 15000+600000
+ 535736 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 63i,12n,71p,10439b,1845s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,80p,10439b,1903s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (36 pages).
+Output written on main.pdf (65 pages).

@@ -12,11 +12,12 @@ A level-1 auxiliary file: ./Section/section5-experimental-results-and-analysis.a
 A level-1 auxiliary file: ./Section/section6-summary-and-outlook.aux
 The style file: unsrt.bst
 A level-1 auxiliary file: ./Section/section7-acknowledgements.aux
+A level-1 auxiliary file: ./Section/section8-appendix.aux
 Database file #1: reference.bib
 Warning--I didn't find a database entry for "nms"
 You've used 20 entries,
             1791 wiz_defined-function locations,
-            567 strings with 7288 characters,
+            568 strings with 7319 characters,
 and the built_in function-call counts, 6150 in all, are:
 = -- 568
 > -- 264

@@ -26,8 +26,10 @@
 		\toprule
 		网络模型 & mAP & FPS\\
 		\midrule
-		SSD 	& 60\% & 80\\
-		改进SSD  &  65\% & 80\\
+		SSD 	& 60\% & 90\\
+		SSD+focal-loss  &  62\% & 87\\
+		SSD+soft-nms & 64\% & 85 \\
+		SSD+soft-nms+focal-loss & 65\% & 80\\
 		\bottomrule
 	\end{tabular}
 \end{table}

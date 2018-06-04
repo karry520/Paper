@@ -32,7 +32,7 @@ L_{conf}(x, c) = -\sum_{i \in Pos}^N x_{ij}^p\log(c_i^0) \quad where \quad c_i^p
 
 (2) en masse, the easy negatives can overwhelm training and lead to degenerate models. \cite{focal-loss}
 
-负样本数量占比过高，使得对总的loss的影响过大，因此使得模型不会按我们所希望的方向进行优化。这也不是新鲜的问题了，先前也有存在一些算法来处理不同类别的训练样本数量不均衡的问题，比如OHEM(Online Hard Example Mining)\cite{ohem}，OHEM算法的主要思想可以用原文的一句话概括：In OHEM each example is scored by its loss, non-maximum suppression (NMS\cite{soft-nms}) is then applied, and a minibatch is constructed with the highest-loss examples。\cite{ohem}可以看出OHEM算法加大了对错分类样本的权重，不过OHEM算法忽略了对容易分类的样本的权重处理。Focal Loss是从标准交叉熵损失基础上改进所得。这个函数可以通过调整易分类样本的权重，使得模型在训练时对难分类的样本更专注。
+负样本数量占比过高，使得对总的loss的影响过大，因此使得模型不会按所希望的方向进行优化。这也不是新鲜的问题了，先前也有存在一些算法来处理不同类别的训练样本数量不均衡的问题，比如OHEM(Online Hard Example Mining)\cite{ohem}，OHEM算法的主要思想可以用原文的一句话概括：In OHEM each example is scored by its loss, non-maximum suppression (NMS\cite{soft-nms}) is then applied, and a minibatch is constructed with the highest-loss examples。\cite{ohem}可以看出OHEM算法加大了对错分类样本的权重，不过OHEM算法忽略了对容易分类的样本的权重处理。Focal Loss是从标准交叉熵损失基础上改进所得。这个函数可以通过调整易分类样本的权重，使得模型在训练时对难分类的样本更专注。
 
 \textbf{标准交叉熵损失函数}
 
@@ -49,7 +49,7 @@ CE(p,y)=\left\{
 
 其中：
 
-CE表示cross entropy,p表示预测样本属于1的概率，y表示label，y的取值为{+1,-1}，这里仅仅以二分类为例，多分类以此类推。为了表示简便，我们用$p_t$表示样本属于true class的概率。所以上式可以写成
+CE表示cross entropy,p表示预测样本属于1的概率，y表示label，y的取值为{+1,-1}，这里仅仅以二分类为例，多分类以此类推。为了表示简便，用$p_t$表示样本属于true class的概率。所以上式可以写成
 
 \begin{equation}
 	CE(p,y) = CE(p_t) = -\log (p_t)	
@@ -57,7 +57,7 @@ CE表示cross entropy,p表示预测样本属于1的概率，y表示label，y的�
 	
 \textbf{平衡交叉熵}
 
-我们知道了"One Stage Detector"在训练的时候正负样本的数量差距很大，那么一种常见的做法就是给正负样本加上权重，负样本出现的频次多，那么就降低负样本的权重，正样本数量少，就相对提高正样本的权重，如下式所示：
+知道了"One Stage Detector"在训练的时候正负样本的数量差距很大，那么一种常见的做法就是给正负样本加上权重，负样本出现的频次多，那么就降低负样本的权重，正样本数量少，就相对提高正样本的权重，如下式所示：
 \begin{equation}
 	CE(p_t) = -\alpha \log (p_t)
 \end{equation}
@@ -75,7 +75,7 @@ $是一个定值时，比如说等于2，简单样本($p_t = 0.9$)的loss要比�
 \end{equation}
 
 \subsubsection{改进NMS,采用Soft-NMS}
-本设计中使用到了NMS-非极大值抑制\cite{nms}进行后处理。NMS通常的做法是将检测框按得分排序，然后保留得分最高的框，同时删除与该框重叠面积大于一定比例的其它框。这种贪心式方法存在如图所示的问题： 
+本设计中使用到了NMS-非极大值抑制\cite{soft-nms}进行后处理。NMS通常的做法是将检测框按得分排序，然后保留得分最高的框，同时删除与该框重叠面积大于一定比例的其它框。这种贪心式方法存在如图所示的问题： 
 \begin{uscfigure}
 	\includegraphics[width=\textwidth]{./Pictures/soft-nms.jpeg}	
 	\caption{非极大值抑制}
@@ -92,7 +92,7 @@ s_i=\left\{
 \end{aligned}
 \right.
 \end{equation}
-现在我们将其替换成如下形式：
+现在将其替换成如下形式：
 \begin{equation}
 s_i=\left\{
 \begin{aligned}

@@ -13,6 +13,6 @@
 \begin{equation}
 	Pr(Class_i | Object) * Pr(Object) * IOU_{pred}^{truth} = Pr(Class_i) * IOU_{pred}^{truth}
 \end{equation}
-YOLO算法基于分而治之的策略，将从卷积后的原始图片中提取到的特征图分为SxS块，然后对每一块进行分类，并使用非极大值抑制(NMS\cite{nms})算法去除重叠的框，最终得到我们想要的结果。
+YOLO算法基于分而治之的策略，将从卷积后的原始图片中提取到的特征图分为SxS块，然后对每一块进行分类，并使用非极大值抑制(NMS\cite{soft-nms})算法去除重叠的框，最终得到想要的结果。
 \subsubsection{SSD}
 YOLO检测速度非常快，但是问题就在于该算法对小物体的检测效果不好。为解决这个问题，SSD就在YOLO的想法上融合了Faster R-CNN的Anchor概念，并在不同尺度的卷积层的特征图上做出预测。关于SSD算法的细节介绍将在第三章将详细阐述。
