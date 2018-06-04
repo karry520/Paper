@@ -8,7 +8,7 @@ SSD采用了多尺度的特征图进行检测，这不同于YOLO算法，其基�
 
 概括地可以将SSD算法的核心思想归结为以下三点
 
-\textbf{1、采用多尺度特征图用于检测 }
+\textcircled{１}\textbf{采用多尺度特征图用于检测 }
 
 所谓多尺度，即采用大小不同的特征图用于检测，如图\ref{multiscale}所示，一般前面的CNN网络其特征图会比较大，后面会采用步长为的卷积或者池化的方式来缩小特征图的大小，
 \begin{uscfigure}
@@ -23,11 +23,11 @@ SSD采用了多尺度的特征图进行检测，这不同于YOLO算法，其基�
 	\label{featuremap}
 \end{uscfigure}
 
-\textbf{2、采用卷积进行检测}
+\textcircled{２}\textbf{采用卷积进行检测}
 
 SSD算法直接采用卷积对不同的特征图进行提取检测结果。采用$ 3\times 3 \times p $这样比较小的卷积核就可以得到形状为 $m\times n \times p $的特征图的检测值。 
 
-\textbf{3、设置先验框 }
+\textcircled{３}\textbf{设置先验框 }
 
 SSD算法引用了Faster R-CNN中anchor的思想，每个单元设置长宽比、大小不同的先验框一般情况下，每个单元会设置多个先验框，其尺度和长宽比存在差异，，预测的边界框(bounding boxes)是以这些先验框为基准的，在一定程度上减少训练难度。如图\ref{ssd_anchor}所示，图片中狗和猫分别采用最适合它们形状的先验框来进行训练，可以看到每个单元使用了4个不同的先验框，后面会详细讲解训练过程中的先验框匹配原则。
 \begin{uscfigure}

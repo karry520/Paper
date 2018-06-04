@@ -66,6 +66,12 @@ Pedro~F Felzenszwalb, Ross~B Girshick, David McAllester, and Deva Ramanan.
 \newblock {\em IEEE transactions on pattern analysis and machine intelligence},
   32(9):1627--1645, 2010.
 
+\bibitem{soft-nms}
+Navaneeth Bodla, Bharat Singh, Rama Chellappa, and Larry~S Davis.
+\newblock Soft-nms—improving object detection with one line of code.
+\newblock In {\em 2017 IEEE International Conference on Computer Vision
+  (ICCV)}, pages 5562--5570. IEEE, 2017.
+
 \bibitem{vgg16}
 Jonathan Long, Evan Shelhamer, and Trevor Darrell.
 \newblock Fully convolutional networks for semantic segmentation.
@@ -83,12 +89,6 @@ Abhinav Shrivastava, Abhinav Gupta, and Ross Girshick.
   mining.
 \newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
   Pattern Recognition}, pages 761--769, 2016.
-
-\bibitem{soft-nms}
-Navaneeth Bodla, Bharat Singh, Rama Chellappa, and Larry~S Davis.
-\newblock Soft-nms—improving object detection with one line of code.
-\newblock In {\em 2017 IEEE International Conference on Computer Vision
-  (ICCV)}, pages 5562--5570. IEEE, 2017.
 
 \bibitem{repid}
 Paul Viola and Michael Jones.

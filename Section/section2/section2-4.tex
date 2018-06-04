@@ -38,13 +38,13 @@ R-CNN使用卷积神经网络(CNN)提取特征取代人工设定的特征如Haar
 \end{itemize}
 \line
 
-\textbf{1、生成候选区域:}利用Selective Search\cite{ss}算法从原始图像中生成约2k-3k个候选区域。生成步骤：1、先将原始图像分割成小块区域。2、检索所有的小区域，合并最可能是属于同一个物体的两个区域。重复该操作直到整张图像中只剩下一个位置区域。3、输出所有候选的区域包括合并的区域，共同作为所谓的候选区域。
+\textcircled{１}\textbf{生成候选区域:}利用Selective Search\cite{ss}算法从原始图像中生成约2k-3k个候选区域。生成步骤：1、先将原始图像分割成小块区域。2、检索所有的小区域，合并最可能是属于同一个物体的两个区域。重复该操作直到整张图像中只剩下一个位置区域。3、输出所有候选的区域包括合并的区域，共同作为所谓的候选区域。
 
-\textbf{2、提取特征:}利用2012年，Hinton在Image Net竞赛上提出的神经网络\footnote{Hinton在2012年提出的AlexNet网络}提取图像中的特征。
+\textcircled{２}\textbf{提取特征:}利用2012年，Hinton在Image Net竞赛上提出的神经网络\footnote{Hinton在2012年提出的AlexNet网络}提取图像中的特征。
 
-\textbf{3、判断类别:}对于每一类别的目标，使用线性SVM\cite{svm}分类器进行判别。输入为4096维特征向量，输出为此类别的置信度。同时原算法使用"Hard Negative Mining"\cite{hnm}方法。使正负样本的数量保持平衡。
+\textcircled{３}\textbf{判断类别:}对于每一类别的目标，使用线性SVM\cite{svm}分类器进行判别。输入为4096维特征向量，输出为此类别的置信度。同时原算法使用"Hard Negative Mining"\cite{hnm}方法。使正负样本的数量保持平衡。
 
-\textbf{4、精修位置:}目标检测的结果好不好是看检测框与实际位置的重叠面积，故需要对检测的位置进行精修，以此提高检测精度。 
+\textcircled{４}\textbf{精修位置:}目标检测的结果好不好是看检测框与实际位置的重叠面积，故需要对检测的位置进行精修，以此提高检测精度。 
 
 \subsubsection{SPP Net}
 R-CNN提出后的一年，以何恺明、任少卿为首的团队发表了SPP Net:\textit{Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition}\cite{sppnet} ，这才是真正摸到了卷积神经网络的脉络。尽管R-CNN效果不错，但是他还有两个缺点：
@@ -68,7 +68,7 @@ R-CNN算法是先生成候选区域，再对该区域进行卷积，其导致的
 SPP Net的出现对整个目标检测及其相关领域产生了重要的影响，他不仅减少了计算冗余从而提高了检测速度，更重要的意义在于解禁了输入固定尺寸这一束缚，也因此被后面出现的算法广泛采用。本文基于的SSD算法就是更是从中受到启发。
 
 \subsubsection{Fast R-CNN}
-继2014年的RCNN之后，Ross Girshick在2015年发表了Fast RCNN\cite{fastrcnn}，构思巧妙，算法流程更加紧凑，目标检测的速度也大幅提高。Fast R-CNN引用了SPP Net的贡献 。概括来说，贡献最大的地方在于用并行结构替换了原算法中的串行结构。Fast RCNN和RCNN相比，同样使用最大规模的网络，测试时间从47秒减少为0.32秒，训练时间从84小时减少为9.5小时。在PASCAL-VOC2007上的准确率，约在66\%-67\%之间。其算法框架如图\ref{fast-rcnn}
+继2014年的RCNN之后，Ross Girshick在2015年发表了Fast RCNN\cite{fastrcnn}，构思巧妙，算法流程更加紧凑，目标检测的速度也大幅提高。Fast R-CNN引用了SPP Net的贡献 。概括来说，贡献最大的地方在于用并行结构替换了原算法中的串行结构。Fast RCNN和RCNN相比，同样使用最大规模的网络，测试时间从47秒减少为0.32秒，训练时间从84小时减少为9.5小时。在PASCAL-VOC2007上的准确率，约在66\%-67\%之间。其算法框架如图\ref{fast-rcnn}。
 \begin{uscfigure}
 	\includegraphics[width=\textwidth]{./Pictures/fast_rcnn.png}	
 	\caption{Fast R-CNN算法框架}	
@@ -134,9 +134,9 @@ g为Smooth L1误差，对outlier不敏感:
 \subsubsection{Faster R-CNN}
 继发表RCNN，Fast RCNN两篇力作之后，Ross Girshick等人又在2015年提出了Faster R-CNN\cite{fasterrcnn}算法。该算法在PASCAL VOC数据集上准确率为59.9\%,在简单网络目标上的检测速度达到17FPS；复杂网络目标上的检测准确率78.8\%，速度达到5FPS。在Faster R-CNN算法被提出前，所有的目标检测算法都是基于Low Level特征采用启发式搜索算法生产候选区域。这种策略存在着两个缺点：
 
-\textbf{第一个缺点}候选区域具有不确定性。“Two Stage”系列算法为了解决这个问题生成了大量无效区域造成了大量多余的计算、可是如果减少了候选区域则又会使之漏检；
+\textbf{第一个缺点：}候选区域具有不确定性。“Two Stage”系列算法为了解决这个问题生成了大量无效区域造成了大量多余的计算、可是如果减少了候选区域则又会使之漏检；
 
-\textbf{第二个缺点}算法第一步——生成候选区域的算法是在CPU上运行的，与在GPU上训练的跨结构交互损失了算法效率。
+\textbf{第二个缺点：}算法第一步——生成候选区域的算法是在CPU上运行的，与在GPU上训练的跨结构交互损失了算法效率。
 
 于是乎，针对上述两个缺点，任少卿等人提出利用神经网络代替Selective Search算法自己去学习生成候选区域。将这个网络称之为RPN:Region Proposal Networks。其结构如图\ref{rpn}。
 \begin{uscfigure}
@@ -163,9 +163,9 @@ Faster RCNN始终围绕着三个问题展开:
 
 \textbf{区域生成网络(RPN)}
 
-\textbf{1、特征提取:}如图\ref{rpn}灰色方框，是对原始特征提取(用任何分类模型进行提取都可)
+\textcircled{１}\textbf{特征提取:}如图\ref{rpn}灰色方框，是对原始特征提取(用任何分类模型进行提取都可)。
 
-\textbf{2、候选区域:}对于图像中的每一个位置，约定9个设定的候选窗口：三种不同比例{1:1,1:2,2:1}×三种不同面积{1282,2562,5122}。这些候选窗口被称之为anchors。如图\ref{anchor}示出51*39个anchor中心，以及9种anchor。
+\textcircled{２}\textbf{候选区域:}对于图像中的每一个位置，约定9个设定的候选窗口：三种不同比例{1:1,1:2,2:1}×三种不同面积{1282,2562,5122}。这些候选窗口被称之为anchors。如图\ref{anchor}示出51*39个anchor中心，以及9种anchor。
  
 \begin{uscfigure}
 	\includegraphics[width=\textwidth,height=8cm]{./Pictures/faster_rcnn_anchor.png}	
@@ -173,7 +173,7 @@ Faster RCNN始终围绕着三个问题展开:
 	\label{anchor}
 \end{uscfigure}
 
-\textbf{3、位置精修和窗口分类:}分类层(cls\_score)计算每一个锚点上9个anchors属于前景和背景的概率；回归层(bbox\_pred)计算每一个锚点上9个anchors对应窗口平移缩放的参数。对于每个锚点输出$9*(4+1)$个参数
+\textcircled{３}\textbf{位置精修和窗口分类:}分类层(cls\_score)计算每一个锚点上9个anchors属于前景和背景的概率；回归层(bbox\_pred)计算每一个锚点上9个anchors对应窗口平移缩放的参数。对于每个锚点输出$9*(4+1)$个参数。
 
 
 

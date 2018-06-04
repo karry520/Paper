@@ -12,22 +12,22 @@ Data Augmentation
 
 \line
 
-\textbf{1. 匹配策略}
+\textcircled{１}\textbf{匹配策略}
 
 此处的匹配指的是Ground Truth与Default Box的匹配。SSD采取的方法与Faster R-CNN中的做法相似。操作分成两步：第一步是根据Ground Truth与Default Box最大的交叠(Overlap)将二者进行匹配，找到IOU最大的区域作为正样本；第二步是与Overlap大于某个阈值的Ground truth进行匹配。
 
-\textbf{2. Default Boxes生成器}
+\textcircled{２}\textbf{Default Boxes生成器}
 
-\textbf{3. Hard Negative Mining}
+\textcircled{３}\textbf{Hard Negative Mining}
 3.4.2节探讨了“One Stage”方法检测精度低的原因，经过上述匹配策略只有少量的正样本，会得到大量的负样本，从而导致了正负样本数量不平衡问题。经过试验表明，正负样本的不均衡会导致检测正确率低下\cite{focal-loss}。因此在训练过程中采用了Hard Negative Mining\cite{hnm}的策略，根据所有的box的Confidence Loss的排序结果，将正负样本的比例控制在1:3以下，实验结果表明，这样做后能提高4\%左右的准确度。
 
-\textbf{4. Data Augmentation}
+\textcircled{４}\textbf{Data Augmentation}
 
 对不同尺度目标的输入数据进行了增强处理，增加了模型的鲁棒性。
 
-1、使用整张图像作为输入
+\textcircled{１}使用整张图像作为输入
 
-2、使用IOU和目标物体为0.1、0.3、0.5、0.7和0.9的patch，这些patch在原图的大小的[0.1, 1]之间，相应的宽高比在[1/2, 2]之间。
+\textcircled{２}使用IOU和目标物体为0.1、0.3、0.5、0.7和0.9的patch，这些patch在原图的大小的[0.1, 1]之间，相应的宽高比在[1/2, 2]之间。
 
-3、随机采取一个Patch
+\textcircled{３}随机采取一个Patch
 

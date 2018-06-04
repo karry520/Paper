@@ -1,10 +1,9 @@
-\textit{You Only Look Once: Unified, Real-time Object Detection}(YOLO)\cite{yolo}是单阶段检测方法的开山之作。正如其名：“你只需要看一次”，它只处理一次图片即可同时得到目标的位置和其属于什么类别，将目标检测任务描述为一个端到端、统一的回归问题。“One Stage”最核心的思想可以概括为：首先对全图给出一个大概的范围进行分类，利用了分类器优秀的分类效果，不断迭代直到得出一个精细的位置，
+\textit{You Only Look Once: Unified, Real-time Object Detection}(YOLO)\cite{yolo}是单阶段检测方法的开山之作。正如其名：“你只需要看一次”，它只处理一次图片即可同时得到目标的位置和其属于什么类别，将目标检测任务描述为一个端到端、统一的回归问题。“One Stage”最核心的思想可以概括为：首先对全图给出一个大概的范围进行分类，利用了分类器优秀的分类效果，不断迭代直到得出一个精细的位置，“One Stage”回归的思想如图\ref{yolo}从蓝色的框框到红色的框框，这样的检测速度一定很快，但是对小尺度目标的检测也肯定不好。
 \begin{uscfigure}
 	\includegraphics[width=\textwidth]{./Pictures/od_regressor.png}	
 	\caption{YOLO}
 	\label{yolo}
 \end{uscfigure}
-“One Stage”回归的思想如图\ref{yolo}从蓝色的框框到红色的框框，这样的检测速度一定很快，但是对小尺度目标的检测也肯定不好。
 
 \subsubsection{YOLO}
 \textbf{YOLO}是“One Stage”方法中的典型算法。首先将原始图片调整到一个固定尺寸，再将调整后的图片划分成一个SxS的网格，每个网格负责检测该网格区域内的物体的类别和位置。

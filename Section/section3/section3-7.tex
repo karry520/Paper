@@ -5,11 +5,11 @@
 \end{equation}
 其中：
 
- 1、$L_{conf}$表示分类误差，采用多分类的softmax loss
+ \textcircled{1}$L_{conf}$表示分类误差，采用多分类的softmax loss
  
- 2、$L_{loc}$表示回归误差，采用Smooth L1 loss
+ \textcircled{2}$L_{loc}$表示回归误差，采用Smooth L1 loss
  
- 3、$\alpha$取1
+\textcircled{3}$\alpha$取1
  
 回归loss,smoothL1:
 \begin{align}
@@ -24,7 +24,7 @@ L_{conf}(x, c) = -\sum_{i \in Pos}^N x_{ij}^p\log(c_i^0) \quad where \quad c_i^p
 \subsubsection{改进损失函数-Focal Loss}
 提出Focal Loss的初衷是希望既有”One-Stage Detector“的速度，也有”Two Stage Detector“的准确率。
 
-\textbf{１、为什么"One Stage Detector"的准确率低？}
+\textbf{为什么"One Stage Detector"的准确率低？}
 
 其作者认为主要原因是：不同类别的训练样本数量的不均衡。在目标检测领域，一张原始图像可能生成非常多的预测区域，但是包含目标的图片数量占比非常低，这就带来了类别不均衡。那么不同类别的训练样本数量不均衡会带来什么后果呢？引用原文讲的两个后果：
 

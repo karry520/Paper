@@ -417,16 +417,22 @@ neg = rank < num_neg.expand_as(rank)  # [N,8732]
 return neg
 
 def forward(self, loc_preds, loc_targets, conf_preds, conf_targets):
-'''Compute loss between (loc_preds, loc_targets) and (conf_preds, conf_targets).
+'''Compute loss between (loc_preds,
+ loc_targets) and (conf_preds, conf_targets).
 
 Args:
-loc_preds: (tensor) predicted locations, sized [batch_size, 8732, 4].
-loc_targets: (tensor) encoded target locations, sized [batch_size, 8732, 4].
-conf_preds: (tensor) predicted class confidences, sized [batch_size, 8732, num_classes].
-conf_targets: (tensor) encoded target classes, sized [batch_size, 8732].
+loc_preds: (tensor) predicted locations, sized
+ [batch_size, 8732, 4].
+loc_targets: (tensor) encoded target locations, sized 
+[batch_size, 8732, 4].
+conf_preds: (tensor) predicted class confidences, sized 
+[batch_size, 8732, num_classes].
+conf_targets: (tensor) encoded target classes, sized 
+[batch_size, 8732].
 
 loss:
-(tensor) loss = SmoothL1Loss(loc_preds, loc_targets) + CrossEntropyLoss(conf_preds, conf_targets).
+(tensor) loss = SmoothL1Loss(loc_preds, loc_targets) 
++ CrossEntropyLoss(conf_preds, conf_targets).
 '''
 batch_size, num_boxes, _ = loc_preds.size()
 
@@ -441,7 +447,8 @@ return Variable(torch.Tensor([0]))
 pos_mask = pos.unsqueeze(2).expand_as(loc_preds)    # [N,8732,4]
 pos_loc_preds = loc_preds[pos_mask].view(-1,4)      # [#pos,4]
 pos_loc_targets = loc_targets[pos_mask].view(-1,4)  # [#pos,4]
-loc_loss = F.smooth_l1_loss(pos_loc_preds, pos_loc_targets, size_average=False)
+loc_loss = F.smooth_l1_loss(pos_loc_preds,
+ pos_loc_targets, size_average=False)
 
 ################################################################
 # conf_loss = CrossEntropyLoss(pos_conf_preds, pos_conf_targets)
@@ -520,13 +527,17 @@ N = box1.size(0)
 M = box2.size(0)
 
 lt = torch.max(
-box1[:,:2].unsqueeze(1).expand(N,M,2),  # [N,2] -> [N,1,2] -> [N,M,2]
-box2[:,:2].unsqueeze(0).expand(N,M,2),  # [M,2] -> [1,M,2] -> [N,M,2]
+box1[:,:2].unsqueeze(1).expand(N,M,2),  # [N,2] ->
+ [N,1,2] -> [N,M,2]
+box2[:,:2].unsqueeze(0).expand(N,M,2),  # [M,2] ->
+ [1,M,2] -> [N,M,2]
 )
 
 rb = torch.min(
-box1[:,2:].unsqueeze(1).expand(N,M,2),  # [N,2] -> [N,1,2] -> [N,M,2]
-box2[:,2:].unsqueeze(0).expand(N,M,2),  # [M,2] -> [1,M,2] -> [N,M,2]
+box1[:,2:].unsqueeze(1).expand(N,M,2),  # [N,2] ->
+ [N,1,2] -> [N,M,2]
+box2[:,2:].unsqueeze(0).expand(N,M,2),  # [M,2] ->
+ [1,M,2] -> [N,M,2]
 )
 
 wh = rb - lt  # [N,M,2]
@@ -535,8 +546,10 @@ inter = wh[:,:,0] * wh[:,:,1]  # [N,M]
 
 area1 = (box1[:,2]-box1[:,0]) * (box1[:,3]-box1[:,1])  # [N,]
 area2 = (box2[:,2]-box2[:,0]) * (box2[:,3]-box2[:,1])  # [M,]
-area1 = area1.unsqueeze(1).expand_as(inter)  # [N,] -> [N,1] -> [N,M]
-area2 = area2.unsqueeze(0).expand_as(inter)  # [M,] -> [1,M] -> [N,M]
+area1 = area1.unsqueeze(1).expand_as(inter)  # [N,] ->
+ [N,1] -> [N,M]
+area2 = area2.unsqueeze(0).expand_as(inter)  # [M,] ->
+ [1,M] -> [N,M]
 
 iou = inter / (area1 + area2 - inter)
 return iou
@@ -576,9 +589,11 @@ iou.squeeze_(0)            # [8732,]
 
 boxes = boxes[max_idx]     # [8732,4]
 variances = [0.1, 0.2]
-cxcy = (boxes[:,:2] + boxes[:,2:])/2 - default_boxes[:,:2]  # [8732,2]
+cxcy = (boxes[:,:2] + boxes[:,2:])/2 -
+ default_boxes[:,:2]  # [8732,2]
 cxcy /= variances[0] * default_boxes[:,2:]
-wh = (boxes[:,2:] - boxes[:,:2]) / default_boxes[:,2:]      # [8732,2]
+wh = (boxes[:,2:] - boxes[:,:2]) /
+ default_boxes[:,2:]      # [8732,2]
 wh = torch.log(wh) / variances[1]
 loc = torch.cat([cxcy, wh], 1)  # [8732,4]
 
